@@ -2,11 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-<<<<<<< HEAD
-      "question": "What are the eigenvalues of the matrix [[3, 0],[0, 4]]",
-=======
       "question": "1. What are the eigenvalues of the matrix [[3, 0],[0, 4]]",
->>>>>>> bfb9e6c (Dev Files)
       "answers": {
         "a": "1,2",
         "b": "3,4",
@@ -14,27 +10,16 @@
         "d": "4,5"
       },
       "explanations": {
-<<<<<<< HEAD
-        "a": "Explanation 2",
-        "b": "For a diagonal matrix, the eigenvalues are the diagonal elements.",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-=======
         "a": "Not correct",
         "b": "For a diagonal matrix, the eigenvalues are the diagonal elements.",
         "c": "Not correct",
         "d": "Not correct"
->>>>>>> bfb9e6c (Dev Files)
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-<<<<<<< HEAD
-      "question": "Which vector is an eigenvector of the matrix [[2, 0],[0, 3]]",
-=======
       "question": "2. Which vector is an eigenvector of the matrix [[2, 0],[0, 3]]",
->>>>>>> bfb9e6c (Dev Files)
       "answers": {
         "a": "[1 0]",
         "b": "[0 1]",
@@ -42,26 +27,16 @@
         "d": "Both a and b"
       },
       "explanations": {
-<<<<<<< HEAD
-        "a": "Explanation 2",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-=======
         "a": "Not correct",
         "b": "Not correct",
         "c": "Not correct",
->>>>>>> bfb9e6c (Dev Files)
         "d": "[1 0] is an eigenvector for eigenvalue 2, and [0 1] is an eigenvector for eigenvalue 3."
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
     },
     {
-<<<<<<< HEAD
-      "question": "Eigenvalue decomposition of a matrix involves decomposing the matrix into which form?",
-=======
       "question": "3. Eigenvalue decomposition of a matrix involves decomposing the matrix into which form?",
->>>>>>> bfb9e6c (Dev Files)
       "answers": {
         "a": "A = PDP^-1",
         "b": "A = LDU",
@@ -70,25 +45,15 @@
       },
       "explanations": {
         "a": "A = PDP^-1, where P is the matrix of eigenvectors and D is the diagonal matrix of eigenvalues.",
-<<<<<<< HEAD
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-=======
         "b": "Not correct",
         "c": "Not correct",
         "d": "Not correct"
->>>>>>> bfb9e6c (Dev Files)
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-<<<<<<< HEAD
-      "question": "LU Decomposition of a matrix A is represented as:",
-=======
       "question": "4. LU Decomposition of a matrix A is represented as:",
->>>>>>> bfb9e6c (Dev Files)
       "answers": {
         "a": "A=LU",
         "b": "A=UL",
@@ -97,25 +62,15 @@
       },
       "explanations": {
         "a": "LU decomposition expresses A as a product of a lower triangular matrix L and an upper triangular matrix U",
-<<<<<<< HEAD
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-=======
         "b": "Not correct",
         "c": "Not correct",
         "d": "Not correct"
->>>>>>> bfb9e6c (Dev Files)
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-<<<<<<< HEAD
-      "question": "SVD of a matrix A is represented as",
-=======
       "question": "5. SVD of a matrix A is represented as",
->>>>>>> bfb9e6c (Dev Files)
       "answers": {
         "a": "A = UΣV",
         "b": "A = UVΣ^T",
@@ -123,27 +78,16 @@
         "d": "A = UΣV*"
       },
       "explanations": {
-<<<<<<< HEAD
-        "a": "Explanation 2",
-        "b": "Explanation 2",
-        "c": "In SVD, A is decomposed into U ,Σ(a digonal matrix) and V^T.",
-        "d": "Explanation 2"
-=======
         "a": "Not correct",
         "b": "Not correct",
         "c": "In SVD, A is decomposed into U ,Σ(a diagonal matrix) and V^T.",
         "d": "Not correct"
->>>>>>> bfb9e6c (Dev Files)
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-<<<<<<< HEAD
-      "question": "The result of multiplying [[1, 2], [3, 4]] and [[2, 0], [1, 2]]",
-=======
       "question": "6. The result of multiplying [[1, 2], [3, 4]] and [[2, 0], [1, 2]]",
->>>>>>> bfb9e6c (Dev Files)
       "answers": {
         "a": "[[4, 4], [10, 8]]",
         "b": "[[2, 4], [7, 10]]",
@@ -152,25 +96,15 @@
       },
       "explanations": {
         "a": "Multiplying the matrices results in [[1.2 + 2.1, 1.0 + 2.2], [3.2 + 4.1, 3.0 + 4.2]]=[[4, 4], [10, 8]]",
-<<<<<<< HEAD
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-=======
         "b": "Not correct",
         "c": "Not correct",
         "d": "Not correct"
->>>>>>> bfb9e6c (Dev Files)
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-<<<<<<< HEAD
-      "question": "The result of adding [[1, 2], [3, 4]] and [[2, 0], [1, 2]]",
-=======
       "question": "7. The result of adding [[1, 2], [3, 4]] and [[2, 0], [1, 2]]",
->>>>>>> bfb9e6c (Dev Files)
       "answers": {
         "a": "[[2, 0], [1, 2]]",
         "b": "[[3, 2], [3, 6]]",
@@ -178,15 +112,9 @@
         "d": "[[3, 2], [4, 6]]"
       },
       "explanations": {
-<<<<<<< HEAD
-        "a": "Explanation 2",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-=======
         "a": "Not correct",
         "b": "Not correct",
         "c": "Not correct",
->>>>>>> bfb9e6c (Dev Files)
         "d": "Adding the matrices results in [[1+2, 2+0], [3+1, 4+2]]=[[3, 2], [4, 6]]"
       },
       "correctAnswer": "d",
