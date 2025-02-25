@@ -1,0 +1,1629 @@
+<!DOCTYPE html><html lang="en"><head>
+      <!--Google Tag Manager-->
+      <script class="gtm">
+        var dataLayer = [{
+        'labName': 'Virtual Lab',
+        'discipline': 'Test',
+        'college': 'IITD',
+        'phase': 'Testing',
+        'expName': 'UNDERSTAND VARIOUS MATRIX OPERATIONS, MATRIX DECOMPOSITIONS, FACTORIZATION AND
+    RELATED OPERATIONS',
+        'expShortName': 'various-matrix-operations'
+        }];
+    
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5NMQ9NQ');
+      </script>
+      <!--End Google Tag Manager-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    
+    	<meta name="experiment-short-name" content="various-matrix-operations">
+    	<meta name="developer-institute" content="IITD">
+    	<meta name="learning-unit" content="UNDERSTAND VARIOUS MATRIX OPERATIONS, MATRIX DECOMPOSITIONS, FACTORIZATION AND
+    RELATED OPERATIONS">
+    	<meta name="task-name" content="Theory">
+    
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#4076e0">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#4076e0">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4076e0">
+    <title>Virtual Labs</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" integrity="sha512-Oy18vBnbSJkXTndr2n6lDMO5NN31UljR8e/ICzVPrGpSud4Gkckb8yUpqhKuUNoE+o9gAb4O/rAxxw1ojyUVzg==" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/github-markdown.min.css">
+    <link rel="stylesheet" href="./assets/css/vlabs-style.css">
+    <link rel="stylesheet" href="./assets/css/toast.css">
+    <link rel="stylesheet" href="./assets/katex_assets/katex.min.css">
+    
+    <script src="./assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      h1 {
+      font-size: 1.8rem;
+      }
+      h2 {
+      font-size: 1.4rem;
+      }
+      h3 {
+      font-size: 1.2rem;
+      }
+
+      h2, h3 {
+      font-weight: 800;
+      }
+    </style>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"></head>
+  <body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
+      <!--Google Tag Manager (noscript)-->
+      <noscript class="gtm">
+        <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5NMQ9NQ" style="display:none;visibility:hidden" width="0">
+        </iframe>
+      </noscript>
+      <!--End Google Tag Manager (noscript)-->
+  
+      <header class="vlabs-header sticky-top bg-white">
+        <nav class="p-0 navbar navbar-light d-flex align-items-stretch">
+          
+          <button class="navbar-toggler px-4" type="button" onclick="toggle()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="d-flex justify-content-center">        
+            <a href="https://vlab.co.in" class="navbar-brand">
+              <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+            </a>
+          </div>
+          
+          <div id="headerNavbar" class="d-none border-top flex-grow-1 d-lg-flex align-items-center justify-content-end">
+            <div class="svc-rating-display">
+                <rating-display spreadsheetid="1x12nhpp0QvnsA6x-O1sV4IA9SAbfVsq_wiexWkutOmU" sheetname="Experiment-Database" columnname="Experiment Short Name" columnvalue="various-matrix-operations" imagesdirectory="/plugins/svc-rating/images/">
+                </rating-display>
+            </div>      <div class="svc-rating-submit">
+                <rating-submit title="Rate" this="" experiment="">
+                </rating-submit>
+            </div>      <bug-report id="bug-report" title="[BUG REPORT] UNDERSTAND VARIOUS MATRIX OPERATIONS, MATRIX DECOMPOSITIONS, FACTORIZATION AND
+      RELATED OPERATIONS" page-type="text" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;IITD&quot;,&quot;expname&quot;:&quot;UNDERSTAND VARIOUS MATRIX OPERATIONS, MATRIX DECOMPOSITIONS, FACTORIZATION AND\nRELATED OPERATIONS&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" button_style="border: none; color: #fff; background-color: #288ec8; text-align: center; font-size: 1.05rem; border-radius: 1em;padding: 0.6em 1.2em; margin: 0 10px" position="override" custom_button_class="v-button"></bug-report>
+          </div>
+        </nav>
+      </header>
+      <div class="container-fluid flex-fill d-flex flex-column vlabs-page-main">
+        <div class="row d-flex justify-content-between">
+          <div class="flex-column">
+          <div class="row py-4 px-4 breadcrumbs">
+          	<div class="title is-4 tools">Tools</div>
+          	<span class="mx-2">
+          		<i aria-hidden="true" class="fa fa-angle-right"></i>
+          	</span>
+          	<a href="performance-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Performance Tool</button>
+          	</a>
+          	<a href="validator-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Validation Tool</button>
+          	</a>
+          </div>
+          </div>
+        </div>
+        <div class="row flex-grow-1 d-flex flex-nowrap flex-column flex-lg-row">
+          <div class="modal fade popupmenu" id="popupMenu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">
+                              <a href="https://vlab.co.in" class="navbar-brand">
+                                  <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+                              </a>
+                          </h5>
+                          <button type="button" class="btn-close align-self-center" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body nav-menu">
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="index.html" class="p-2 ">
+                                      Aim
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="theory.html" class="p-2  current-item ">
+                                      Theory
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="pretest.html" class="p-2 ">
+                                      Pretest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="procedure.html" class="p-2 ">
+                                      Procedure
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="simulation.html" class="p-2 ">
+                                      Simulation
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="posttest.html" class="p-2 ">
+                                      Posttest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="references.html" class="p-2 ">
+                                      References
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="feedback.html" class="p-2 ">
+                                      Feedback
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="nav flex-column sidebar nav-menu flex-shrink-0 px-lg-4 align-items-center align-items-lg-start hidden d-none d-lg-flex" id="menu">
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="index.html" class="p-2 ">
+                        Aim
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="theory.html" class="p-2  current-item ">
+                        Theory
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="pretest.html" class="p-2 ">
+                        Pretest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="procedure.html" class="p-2 ">
+                        Procedure
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="simulation.html" class="p-2 ">
+                        Simulation
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="posttest.html" class="p-2 ">
+                        Posttest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="references.html" class="p-2 ">
+                        References
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="feedback.html" class="p-2 ">
+                        Feedback
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+          </div>          <div class="vlabs-page-content px-5 pb-4 flex-grow-1 markdown-body">
+            <div class="text-center fix-spacing">
+              <h2 id="understand-various-matrix-operations-matrix-decompositions-factorization-and-related-operations">Understand various matrix operations, matrix decompositions, factorization and related operations</h2>
+          
+            </div>
+              
+          
+          
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+          
+          
+                <div class="px-6 pb-6 flex-1">
+                  <div class="w-full text-[#007bff] font-normal text-[19.2px]" style="font-family: Raleway, sans-serif"><p>In signal processing, basic matrices play crucial roles in various operations, forming the backbone of many algorithms and techniques. The identity matrix, a specific type of diagonal matrix, serves as a neutral element in matrix multiplication, crucial for preserving original signal values during transformations. Diagonal matrices streamline computations by allowing for independent scaling of signal components. Singular Value Decomposition (SVD) is a powerful tool in signal processing, extensively applied in noise reduction, data compression, and system identification. Matrix multiplication is fundamental in filtering, convolution, and applying linear transformations to signals, with convolution matrices specifically used to represent the effect of filters or kernels on signals.</p>
+                  <p>The Fourier matrix is essential for converting signals between time and frequency domains in signal processing. Transposition is used in forming cross-correlation matrices and working with orthogonal bases, like in PCA. Determinants help analyze system stability and calculate volumes in multivariate Gaussian distributions, while eigenvalue decomposition simplifies the representation of systems and signal energy distribution.</p>
+                  <p>LU decomposition is essential for solving linear equations, inverting matrices, and computing determinants. In signal processing, linear equations are crucial for various tasks, including filter design, system identification, and signal reconstruction. They are used to model and solve problems such as noise reduction, linear filtering, and Fourier transforms. Linear systems also underpin techniques like Principal Component Analysis (PCA) and Kalman filtering for estimation and prediction. Essentially, they provide the mathematical framework for manipulating and analyzing signals efficiently.</p>
+                  <p>Row echelon form is a fundamental tool in linear algebra that supports various signal processing applications by simplifying the analysis and solution of linear systems, determining matrix rank, etc.</p>
+                  <p>These foundational matrices enable efficient computation, representation, and manipulation of signals, serving as the building blocks for more complex signal processing tasks.</p>
+                  </div></div>
+          <br><br>
+          <p>
+                          <strong>Properties of Matrix Operations</strong><a></a>
+                      </p>
+                      <p>
+                          <strong>Properties</strong><strong>&nbsp;</strong><strong>of Addition</strong>
+                      </p>
+                      <p>
+                          The basic properties of addition for real numbers also hold true for matrices.&nbsp;
+                      </p>
+                      <p>
+                          Let&nbsp;A,&nbsp;B&nbsp;and&nbsp;C&nbsp;be&nbsp;m x n&nbsp;matrices
+                      </p>
+                      <ol>
+                          <li>
+                              A + B&nbsp; =&nbsp; B + A&nbsp;&nbsp;&nbsp;&nbsp;commutative
+                          </li>
+                          <li>
+                              A + (B + C)&nbsp; =&nbsp; (A + B) + C&nbsp;&nbsp;&nbsp;&nbsp;associative
+                          </li>
+                          <li>
+                              There is a unique&nbsp;m x n&nbsp;matrix&nbsp;O&nbsp;with&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A + O&nbsp; =&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;additive identity
+                          </li>
+                          <li>
+                              For any&nbsp;&nbsp;m x n&nbsp;matrix&nbsp;A&nbsp;there is an&nbsp;m x n&nbsp;matrix&nbsp;B&nbsp;(called&nbsp;-A) with&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A + B&nbsp; =&nbsp; O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;additive inverse
+                          </li>
+                      </ol>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Properties of Matrix</strong><strong>&nbsp;</strong><a><strong>Multiplication</strong></a>
+                      </p>
+                      <p>
+                          Unlike matrix addition, the properties of multiplication of real numbers do not all generalize to matrices.&nbsp; Matrices rarely commute even if&nbsp;AB&nbsp;and&nbsp;BA&nbsp;are both defined.&nbsp; There often is no multiplicative inverse of a matrix, even if the matrix is a square matrix.&nbsp; There are a few properties of multiplication of real numbers that generalize to matrices.&nbsp; We state them now.
+                      </p>
+                      <p>
+                          Let&nbsp;A,&nbsp;B&nbsp;and&nbsp;C&nbsp;be matrices of dimensions such that the following are defined.&nbsp; Then
+                      </p>
+                      <ol>
+                          <li>
+                              A(BC)&nbsp; =&nbsp; (AB)C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; associative
+                          </li>
+                          <li>
+                              A(B + C)&nbsp; =&nbsp; AB + AC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;distributive
+                          </li>
+                          <li>
+                              (A + B)C&nbsp; =&nbsp; AC + BC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;distributive
+                          </li>
+                          <li>
+                              There are unique matrices&nbsp;I<sub>m</sub>&nbsp;and&nbsp;I<sub>n</sub>&nbsp;with&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I<sub>m</sub>&nbsp;A&nbsp; =&nbsp; A I<sub>n</sub>&nbsp; =&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;multiplicative identity
+                          </li>
+                      </ol>
+                      <p>
+                          <strong>&nbsp;</strong>
+                      </p>
+                      <p>
+                          <strong>Properties of</strong><strong>&nbsp;</strong><a><strong>Scalar</strong></a><strong>&nbsp;</strong><strong>Multiplication</strong>
+                      </p>
+                      <p>
+                          Since we can multiply a matrix by a scalar, we can investigate the properties that this multiplication has.&nbsp; All of the properties of multiplication of real numbers generalize.&nbsp; In particular, we have
+                      </p>
+                      <p>
+                          Let&nbsp;r&nbsp;and&nbsp;s&nbsp;be real numbers and&nbsp;A&nbsp;and&nbsp;B&nbsp;be matrices.&nbsp; Then
+                      </p>
+                      <ol>
+                          <li>
+                              r(sA)&nbsp; =&nbsp; (rs)A&nbsp;
+                          </li>
+                          <li>
+                              (r + s)A&nbsp; =&nbsp; rA + sA
+                          </li>
+                          <li>
+                              r(A + B)&nbsp; =&nbsp; rA + rB
+                          </li>
+                          <li>
+                              A(rB)&nbsp; =&nbsp; r(AB)&nbsp; =&nbsp; (rA)B
+                          </li>
+                      </ol>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Properties of the</strong><strong>&nbsp;</strong><a><strong>Transpose</strong></a><strong>&nbsp;</strong><strong>of a Matrix</strong>
+                      </p>
+                      <p>
+                          Recall that the transpose of a matrix is the operation of switching rows and columns.&nbsp; We state the following properties.&nbsp; We proved the first property in the last section.
+                      </p>
+                      <p>
+                          Let&nbsp;r&nbsp;be a real number and&nbsp;A&nbsp;and&nbsp;B&nbsp;be matrices.&nbsp; Then
+                      </p>
+                      <ol>
+                          <li>
+                              (A<sup>T</sup>)<sup>T</sup>&nbsp; =&nbsp; A
+                          </li>
+                          <li>
+                              (A + B)<sup>T</sup>&nbsp; =&nbsp; A<sup>T</sup>&nbsp;+ B<sup>T</sup>
+                          </li>
+                          <li>
+                              (AB)<sup>T</sup>&nbsp; =&nbsp; B<sup>T</sup>A<sup>T</sup>
+                          </li>
+                          <li>
+                              (rA)<sup>T</sup>&nbsp; =&nbsp; rA<sup>T</sup>
+                          </li>
+                      </ol>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Properties of Determinants</strong>
+                      </p>
+                      <ol>
+                          <li>
+                              det(A) = &nbsp;det(AT)
+                          </li>
+                          <li>
+                              If any row or column of a determinant, is multiplied by any scalar value, that is, a non-zero constant, the entire determinant gets multiplied by the same scalar, that is, if any row or column is multiplied by constant k, the determinant value gets multiplied by k.
+                          </li>
+                      </ol>
+                      <p>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; det(Δ’) = k det(Δ)
+                      </p>
+                      <ol start="3">
+                          <li>
+                              If all elements of any column or row are zero, then the determinant is zero
+                          </li>
+                          <li>
+                              If all the elements in the determinant above or below the diagonal are zero, then the determinant is a product of diagonal elements
+                          </li>
+                      </ol>
+                      <p>
+                          <strong>&nbsp;</strong>
+                      </p>
+                      <p>
+                          <strong>Minor, Co-factor, Adjoint, Inverse</strong>
+                      </p>
+                      <p>
+                          [A]<sub>(i x k) </sub><strong>.</strong> [B]<sub>(k x j)</sub>
+                      </p>
+                      <p>
+                          =<img src="1739254504_matrix-theory/1739254504_matrix-theory-1.png" width="226" height="68" alt="">
+                      </p>
+                      <p>
+                          =<img src="1739254504_matrix-theory/1739254504_matrix-theory-2.png" width="110" height="68" alt=""> = [C]<sub>ij</sub>
+                      </p>
+                      <p>
+                          Where, c<sub>ij</sub> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-3.png" width="19" height="21" alt=""> a<sub>ik</sub>b<sub>kj</sub>
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          C<sup>T</sup> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-4.png" width="110" height="68" alt=""> = [C]<sub>ji</sub>
+                      </p>
+                      <p>
+                          Where, C<sup>T </sup>is transpose of matrix C
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>1. a.)</strong>
+                      </p>
+                      <p>
+                          <strong>(A.B)</strong><strong><sup>T</sup></strong><strong> = B</strong><strong><sup>T</sup></strong><strong>.A</strong><strong><sup>T</sup></strong>
+                      </p>
+                      <p>
+                          (A.B)<sup>T</sup><sub>ij </sub>
+                      </p>
+                      <p>
+                          = (A.B)<sub>ji</sub>
+                      </p>
+                      <p>
+                          = a<sub>jk</sub>b<sub>ki</sub>
+                      </p>
+                      <p>
+                          = b<sub>ki</sub>a<sub>jk</sub>
+                      </p>
+                      <p>
+                          = (b<sup>T </sup>)<sub>ik </sub>(a<sup>T</sup>)<sub>kj</sub>
+                      </p>
+                      <p>
+                          = (B<sup>T</sup>A<sup>T</sup>)<sub>ij</sub>
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>(1. b.)</strong>
+                      </p>
+                      <p>
+                          <strong>B</strong><strong><sup>T</sup></strong><strong>.A</strong><strong><sup>T </sup></strong><strong>= (A.B)</strong><strong><sup>T</sup></strong>
+                      </p>
+                      <p>
+                          &nbsp;(B<sup>T</sup>A<sup>T</sup>)<sub>ij</sub>
+                      </p>
+                      <p>
+                          = (b<sup>T</sup>)<sub>ik</sub><sub>&nbsp; </sub><sub>.</sub><sub>&nbsp; </sub>(a<sup>T</sup>)<sub>kj</sub>
+                      </p>
+                      <p>
+                          = (b)<sub>ki</sub><sub>&nbsp; </sub><sub>.</sub><sub>&nbsp; </sub>(a)<sub>jk</sub>
+                      </p>
+                      <p>
+                          = (a)<sub>jk</sub> . (b)<sub>ki</sub><sub>&nbsp;&nbsp;&nbsp; </sub>
+                      </p>
+                      <p>
+                          = (AB)<sub>ji</sub>
+                      </p>
+                      <p>
+                          = (AB)<sup>T</sup><sub>ij</sub>
+                      </p>
+                      <p>
+                          <sub>&nbsp;</sub>
+                      </p>
+                      <p>
+                          Cofactor Matrix of a matrix A
+                      </p>
+                      <p>
+                          [CO<sub>ij</sub>] =&nbsp; (-1)<sup>(i+j) </sup>*<img src="1739254504_matrix-theory/1739254504_matrix-theory-5.png" width="123" height="68" alt="">
+                      </p>
+                      <p>
+                          Where, <img src="1739254504_matrix-theory/1739254504_matrix-theory-6.png" width="274" height="68" alt="">
+                      </p>
+                      <p>
+                          M<sub>ij </sub>is the entry in the i<sup>th</sup> row and j<sup>th</sup> column
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          Adjoint of a matrix, A
+                      </p>
+                      <p>
+                          Adj(A) = [CO<sub>ij</sub>]<sup>T</sup>
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          Now, the inverse of the matrix A
+                      </p>
+                      <p>
+                          A<sup>-1</sup> = Adj(A) / det(A)
+                      </p>
+                      <p>
+                          Where ‘det’ denotes the determinant
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>2. (AB)</strong><strong><sup>−1</sup></strong><strong>=B</strong><strong><sup>−1</sup></strong><strong>A</strong><strong><sup>−1</sup></strong>
+                      </p>
+                      <p>
+                          If A and B are invertible matrices or Both A and B are <strong>n X n</strong> square matrices and determinants are not zeroes then
+                      </p>
+                      <p>
+                          (AB)(AB)<sup>-1 </sup>= I 
+                      </p>
+                      <p>
+                          Where I is the identity matrix of size <strong>n X n</strong>
+                      </p>
+                      <p>
+                          &nbsp;Pre-multiply by A<sup>-1</sup>
+                      </p>
+                      <p>
+                          (A<sup>-1 </sup>). (AB)(AB)<sup>-1</sup> = A<sup>-1</sup>I
+                      </p>
+                      <p>
+                          Or, I.(B).(AB)<sup>-1</sup> = A<sup>-1</sup>
+                      </p>
+                      <p>
+                          Or,&nbsp; (B).(AB)<sup>-1 </sup>= A<sup>-1</sup>
+                      </p>
+                      <p>
+                          <sup>&nbsp;</sup>
+                      </p>
+                      <p>
+                          Pre-multiply by B<sup>-1</sup>
+                      </p>
+                      <p>
+                          (B<sup>-1 </sup>). (B).(AB)<sup>-1 </sup>= B<sup>-1</sup>A<sup>-1</sup>
+                      </p>
+                      <p>
+                          Or, I(AB)<sup>-1 </sup>= B<sup>-1</sup>A<sup>-1</sup>
+                      </p>
+                      <p>
+                          Or, (AB)<sup>-1 </sup>= B<sup>-1</sup>A<sup>-1</sup>
+                      </p>
+                      <p>
+                          <strong>&nbsp;</strong>
+                      </p>
+                      <p>
+                          <strong>3. Adj(A . B) = Adj(B) . Adj(A)</strong>
+                      </p>
+                      <p>
+                          (AB)<sup>−1</sup>=adj(AB)/det(AB)
+                      </p>
+                      <p>
+                          Or, adj(AB) = (AB)<sup>−1</sup>⋅det(AB)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . . . (1)
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          It is also known that, (AB)<sup>−1</sup>=B<sup>-1</sup>A<sup>−1</sup>
+                      </p>
+                      <p>
+                          And, det(AB)=det(A)⋅det(B)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . . . (2)
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          Also
+                      </p>
+                      <p>
+                          A<sup>−1</sup>=adj(A)/det(A) 
+                      </p>
+                      <p>
+                          B<sup>−1</sup>=adj(B)/det(B)
+                      </p>
+                      <p>
+                          Or, adj(A)=A<sup>-1</sup>det(A) 
+                      </p>
+                      <p>
+                          Or, adj(B)=B<sup>−1</sup>det(B)
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          adj(B)⋅adj(A)=detA⋅detB⋅B<sup>−1</sup>⋅A<sup>−1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . . . (3)
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          Putting (2) in equation (1)
+                      </p>
+                      <p>
+                          adj(AB)=det(A)⋅det(B)⋅B<sup>−1</sup>⋅A<sup>−1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . . . (4)
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          From (3) and (4)
+                      </p>
+                      <p>
+                          adj(AB)=adj(B)⋅adj(A)
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Eigenvalue and Eigenvector</strong>
+                      </p>
+                      <p>
+                          Let’s assume a square matrix <strong>A</strong>
+                      </p>
+                      <p>
+                          The characteristic equation,
+                      </p>
+                      <p>
+                          <strong>| A – </strong>λ*<strong>I | = </strong>0&nbsp;&nbsp; 
+                      </p>
+                      <p>
+                          <em>(where </em><strong><em>I </em></strong><em>is an identity matrix)</em>
+                      </p>
+                      <p>
+                          After calculating the values of λs we attempt to find eigenvectors for corresponding eigenvalues like this
+                      </p>
+                      <p>
+                          For eigenvalue, λ = λ<sub>1</sub>
+                      </p>
+                      <p>
+                          <strong>A*x</strong> = λ<sub>1</sub>*<strong>I*x</strong><strong>&nbsp;&nbsp; </strong><em>(where, </em><strong><em>x</em></strong><em> is an unknown vector)</em>
+                      </p>
+                      <p>
+                          Or, (<strong>A</strong> - λ<sub>1</sub>*<strong>I</strong>)*<strong>x</strong> = 0
+                      </p>
+                      <p>
+                          The value of <strong>x </strong>is the corresponding eigenvector of λ<sub>1</sub>
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Power Method for Dominant Eigenvalue</strong>
+                      </p>
+                      <p>
+                          Let λ<sub>1</sub>, λ<sub>2</sub>, λ<sub>3</sub>, and λ<sub>n</sub> be the eigenvalues of an <strong>n X n </strong>matrix <strong>A</strong>.&nbsp; λ<sub>1 </sub>is called the dominant eigenvalue of <strong>A</strong> if
+                      </p>
+                      <p>
+                          | λ<sub>1</sub>| &gt; | λ<sub>i </sub>|,&nbsp;&nbsp; <em>i = 2, 3, ... , n</em>
+                      </p>
+                      <p>
+                          The eigenvectors corresponding to λ<sub>1 </sub>are called dominant eigenvectors of <strong>A</strong>.
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Procedure</strong>
+                      </p>
+                      <ol>
+                          <li>
+                              Choose an <strong>n X n </strong>matrix
+                          </li>
+                      </ol>
+                      <p>
+                          <strong><em>The number of rows and columns should be the same (or matrix dimension mismatched)</em></strong>
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <ol start="2">
+                          <li>
+                              Like the Jacobi and Gauss-Seidel methods, the power method for approximating eigenvalues is iterative. First, we assume that matrix <strong>A</strong> has a dominant eigenvalue with corresponding dominant eigenvectors. Then we choose an initial approximation <strong>x</strong><strong><sub>0</sub></strong> of one of the
+                          </li>
+                      </ol>
+                      <p>
+                          dominant eigenvectors of <strong>A</strong>. This initial approximation must be a nonzero vector in R<em><sup>n </sup></em>
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          Finally, we form the sequence given by
+                      </p>
+                      <p>
+                          <strong>x</strong><strong><sub>1</sub></strong><strong> = Ax</strong><strong><sub>0</sub></strong>
+                      </p>
+                      <p>
+                          <strong>x</strong><strong><sub>2</sub></strong><strong> = Ax</strong><strong><sub>1 </sub></strong><strong>= A(Ax</strong><strong><sub>0</sub></strong><strong>) = A</strong><strong><sup>2</sup></strong><strong>x</strong><strong><sub>0</sub></strong>
+                      </p>
+                      <p>
+                          <strong>x</strong><strong><sub>3</sub></strong><strong> = Ax</strong><strong><sub>2 </sub></strong><strong>= A(A</strong><strong><sup>2</sup></strong><strong>x</strong><strong><sub>0</sub></strong><strong>) = A</strong><strong><sup>3</sup></strong><strong>x</strong><strong><sub>0</sub></strong>
+                      </p>
+                      <p>
+                          <strong><sub>. . .</sub></strong>
+                      </p>
+                      <p>
+                          <strong>x</strong><strong><sub>n</sub></strong><strong> = Ax</strong><strong><sub>n-1 </sub></strong><strong>= A(A</strong><strong><sup>n-1</sup></strong><strong>x</strong><strong><sub>0</sub></strong><strong>) = A</strong><strong><sup>n</sup></strong><strong>x</strong><strong><sub>0</sub></strong>
+                      </p>
+                      <p>
+                          <em>(In the above, </em><strong><em>x</em></strong><strong><em><sub>1 </sub></em></strong><em>denotes</em><strong><em> </em></strong><em>the</em><strong><em> </em></strong><em>value of vector </em><strong><em>x </em></strong><em>at the first iteration and so on)</em>
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          Compare the updated value of <strong>x </strong>with its previous value (obtained from the previous iteration)
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          For large powers of k, and by properly scaling this sequence, we will see that we obtain a good approximation of the dominant eigenvector of <strong>A</strong>. 
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <ol start="3">
+                          <li>
+                              Repeat the iteration process until convergence
+                          </li>
+                      </ol>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <ol start="4">
+                          <li>
+                              The formula for finding the corresponding eigenvalue from eigenvector x.
+                          </li>
+                      </ol>
+                      <p>
+                          If <strong>x </strong>is an eigenvector of <strong>A</strong>, then its corresponding eigenvalue is given by 
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          λ = (<strong>Ax.x / x.x</strong>)
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <ol start="5">
+                          <li>
+                              If they do not converge even after many iterations (maybe after 1000 iterations), then
+                          </li>
+                      </ol>
+                      <p>
+                          <strong><em>Entered matrix has no dominant eigenvalue</em></strong>
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Example</strong>
+                      </p>
+                      <p>
+                          A = <img src="1739254504_matrix-theory/1739254504_matrix-theory-7.png" width="82" height="42" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          We begin with an initial nonzero approximation of
+                      </p>
+                      <p>
+                          <strong>x</strong><strong><sub>0</sub></strong> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-8.png" width="24" height="42" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          We then obtain the following approximations
+                      </p>
+                      <p>
+                          <strong>x</strong><strong><sub>1</sub></strong><strong> = Ax</strong><strong><sub>0 </sub></strong><strong>= </strong><img src="1739254504_matrix-theory/1739254504_matrix-theory-9.png" width="106" height="42" alt=""> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-10.png" width="53" height="42" alt=""> = -4<img src="1739254504_matrix-theory/1739254504_matrix-theory-11.png" width="49" height="42" alt="">
+                      </p>
+                      <p>
+                          <strong>&nbsp;</strong>
+                      </p>
+                      <p>
+                          <strong>x</strong><strong><sub>2</sub></strong><strong> = Ax</strong><strong><sub>1 </sub></strong><strong>= </strong><img src="1739254504_matrix-theory/1739254504_matrix-theory-12.png" width="134" height="42" alt=""> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-13.png" width="35" height="42" alt=""> = 10<img src="1739254504_matrix-theory/1739254504_matrix-theory-14.png" width="49" height="42" alt="">
+                      </p>
+                      <p>
+                          <strong>x</strong><strong><sub>3</sub></strong><strong> = Ax</strong><strong><sub>2 </sub></strong><strong>= </strong><img src="1739254504_matrix-theory/1739254504_matrix-theory-15.png" width="116" height="42" alt=""> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-16.png" width="53" height="42" alt=""> = -22<img src="1739254504_matrix-theory/1739254504_matrix-theory-17.png" width="49" height="42" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>x</strong><strong><sub>4</sub></strong><strong> = Ax</strong><strong><sub>3 </sub></strong><strong>= </strong><img src="1739254504_matrix-theory/1739254504_matrix-theory-18.png" width="134" height="42" alt=""> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-19.png" width="45" height="42" alt=""> = 46<img src="1739254504_matrix-theory/1739254504_matrix-theory-20.png" width="49" height="42" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>x</strong><strong><sub>5</sub></strong><strong> = Ax</strong><strong><sub>4 </sub></strong><strong>= </strong><img src="1739254504_matrix-theory/1739254504_matrix-theory-21.png" width="127" height="42" alt=""> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-22.png" width="63" height="42" alt=""> = -94<img src="1739254504_matrix-theory/1739254504_matrix-theory-23.png" width="49" height="42" alt="">
+                      </p>
+                      <p>
+                          <strong>x</strong><strong><sub>6</sub></strong><strong> = Ax</strong><strong><sub>5 </sub></strong><strong>= </strong><img src="1739254504_matrix-theory/1739254504_matrix-theory-24.png" width="145" height="42" alt=""> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-25.png" width="45" height="42" alt=""> = 190<img src="1739254504_matrix-theory/1739254504_matrix-theory-26.png" width="49" height="42" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          Note that the approximations in Example appear to be approaching scalar multiples of <img src="1739254504_matrix-theory/1739254504_matrix-theory-27.png" width="24" height="42" alt="">
+                      </p>
+                      <p>
+                          So, the obtained dominant eigenvector from the above iterations is
+                      </p>
+                      <p>
+                          <strong>x</strong> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-27.png" width="24" height="42" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          Now, we’ll find the corresponding eigenvalue from the obtained eigenvector
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Formula</strong>
+                      </p>
+                      <p>
+                          If <strong>x </strong>is an eigenvector of <strong>A</strong>, then its corresponding eigenvalue is given by 
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          λ = (<strong>Ax.x / x.x</strong>)
+                      </p>
+                      <p>
+                          <strong>Ax </strong>= <img src="1739254504_matrix-theory/1739254504_matrix-theory-28.png" width="130" height="42" alt=""> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-29.png" width="67" height="42" alt="">
+                      </p>
+                      <p>
+                          Then, <strong>Ax.x = </strong><img src="1739254504_matrix-theory/1739254504_matrix-theory-30.png" width="116" height="42" alt=""> = -20.0 (approx.)
+                      </p>
+                      <p>
+                          And <strong>x.x </strong>= <img src="1739254504_matrix-theory/1739254504_matrix-theory-31.png" width="97" height="42" alt=""> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-26.png" width="49" height="42" alt=""> = 9.94 (approx.)
+                      </p>
+                      <p>
+                          So, the corresponding eigenvalue, λ = (-20.0 / 9.94) = -2 (approx.)
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Singular Value Decomposition (SVD)</strong>
+                      </p>
+                      <p>
+                          <strong>Theory:</strong>
+                      </p>
+                      <p>
+                          Singular Value Decomposition (SVD) is a matrix factorization technique that decomposes any m×n matrix A into three matrices: A=UΣV<sup>T</sup> 
+                      </p>
+                      <p>
+                          Where:
+                      </p>
+                      <ul>
+                          <li>
+                              U is an m×m orthogonal matrix (or unitary if complex).
+                          </li>
+                          <li>
+                              Σ is m×n diagonal matrix with non-negative real numbers on the diagonal (singular values).
+                          </li>
+                          <li>
+                              V<sup>T</sup> is an n×n orthogonal matrix (or unitary if complex), and V<sup>T</sup> is the transpose of V.
+                          </li>
+                      </ul>
+                      <p>
+                          <strong>Example</strong>
+                      </p>
+                      <p>
+                          A = <img src="1739254504_matrix-theory/1739254504_matrix-theory-32.png" width="53" height="42" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          Compute A<sup>T</sup>A and AA<sup>T</sup>
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          A<sup>T</sup>A = <img src="1739254504_matrix-theory/1739254504_matrix-theory-33.png" width="111" height="42" alt=""> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-34.png" width="74" height="42" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          AA<sup>T</sup> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-35.png" width="111" height="42" alt=""> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-36.png" width="74" height="42" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Find Eigenvalues and Eigenvectors</strong>:
+                      </p>
+                      <p>
+                          For A<sup>T</sup>A:
+                      </p>
+                      <ul>
+                          <li>
+                              Eigenvalues are λ1= 29.8661 and λ2 = 0.1339
+                          </li>
+                          <li>
+                              Corresponding eigenvectors (normalized) are v1 = <img src="1739254504_matrix-theory/1739254504_matrix-theory-37.png" width="92" height="42" alt="">and v2 = <img src="1739254504_matrix-theory/1739254504_matrix-theory-38.png" width="88" height="42" alt="">
+                          </li>
+                      </ul>
+                      <p>
+                          For AA<sup>T</sup>:
+                      </p>
+                      <ul>
+                          <li>
+                              Eigenvalues are λ1= 29.8661 and λ2 = 0.1339
+                          </li>
+                          <li>
+                              Corresponding eigenvectors (normalized) are u1 = <img src="1739254504_matrix-theory/1739254504_matrix-theory-39.png" width="92" height="42" alt="">and u2 = <img src="1739254504_matrix-theory/1739254504_matrix-theory-40.png" width="88" height="42" alt="">
+                          </li>
+                      </ul>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Compute Singular Values</strong>:
+                      </p>
+                      <p>
+                          Singular values are σ1 = √ 29.8661= 5.4650
+                      </p>
+                      <p>
+                          And σ1 = √ 0.1339 = 0.3660
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Final SVD:</strong>
+                      </p>
+                      <p>
+                          A=UΣV<sup>T</sup>
+                      </p>
+                      <p>
+                          Where: 
+                      </p>
+                      <p>
+                          U = <img src="1739254504_matrix-theory/1739254504_matrix-theory-41.png" width="185" height="42" alt="">&nbsp; Σ = <img src="1739254504_matrix-theory/1739254504_matrix-theory-42.png" width="149" height="42" alt="">&nbsp; 
+                      </p>
+                      <p>
+                          V<sup>T</sup> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-43.png" width="180" height="42" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>LU Decomposition</strong>
+                      </p>
+                      <p>
+                          LU Decomposition is a method to find solutions of linear equations.
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          Using Gauss Elimination Method 
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          Consider a matrix&nbsp;𝐴. If all entries below the diagonal entries are zero, then the matrix is called “upper triangular.” If all entries above the diagonal entries are zero, then the matrix is called “lower triangular.” 
+                      </p>
+                      <p>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; And <strong>A = L*U</strong>
+                      </p>
+                      <p>
+                          <strong>L</strong> =<img src="1739254504_matrix-theory/1739254504_matrix-theory-44.png" width="201" height="79" alt="">&nbsp; ;&nbsp;&nbsp; <strong>U</strong> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-45.png" width="178" height="79" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong><em>L= lower triangular matrix; U= upper triangular matrix</em></strong>
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Procedure-</strong>
+                      </p>
+                      <ol>
+                          <li>
+                              Choose a matrix (<strong>m X n) </strong>(e.g., 3X 3, 3 X 4, 4 X 4, etc.,)
+                          </li>
+                      </ol>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <ol start="2">
+                          <li>
+                              Initialize the <strong>L</strong> and <strong>U </strong>matrices. For L matrix, take a matrix with all diagonal elements assigned to 1, and the remaining components are zero. L matrix size will be (<strong>m X m</strong>). 
+                          </li>
+                      </ol>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <ol start="3">
+                          <li>
+                              Consider the <strong>U</strong> matrix's elements to be same to those of the <strong>A</strong> matrix. So, size of matrix <strong>U </strong>will be as same as matrix<strong> A</strong>.
+                          </li>
+                      </ol>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <ol start="4">
+                          <li>
+                              4. Next, execute row operations on the <strong>U</strong> matrix to make sure that all of the components below the diagonal are zeroes. For instance, to make an element in row 2 or R2 at the (i,j)th position zero, we would first do 
+                          </li>
+                      </ol>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          "R2 - (-2)*R1" 
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          and then set the value ‘(-2)’ at the (i,j)th place of the L Matrix.
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <ol start="5">
+                          <li>
+                              For a given matrix
+                          </li>
+                      </ol>
+                      <p>
+                          <strong>A</strong> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-46.png" width="186" height="79" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>A=L*U</strong>
+                      </p>
+                      <p>
+                          Or, <strong>A</strong>=<img src="1739254504_matrix-theory/1739254504_matrix-theory-47.png" width="117" height="79" alt="">* <img src="1739254504_matrix-theory/1739254504_matrix-theory-46.png" width="186" height="79" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong><em>L= lower triangular matrix; U= upper triangular matrix</em></strong>
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          After doing the row&nbsp;operation "R2 - (-2)*R1," we get,
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          Or, <strong>A</strong> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-48.png" width="135" height="79" alt="">* <img src="1739254504_matrix-theory/1739254504_matrix-theory-49.png" width="142" height="79" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          After row operation in matrix <strong>U</strong>, we've set (-2) to the same place of the<strong> L</strong> matrix and the (2, 1)<sup>th</sup> position of the U matrix, which is now zero.
+                      </p>
+                      <p>
+                          Firstly, try the first column elements of matrix <strong>U</strong> below diagonal elements to make zeroes,
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          After doing,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘R2-(-2)*R1’ <em>(as demonstrated above)</em>
+                      </p>
+                      <p>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘R3-(3)*R1’ and
+                      </p>
+                      <p>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘R4-(2)*R1’
+                      </p>
+                      <p>
+                          We get,
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>A</strong> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-50.png" width="135" height="79" alt="">* <img src="1739254504_matrix-theory/1739254504_matrix-theory-51.png" width="167" height="79" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          In a same way, we will now employ row operations to set the elements of the second column of matrix <strong>U</strong> to zero.
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          Calculate,&nbsp;&nbsp;&nbsp; ‘R3-(-4)*R2’ and
+                      </p>
+                      <p>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘R4-(1)*R2’
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          We get,
+                      </p>
+                      <p>
+                          <strong>A</strong> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-52.png" width="153" height="79" alt="">* <img src="1739254504_matrix-theory/1739254504_matrix-theory-53.png" width="149" height="79" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          Now, we'll apply row operations to convert the elements of the third column of matrix <strong>U</strong> to zeroes.
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          Now calculate "R4-(3)*R2"
+                      </p>
+                      <p>
+                          We get,
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>A</strong> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-54.png" width="153" height="79" alt="">* <img src="1739254504_matrix-theory/1739254504_matrix-theory-55.png" width="149" height="79" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          So, 
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>L</strong> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-54.png" width="153" height="79" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>U</strong> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-55.png" width="149" height="79" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <ol start="6">
+                          <li>
+                              <strong>Before showing the final result, all intermediate steps must be displayed.</strong>
+                          </li>
+                      </ol>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Row Echelon Form</strong>
+                      </p>
+                      <p>
+                          A matrix is in row echelon form if
+                      </p>
+                      <ul>
+                          <li>
+                              All rows consisting of only zeroes are at the bottom.
+                          </li>
+                          <li>
+                              The leading entry (that is the left-most nonzero entry) of every nonzero row is to the right of the leading entry of every row above
+                          </li>
+                          <li>
+                              Some texts add the condition that the leading coefficient must be 1 while others regard this as reduced row echelon form
+                          </li>
+                          <li>
+                              These two conditions imply that all entries in a column below a leading coefficient are zeros
+                          </li>
+                      </ul>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Procedure</strong>
+                      </p>
+                      <ol>
+                          <li>
+                              Choose an m X n matrix
+                          </li>
+                          <li>
+                              All zero rows are at the bottom. 
+                          </li>
+                          <li>
+                              Choose the leading entry in the first non-zero row and swap it with the first row if necessary. Or, the leading entry/element in the first row must be non-zero.
+                          </li>
+                          <li>
+                              Divide the first row by the leading entry so that the leading entry becomes 1.
+                          </li>
+                          <li>
+                              Use row operations to make all entries in the first column below the leading entry equal to 0.
+                          </li>
+                          <li>
+                              Repeat steps 3 through 5 for each subsequent row, working from top to bottom.
+                          </li>
+                      </ol>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          These conditions also imply that all entries in a column below a leading coefficient are zeros
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Example</strong>
+                      </p>
+                      <p>
+                          Given matrix,
+                      </p>
+                      <p>
+                          <strong>A = </strong><img src="1739254504_matrix-theory/1739254504_matrix-theory-56.png" width="104" height="61" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          R2 ← R2 – R1
+                      </p>
+                      <p>
+                          <img src="1739254504_matrix-theory/1739254504_matrix-theory-57.png" width="100" height="61" alt="">
+                      </p>
+                      <p>
+                          <strong>&nbsp;</strong>
+                      </p>
+                      <p>
+                          R3 ← R3 + 2*R2
+                      </p>
+                      <p>
+                          <img src="1739254504_matrix-theory/1739254504_matrix-theory-58.png" width="100" height="61" alt="">
+                      </p>
+                      <p>
+                          <strong>&nbsp;</strong>
+                      </p>
+                      <p>
+                          R3 ← R3 / 4
+                      </p>
+                      <p>
+                          <img src="1739254504_matrix-theory/1739254504_matrix-theory-59.png" width="100" height="61" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Reduced Row Echelon Form (RREF)</strong>
+                      </p>
+                      <p>
+                          <strong>Procedure</strong>
+                      </p>
+                      <ol>
+                          <li>
+                              Choose an m X n matrix
+                          </li>
+                          <li>
+                              All zero rows are at the bottom. 
+                          </li>
+                          <li>
+                              Choose the leading entry in the first non-zero row and swap it with the first row if necessary.
+                          </li>
+                          <li>
+                              Divide the first row by the leading entry so that the leading entry becomes 1.
+                          </li>
+                          <li>
+                              Use row operations to make all entries in the first column above and below the leading entry equal to 0.
+                          </li>
+                          <li>
+                              Repeat steps 3 through 5 for each subsequent row, working from top to bottom.
+                          </li>
+                          <li>
+                              After all, rows have been processed, the matrix is in reduced row echelon form.
+                          </li>
+                      </ol>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Example:</strong>
+                      </p>
+                      <p>
+                          Given matrix <strong>A </strong>= <img src="1739254504_matrix-theory/1739254504_matrix-theory-60.png" width="94" height="61" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          R2 ← R2 – 2*R1 <em>(R1 denotes row 1 and so on)</em>
+                      </p>
+                      <p>
+                          <img src="1739254504_matrix-theory/1739254504_matrix-theory-61.png" width="94" height="61" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          R3 ← R3 – 3*R1
+                      </p>
+                      <p>
+                          <img src="1739254504_matrix-theory/1739254504_matrix-theory-62.png" width="83" height="61" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          R1 ← R1 – 2*R2
+                      </p>
+                      <p>
+                          <img src="1739254504_matrix-theory/1739254504_matrix-theory-63.png" width="83" height="61" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          R1 ← R1 – R3
+                      </p>
+                      <p>
+                          <img src="1739254504_matrix-theory/1739254504_matrix-theory-64.png" width="83" height="61" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          R2 ← R2 – R3
+                      </p>
+                      <p>
+                          <img src="1739254504_matrix-theory/1739254504_matrix-theory-65.png" width="83" height="61" alt="">
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Rank of a Matrix</strong>
+                      </p>
+                      <p>
+                          <strong>Theory:</strong>
+                      </p>
+                      <p>
+                          <strong>Definition</strong>: The rank of a matrix is defined as the maximum number of linearly independent rows (or columns) in the matrix. It can also be seen as the dimension of the row space or column space of the matrix.
+                      </p>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Rank of a Matrix in Row Echelon Form (REF)</strong>
+                      </p>
+                      <ol>
+                          <li>
+                              <strong>Row Echelon Form (REF)</strong>: A matrix is in row echelon form when:
+                              <ul>
+                                  <li>
+                                      All non-zero rows are above any rows of all zeros.
+                                  </li>
+                                  <li>
+                                      The leading entry (pivot) of each non-zero row is to the right of the leading entry of the row above it.
+                                  </li>
+                                  <li>
+                                      All entries below a pivot are zero.
+                                  </li>
+                              </ul>
+                          </li>
+                      </ol>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <ol start="2">
+                          <li>
+                              <strong>Finding the Rank</strong>:
+                              <ul>
+                                  <li>
+                                      <strong>Identify Non-Zero Rows</strong>: In REF, the rank of the matrix is equal to the number of non-zero rows. This is because each non-zero row represents a linearly independent vector in the row space of the matrix.
+                                  </li>
+                                  <li>
+                                      <strong>Process</strong>: Convert the matrix to REF using row operations (row swapping, scaling rows, adding/subtracting multiples of rows) and count the number of non-zero rows to determine the rank.
+                                  </li>
+                              </ul>
+                          </li>
+                      </ol>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <p>
+                          <strong>Rank of a Matrix in Reduced Row Echelon Form (RREF)</strong>
+                      </p>
+                      <p>
+                          <strong>Theory:</strong>
+                      </p>
+                      <ol>
+                          <li>
+                              <strong>Reduced Row Echelon Form (RREF)</strong>: A matrix is in reduced row echelon form when:
+                              <ul>
+                                  <li>
+                                      It is in row echelon form (REF).
+                                  </li>
+                                  <li>
+                                      Each leading entry (pivot) is 1.
+                                  </li>
+                                  <li>
+                                      Each leading 1 is the only non-zero entry in its column.
+                                  </li>
+                                  <li>
+                                      All rows with leading 1s are above rows of all zeros.
+                                  </li>
+                              </ul>
+                          </li>
+                      </ol>
+                      <p>
+                          &nbsp;
+                      </p>
+                      <ol start="2">
+                          <li>
+                              <strong>Finding the Rank</strong>:
+                              <ul>
+                                  <li>
+                                      <strong>Count Leading 1s</strong>: In RREF, the rank of the matrix is equal to the number of leading 1s. Each leading 1 represents a pivot position in a linearly independent row.
+                                  </li>
+                                  <li>
+                                      <strong>Process</strong>: Convert the matrix to RREF using row operations (pivoting, scaling, and clearing entries above and below pivots) and count the number of leading 1s to determine the rank.
+                                  </li>
+                              </ul>
+                          </li>
+                      </ol>
+           
+          
+          
+          
+          </div>
+          <div class="bug-report-mobile">
+              <bug-report id="bug-report" title="[BUG REPORT] UNDERSTAND VARIOUS MATRIX OPERATIONS, MATRIX DECOMPOSITIONS, FACTORIZATION AND
+          RELATED OPERATIONS" page-type="text" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;IITD&quot;,&quot;expname&quot;:&quot;UNDERSTAND VARIOUS MATRIX OPERATIONS, MATRIX DECOMPOSITIONS, FACTORIZATION AND\nRELATED OPERATIONS&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" position="override" button_style="
+                          position: fixed; 
+                          bottom: 20px;
+                          right: 20px;
+                          z-index: 1;
+                          font-size: 0;
+                          padding: 25px;
+                          border-radius: 50%;
+                          border: none;
+                          background-color: #0fc0ff;
+                          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAAXNSR0IArs4c6QAABiFJREFUaEPFmVuMFEUUhv/TM7uwoBGVyG22u7ZnYGG5REETo8RA1BhFIka8ABFf0PCgDxhFEpCLqAlE1OiTiSj4gFGjD0QBETQaEqPRICALSHdPV+8YQQJBA+wuO1PHdMNcWGame2ZWqMfuc/nq1KlT1acJAzhShjFVAUsYdL8G3HjRdA7gHwna5uahLR91dnaeb9QlNWrA1+/o6GjuPnv2DQ30LICKNhk4qLF63PK8g434rejATJhjKa6m9WazOzOZzKlKTmYAcc8QnxEwJwqIAk5STpvpZJwD1eTHjR43PKflhtkZ2+ovVxbaTJiTSVM/gzCYGIebu4fc1nmi80w5J0nDWA7Qq1GACzLMR3pV7pZMJtNdTs/UzelE6msAQ0BYb7vuS6VyZaGTungGhPfygkRYZ7nusv4OEonEDc2xuEfA0JqgATBhieO6b/fXE0IM1pgPECgVvGP+x/bksFDo1JhUguPZI8FMAz0+zzFtSjqd9p8VRlJvew7E79QKHNgEDjrSndRfNyXEGmasLK4KttmeOysU2hdIGm0vA/xKUZh32VLeW6psCrGMmO+uB5qIeEh398P7jx8/m9cP9pGm9vtpmQ9WjHDzUSkPRYJOpVKDuK9vP0Dj8goMfsSR8ot6IKPoJI22XUBpEHitLWUx6heNVC15pmHMItCXBYeKPUZsLlFWVYNQsVg2nU7v82XaW1tHZ4lGhUEztOlEKOQ4A/b5XHZyuc0aWqdNIbYSY3aY00veM/9te3KE/ywlxGpmrKpJP8h5ftCR8qtyeqHQY3XdVNAO5vMskvMGoRWrT9Ke90QlX6HQF6N16Y4OI28Ampn/jatcxx+ZzJ8NQScSiZZBWvzJwAhhJoCKUQhkaoVmnAZoJcC9WowOH02nf6gWl0iRLpQk3ZwOym0n0DVVg10rNAAF7Ig1xedYltUbtpCRoZO6Po1J+z7S6VcHdLCIClusLnfBgED7NVv1ZX8lYGKYwbrSo8Qogxc4Um5pOD1Mo20DgZ+PBFxPTpcYJuBUljDRdd1jdW/EcYnEmKwWSxNR05WADnwo2mB3pV+oGzopxDowlkYGbjDSF9ILpwd1D2mtdB2uuhEv3D+yfwG4/opCB5WVnrZk+v1yfqtCJ3X9TpC2pybggYj0BYcf29KdXwe0WArCuqsCzSxtT4qq0GareStIXXo3JjxGwNSrAh0crMFFq3jYEJ9wpPygkB6mYZwg0PCaAcsp1Hm4RPFtS5eK0LpxvqayVs3DlYIO7r0K8xUhlufRGKNrupLmFQcImsEZBhWaOxq4y5ZyRvXqIcSnYDwaZdkukRkgaGqK32RZ1on+/qt/buliFRFWXxXokonXBJ3S22Yz8darAc2sdjqed1/NddpvnMQUHwPRdTWBD0R6EBbbrltoGJX6D71PJ3V9E0h76kpCMzirNTWNLpfPPkcodNDXi6m9QLGqhE6gwUgzaKMj04sq+QmF9hVrjnYj0IwejmvtjuN4DUEbhjEqztgLoqCXEToagQavsKV8rZqPSJH2DaSEmMGMXZHSpE5oZnzneK7fL8w1DJ1sTU6CltvEwPj/88OWwRYx77Y9b3HD0KYuvqUL/Y5oo85I542TooesrnTF8yE0PUwh5hGj6tfxZTNpEBqKvUE9QyfW9bnV3t5+bV9P7yECxuTBFGOvRn5v5eJgTLzsUhUFmuGCcLJoBiNL/ZT7bVFYiWrrnTSM9QC9WBSmzy2ZnluqI4QYGQcWM/O8Qi+7EjSjB4xtTNqHjuf4HVHO20q1tiZZi/k/j1r8Z8zcRxyfanfZv/dnrJgeYw1jQo6xr+SOfY5j2oRq9VMIIWLA7QSMslz3raDGG8ZMJhoPpR1QmvrFdd2eSoFKGm0rAF5bfM97bCnvKp2c/64idFLXd4C0woWFwMstKV+PthPrk/L/R/aeOfcbCBOKq8uLLCk3llos/0tON+8hUt+U5O1Rao5PjtIcrA+3qOWvDEC78wFlIO1I1wyFTuptC0G8uWSZHrCl3N4oUFT9NiE2a4yFQW6DLUfKsaHQU0aMGHq2pWULM98Bpncdzy35yxXVdf1yftXK9vS8CUVjtBjWHHXdn0qt/Qf/x1JblU8EiAAAAABJRU5ErkJggg==);
+                          background-repeat: no-repeat;
+                          background-position: center;
+                          background-size: 30px;
+                          filter: invert(1);">
+              </bug-report>
+          </div>        </div>
+      </div>
+      <footer class="text-light pt-2 vlabs-footer d-flex flex-column">
+        <div class="row px-5 mx-0">
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Community Links</span>
+            <a href="https://www.sakshat.ac.in/" class="text-light">Sakshat Portal</a>
+            <a href="http://outreach.vlabs.ac.in/" class="text-light">Outreach Portal</a>
+            <a href="https://vlab.co.in/faq" class="text-light">FAQ: Virtual Labs</a>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Contact Us</span>
+            <span> Phone: General Information: 011-26582050 </span>
+            <span> Email: support@vlabs.ac.in </span>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Follow Us</span>
+            <div class="social-links">
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #55acee;" href="https://twitter.com/TheVirtualLabs">
+      	  <i class="fab fa-twitter"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #3b5998;" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/">
+      	  <i class="fab fa-facebook"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #e52d27;" href="https://www.youtube.com/watch?v=asxRaOgk6a0">
+      	  <i class="fab fa-youtube"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #2867B2;" href="https://in.linkedin.com/in/virtual-labs-008ba9136">
+      	  <i class="fab fa-linkedin"></i>
+      	</a>
+            </div>
+          </div>
+        </div>
+        <div class="m-0 py-2 text-center" style="font-family: &quot;Open Sans&quot;, sans-serif; background: #212121;">
+          <a class="text-primary font-weight-bold" href="https://www.gnu.org/licenses/agpl-3.0.en.html"> AGPL 3.0 </a>
+          &nbsp;&amp;&nbsp;
+          <a class="text-primary font-weight-bold" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> Creative Commons (CC BY-NC-SA 4.0) </a>
+        </div>
+      </footer>
+    <script src="./assets/js/toggleSidebar.js"></script>
+    <script src="./assets/js/event-handler.js"></script>
+
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register("sw.js");
+        });
+      }
+    </script>
+  
+
+<script type="module" src="https://cdn.vlabs.ac.in/bug-report/vlabs-bug-report.js"></script><script type="module" src="/exp-various-matrix-operations-iitd/plugins/svc-rating/index.js"></script><script type="module" src="/exp-various-matrix-operations-iitd/plugins/svc-rating/config.js"></script><script type="module" src="https://apis.google.com/js/api.js"></script></body></html>
