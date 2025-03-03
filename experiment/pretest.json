@@ -103,23 +103,23 @@
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
-    {
-      "question": "7. Which of the following matrices can be diagonalized?",
-      "answers": {
-        "a": "[[1, 2], [2, 1]]",
-        "b": "[[1, 0], [0, 1]]",
-        "c": "[[1, 2], [3, 4]]",
-        "d": "[[1, 1], [1, 1]]"
-      },
-      "explanations": {
-        "a": "",
-        "b": "This matrix is already diagonal. Diagonalizable matrices must have enough linearly independent eigenvectors to form a basis.",
-        "c": "Not correct",
-        "d": "Not correct"
-      },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
-    },
+{
+  "question": "7. Which of the following matrices can be diagonalized?",
+  "answers": {
+    "a": "[[1, 2], [2, 1]]",
+    "b": "[[1, 0], [0, 1]]",
+    "c": "[[1, 2], [3, 4]]",
+    "d": "All of the above"
+  },
+  "explanations": {
+    "a": "This matrix is symmetric, and symmetric matrices can always be diagonalized.",
+    "b": "This matrix is already diagonal. A matrix is diagonalizable if it has enough linearly independent eigenvectors to form a basis.",
+    "c": "This matrix has distinct eigenvalues, meaning it can be diagonalized.",
+    "d": "All of the above matrices can be diagonalized."
+  },
+  "correctAnswer": "d",
+  "difficulty": "beginner"
+},
     {
       "question": "8. What is the trace of the matrix [[1, 2, 3], [4, 5, 6], [7, 8, 9]]?",
       "answers": {
@@ -163,12 +163,12 @@
         "d": "0"
       },
       "explanations": {
-        "a": "The second row is a multiple of the first row, so the matrix is of rank 1.",
-        "b": "Not correct",
+        "a": "Not correct",
+        "b": "Since the determinant is nonzero, the matrix is full rank, meaning its rank is 2 (the maximum possible for a 2×2 matrix).",
         "c": "Not correct",
         "d": "Not correct"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
