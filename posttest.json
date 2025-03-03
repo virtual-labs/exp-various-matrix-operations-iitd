@@ -1,0 +1,124 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What are the eigenvalues of the matrix [[3, 0],[0, 4]]",
+      "answers": {
+        "a": "1,2",
+        "b": "3,4",
+        "c": "2,3",
+        "d": "4,5"
+      },
+      "explanations": {
+        "a": "Not correct",
+        "b": "For a diagonal matrix, the eigenvalues are the diagonal elements.",
+        "c": "Not correct",
+        "d": "Not correct"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Which vector is an eigenvector of the matrix [[2, 0],[0, 3]]",
+      "answers": {
+        "a": "[1 0]",
+        "b": "[0 1]",
+        "c": "[1 1]",
+        "d": "Both a and b"
+      },
+      "explanations": {
+        "a": "Not correct",
+        "b": "Not correct",
+        "c": "Not correct",
+        "d": "[1 0] is an eigenvector for eigenvalue 2, and [0 1] is an eigenvector for eigenvalue 3."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Eigenvalue decomposition of a matrix involves decomposing the matrix into which form?",
+      "answers": {
+        "a": "A = PDP^-1",
+        "b": "A = LDU",
+        "c": "A = LUP",
+        "d": "A = LQU"
+      },
+      "explanations": {
+        "a": "A = PDP^-1, where P is the matrix of eigenvectors and D is the diagonal matrix of eigenvalues.",
+        "b": "Not correct",
+        "c": "Not correct",
+        "d": "Not correct"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. LU Decomposition of a matrix A is represented as:",
+      "answers": {
+        "a": "A=LU",
+        "b": "A=UL",
+        "c": "A=PLU",
+        "d": "A=PQU"
+      },
+      "explanations": {
+        "a": "LU decomposition expresses A as a product of a lower triangular matrix L and an upper triangular matrix U",
+        "b": "Not correct",
+        "c": "Not correct",
+        "d": "Not correct"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. SVD of a matrix A is represented as",
+      "answers": {
+        "a": "A = UΣV",
+        "b": "A = UVΣ^T",
+        "c": "A = UΣV^T",
+        "d": "A = UΣV*"
+      },
+      "explanations": {
+        "a": "Not correct",
+        "b": "Not correct",
+        "c": "In SVD, A is decomposed into U ,Σ(a diagonal matrix) and V^T.",
+        "d": "Not correct"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. The result of multiplying [[1, 2], [3, 4]] and [[2, 0], [1, 2]]",
+      "answers": {
+        "a": "[[4, 4], [10, 8]]",
+        "b": "[[2, 4], [7, 10]]",
+        "c": "[[4, 4], [7, 10]]",
+        "d": "[[4, 4], [10, 10]]"
+      },
+      "explanations": {
+        "a": "Multiplying the matrices results in [[1.2 + 2.1, 1.0 + 2.2], [3.2 + 4.1, 3.0 + 4.2]]=[[4, 4], [10, 8]]",
+        "b": "Not correct",
+        "c": "Not correct",
+        "d": "Not correct"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. The result of adding [[1, 2], [3, 4]] and [[2, 0], [1, 2]]",
+      "answers": {
+        "a": "[[2, 0], [1, 2]]",
+        "b": "[[3, 2], [3, 6]]",
+        "c": "[[1, 2], [3, 4]]",
+        "d": "[[3, 2], [4, 6]]"
+      },
+      "explanations": {
+        "a": "Not correct",
+        "b": "Not correct",
+        "c": "Not correct",
+        "d": "Adding the matrices results in [[1+2, 2+0], [3+1, 4+2]]=[[3, 2], [4, 6]]"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    }
+  ]
+}
