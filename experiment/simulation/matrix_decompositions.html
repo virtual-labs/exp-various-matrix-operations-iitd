@@ -69,40 +69,90 @@
         right: 10px;
         cursor: pointer;
       }
-	  	  	h1, #inst {
+	  	  	#inst {
     color: #333;
     font-size: 25px; /* Increased font size */
 	font-weight: 500;
     margin-bottom: 20px;
 }
-	ul {
-    list-style-type: none;
-    fft1: 0;
+#container {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 25px 40px;
+  max-width: 100%;
+  margin: 20px auto;
+  text-align: left;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-li {
-    background-color: #e0e7ff;
-    margin: 5px 0;
-    fft1: 5px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 14px; /* Set font size for list items */
+h1 {
+  color: #1e3a8a;
+  font-size: 24px;
+  margin-bottom: 25px;
+  text-align: justify;
 }
 
-li::before {
-    content: "✔";
-    color: #4caf50;
-    margin-right: 10px;
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
+
+li.step {
+  margin: 12px 0;
+  padding: 12px 15px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+li.step::before {
+  content: "✔";
+  color: #10b981;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+li.step:hover {
+  transform: scale(1.02);
+  background-color: #f3f4f6;
+}
+
+/* Color code each step */
+.step1 {
+  background-color: #ffe0e0;
+  border-left: 5px solid #ef4444;
+}
+.step2 {
+  background-color: #e0f7ff;
+  border-left: 5px solid #0ea5e9;
+}
+.step3 {
+  background-color: #e0ffe5;
+  border-left: 5px solid #22c55e;
+}
+.step4 {
+  background-color: #f5e0ff;
+  border-left: 5px solid #a855f7;
+}
+#matrixTextarea::placeholder {
+    color: black; /* This is Tailwind's gray-500 */
+    white-space: pre-line;
+  }
     </style>
   </head>
   <body>
   <div id = "instructions">
     <h1 id ="inst">Instructions for Performing Matrix Decomposition Operations</h1>
 <ul>
-<li>Step 1: For each section, you can input your matrix element values in two ways: either through the textarea or by filling the cells.</li>
-<li>Step 2: After entering the matrix values, click the buttons for the various matrix decomposition methods to perform the operation.</li>
+<li class="step step1">Step 1: For each section, you can input your matrix element values in two ways: either through the textarea or by filling the cells.</li>
+<li class="step step2">Step 2: After entering the matrix values, click the buttons for the various matrix decomposition methods to perform the operation.</li>
 </ul>
+<p>&#9888; <strong>Disclaimer:</strong> This calculator only works for square matrices.</p>
+
 	</div>
 	<hr/>
     <!-- sidebar and body -->
@@ -120,17 +170,21 @@ li::before {
                 <!-- input -->
                 <div class="flex justify-around">
                   <textarea
-                    id="matrixTextarea"
-                    wrap="off"
-                    spellcheck="false"
-                    autocapitalize="off"
-                    autocomplete="off"
-                    class="input_area"
-                    placeholder="1  2 3
-  4 -5 6
-  7 -1 2/3"
-                    required=""
-                  ></textarea>
+                  style="background-color: white; color: black;"
+                  id="matrixTextarea"
+                  wrap="off"
+                  spellcheck="false"
+                  autocapitalize="off"
+                  autocomplete="off"
+                  class="input_area"
+                  placeholder="1  2 3
+                4 -5 6
+                7 -1 2/3"
+                  required
+                ></textarea>
+                
+                
+                
                 </div>
                 <div class="inputBoxes hidden" id="matrixGrid"></div>
                 <div class="Buttons mt-2">
@@ -419,71 +473,79 @@ li::before {
         }
       }
 
-      function luDecomposition(matrixString) {
-        try {
-          const matrixArray = parseMatrixString(matrixString);
-          const n = matrixArray.length;
+function luDecomposition(matrixString) {
+  try {
+    const matrixArray = parseMatrixString(matrixString);
+    const n = matrixArray.length;
 
-          const A = math.matrix(matrixArray);
-          const L = math.zeros(n, n);
-          const U = math.zeros(n, n);
-          const P = math.identity(n);
+    const A = math.matrix(matrixArray);
+    const L = math.zeros(n, n);
+    const U = math.zeros(n, n);
+    const P = math.identity(n);
 
-          for (let i = 0; i < n; i++) {
-            let maxRow = i;
-            for (let k = i + 1; k < n; k++) {
-              if (Math.abs(A._data[k][i]) > Math.abs(A._data[maxRow][i])) {
-                maxRow = k;
-              }
-            }
-
-            // Swap rows in P, A, and L
-            [P._data[i], P._data[maxRow]] = [P._data[maxRow], P._data[i]];
-            [A._data[i], A._data[maxRow]] = [A._data[maxRow], A._data[i]];
-            if (i > 0) {
-              [L._data[i], L._data[maxRow]] = [L._data[maxRow], L._data[i]];
-            }
-
-            for (let j = 0; j < n; j++) {
-              if (j < i) {
-                L._data[j][i] = 0;
-              } else {
-                L._data[j][i] = A._data[j][i];
-                for (let k = 0; k < i; k++) {
-                  L._data[j][i] -= L._data[j][k] * U._data[k][i];
-                }
-              }
-
-              if (j < i) {
-                U._data[i][j] = 0;
-              } else if (j == i) {
-                U._data[i][j] = 1;
-              } else {
-                U._data[i][j] = A._data[i][j] / L._data[i][i];
-                for (let k = 0; k < i; k++) {
-                  U._data[i][j] -=
-                    (L._data[i][k] * U._data[k][j]) / L._data[i][i];
-                }
-              }
-            }
-          }
-
-          // Round off values in L and U to 2 decimal digits
-          for (let i = 0; i < n; i++) {
-            for (let j = 0; j < n; j++) {
-              L._data[i][j] = Math.round(L._data[i][j] * 100) / 100;
-              U._data[i][j] = Math.round(U._data[i][j] * 100) / 100;
-            }
-          }
-
-          return {
-            L: L._data,
-            U: U._data,
-          };
-        } catch (error) {
-          return `Error: ${error.message}`;
+    for (let i = 0; i < n; i++) {
+      // Find the pivot row
+      let maxRow = i;
+      for (let k = i + 1; k < n; k++) {
+        if (Math.abs(A._data[k][i]) > Math.abs(A._data[maxRow][i])) {
+          maxRow = k;
         }
       }
+
+      // Swap rows in P, A, and L
+      [P._data[i], P._data[maxRow]] = [P._data[maxRow], P._data[i]];
+      [A._data[i], A._data[maxRow]] = [A._data[maxRow], A._data[i]];
+      if (i > 0) {
+        for (let j = 0; j < i; j++) {
+          [L._data[i][j], L._data[maxRow][j]] = [L._data[maxRow][j], L._data[i][j]];
+        }
+      }
+
+      // Compute L and U
+      for (let j = i; j < n; j++) {
+        // U[i][j] = A[i][j] - sum_k L[i][k] * U[k][j]
+        let sum = 0;
+        for (let k = 0; k < i; k++) {
+          sum += L._data[i][k] * U._data[k][j];
+        }
+        U._data[i][j] = A._data[i][j] - sum;
+      }
+
+      for (let j = i; j < n; j++) {
+        if (U._data[i][i] === 0) {
+          throw new Error("Zero pivot encountered.");
+        }
+
+        // L[j][i] = (A[j][i] - sum_k L[j][k] * U[k][i]) / U[i][i]
+        let sum = 0;
+        for (let k = 0; k < i; k++) {
+          sum += L._data[j][k] * U._data[k][i];
+        }
+        L._data[j][i] = (A._data[j][i] - sum) / U._data[i][i];
+      }
+    }
+
+    // Round off values in L, U, and P to 2 decimal digits
+    for (let i = 0; i < n; i++) {
+      for (let j = 0; j < n; j++) {
+        L._data[i][j] = Math.round(L._data[i][j] * 100) / 100;
+        U._data[i][j] = Math.round(U._data[i][j] * 100) / 100;
+        P._data[i][j] = Math.round(P._data[i][j] * 100) / 100;
+      }
+    }
+
+    // Use .toArray() or .valueOf() to output matrix data
+    return {
+      P: P.toArray(),  // or P.valueOf()
+      L: L.toArray(),  // or L.valueOf()
+      U: U.toArray(),  // or U.valueOf()
+    };
+  } catch (error) {
+    return `Error: ${error.message}`;
+  }
+}
+
+
 
       function roundMatrix(matrix, decimals) {
         const factor = Math.pow(10, decimals);
@@ -492,30 +554,55 @@ li::before {
         );
       }
 
-      function svd(matrixString) {
-        try {
-          const matrixArray = parseMatrixString(matrixString);
-          console.log("Parsed Matrix Array:", matrixArray);
+function isOrthogonal(matrix) {
+  const transpose = numeric.transpose(matrix);
+  const product = numeric.dot(transpose, matrix);
+  const identity = numeric.identity(matrix[0].length);
 
-          const svdResult = numeric.svd(matrixArray);
-          console.log("SVD Result:", svdResult);
-
-          const roundedU = roundMatrix(svdResult.U, 4);
-          const roundedS = roundMatrix(
-            svdResult.S.map((value) => [value]),
-            4
-          ); // Convert S to diagonal matrix format
-          const roundedV = roundMatrix(svdResult.V, 4);
-
-          return {
-            U: roundedU,
-            S: roundedS,
-            V: roundedV,
-          };
-        } catch (error) {
-          return `Error: ${error.message}`;
-        }
+  for (let i = 0; i < identity.length; i++) {
+    for (let j = 0; j < identity.length; j++) {
+      if (Math.abs(product[i][j] - identity[i][j]) > 1e-6) {
+        return false;
       }
+    }
+  }
+  return true;
+}
+
+function svd(matrixString) {
+  try {
+    const matrixArray = parseMatrixString(matrixString);
+    console.log("Parsed Matrix Array:", matrixArray);
+
+    const svdResult = numeric.svd(matrixArray);
+    console.log("SVD Result:", svdResult);
+
+    // Check orthogonality before rounding
+    const isUOrthogonal = isOrthogonal(svdResult.U);
+    const isVOrthogonal = isOrthogonal(svdResult.V);
+
+    console.log("Is U orthogonal?", isUOrthogonal);
+    console.log("Is V orthogonal?", isVOrthogonal);
+
+    const roundedU = roundMatrix(svdResult.U, 4);
+    const roundedS = roundMatrix(
+      svdResult.S.map((value) => [value]),
+      4
+    );
+    const roundedV = roundMatrix(svdResult.V, 4);
+
+    return {
+      U: roundedU,
+      S: roundedS,
+      V: roundedV,
+      isUOrthogonal: isUOrthogonal,
+      isVOrthogonal: isVOrthogonal,
+    };
+  } catch (error) {
+    return `Error: ${error.message}`;
+  }
+}
+
     </script>
     <script>
       function eigenvalueresult(eigenvalues) {
@@ -698,128 +785,192 @@ li::before {
         resultContainer.appendChild(container);
       }
 
-      function luDecompositionResult(decomposition) {
-        var resultContainer = document.getElementById("result");
+function luDecompositionResult(decomposition) {
+  var resultContainer = document.getElementById("result");
 
-        // Clear any existing content in the result container
-        resultContainer.innerHTML = "";
+  // Clear any existing content in the result container
+  resultContainer.innerHTML = "";
 
-        // Function to create a grid for the matrix
-        function createGrid(matrix) {
-          var matrixGrid = document.createElement("div");
-          matrixGrid.className = "inputBoxes";
-          // Set grid template columns based on the number of columns
-          var columns = matrix[0].length;
-          matrixGrid.style.gridTemplateColumns = `repeat(${columns}, 95px)`;
-          matrix.forEach((row) => {
-            row.forEach((value) => {
-              var input = document.createElement("input");
-              input.className = "resultbox";
-              input.value = value;
-              input.readOnly = true; // Make input read-only
-              matrixGrid.appendChild(input);
-            });
-          });
+  // Function to create a grid for the matrix
+  function createGrid(matrix) {
+    var matrixGrid = document.createElement("div");
+    matrixGrid.className = "inputBoxes";
+    var columns = matrix[0].length;
+    matrixGrid.style.gridTemplateColumns = `repeat(${columns}, 95px)`;
+    matrix.forEach((row) => {
+      row.forEach((value) => {
+        var input = document.createElement("input");
+        input.className = "resultbox";
+        input.value = value;
+        input.readOnly = true;
+        matrixGrid.appendChild(input);
+      });
+    });
+    return matrixGrid;
+  }
 
-          return matrixGrid;
-        }
+  // Create grids for P, L, and U matrices
+  var pGrid = createGrid(decomposition.P);
+  var lGrid = createGrid(decomposition.L);
+  var uGrid = createGrid(decomposition.U);
 
-        // Create grids for L and U matrices
-        var lGrid = createGrid(decomposition.L);
-        var uGrid = createGrid(decomposition.U);
+  // Create grid for L Matrix with title
+  var div1 = document.createElement("div");
+  div1.className = "flex-col";
+  var lTitle = document.createElement("div");
+  lTitle.className = "matrix-title";
+  lTitle.innerText = "L Matrix";
+  div1.appendChild(lTitle);
+  div1.appendChild(lGrid);
 
-        // Create grid for L Matrix with title
-        var div1 = document.createElement("div");
-        div1.className = "flex-col";
-        var lTitle = document.createElement("div");
-        lTitle.className = "matrix-title";
-        lTitle.innerText = "L Matrix";
-        div1.appendChild(lTitle);
-        div1.appendChild(lGrid);
+  // Create grid for U Matrix with title
+  var div2 = document.createElement("div");
+  div2.className = "flex-col";
+  var uTitle = document.createElement("div");
+  uTitle.className = "matrix-title";
+  uTitle.innerText = "U Matrix";
+  div2.appendChild(uTitle);
+  div2.appendChild(uGrid);
 
-        // Create grid for U Matrix with title
-        var div2 = document.createElement("div");
-        div2.className = "flex-col";
-        var uTitle = document.createElement("div");
-        uTitle.className = "matrix-title";
-        uTitle.innerText = "U Matrix";
-        div2.appendChild(uTitle);
-        div2.appendChild(uGrid);
+  // Create grid for P Matrix with title and store in div3
+  var div3 = document.createElement("div");
+  div3.className = "flex-col";
+  var pTitle = document.createElement("div");
+  pTitle.className = "matrix-title";
+  pTitle.innerText = "P Matrix";
+  div3.appendChild(pTitle);
+  div3.appendChild(pGrid);
 
-        var divContainer = document.createElement("div");
-        divContainer.style.display = "flex";
-        divContainer.appendChild(div1);
-        divContainer.appendChild(div2);
-        // Append the new grids to the result container
-        resultContainer.appendChild(divContainer);
+  // Combine all into one flex container
+  var divContainer = document.createElement("div");
+  divContainer.style.display = "flex";
+  divContainer.appendChild(div1); // L Matrix
+  divContainer.appendChild(div2); // U Matrix
+  divContainer.appendChild(div3); // P Matrix
+
+  // Append the new grids to the result container
+  resultContainer.appendChild(divContainer);
+}
+
+
+function svdResult(decomposition) {
+  var resultContainer = document.getElementById("result");
+
+  // Clear any existing content in the result container
+  resultContainer.innerHTML = "";
+
+  // Function to create a grid for the matrix
+  function createGrid(matrix) {
+    var matrixGrid = document.createElement("div");
+    matrixGrid.className = "inputBoxes";
+    var columns = matrix[0].length;
+    matrixGrid.style.gridTemplateColumns = `repeat(${columns}, 95px)`;
+    matrix.forEach((row) => {
+      row.forEach((value) => {
+        var input = document.createElement("input");
+        input.className = "resultbox";
+        input.value = value.toFixed(2);
+        input.readOnly = true;
+        matrixGrid.appendChild(input);
+      });
+    });
+    return matrixGrid;
+  }
+
+  // Helper to create title + grid + orthogonality label
+  function createMatrixSection(titleText, matrixGrid, isOrthogonal, condNumber) {
+    var section = document.createElement("div");
+    section.className = "flex-col";
+
+    var title = document.createElement("div");
+    title.className = "matrix-title";
+    title.innerText = titleText;
+    section.appendChild(title);
+
+    section.appendChild(matrixGrid);
+
+    // Orthogonality Check
+    if (typeof isOrthogonal !== "undefined") {
+      var orthoLabel = document.createElement("div");
+      orthoLabel.style.marginTop = "8px";
+      orthoLabel.style.fontWeight = "bold";
+      orthoLabel.style.color = isOrthogonal ? "green" : "red";
+      orthoLabel.innerText = isOrthogonal
+        ? "Orthogonal"
+        : "Not Orthogonal";
+      section.appendChild(orthoLabel);
+    }
+
+    // Condition Number Display
+    if (condNumber !== undefined) {
+      var condLabel = document.createElement("div");
+      condLabel.style.marginTop = "8px";
+      condLabel.style.fontWeight = "bold";
+      condLabel.innerText = `Condition Number: ${condNumber.toFixed(2)}`;
+      section.appendChild(condLabel);
+    }
+
+    return section;
+  }
+
+  // Function to calculate condition number
+  function calculateConditionNumber(singularValues) {
+    const maxSingularValue = Math.max(...singularValues);
+    const minSingularValue = Math.min(...singularValues);
+    return maxSingularValue / minSingularValue;
+  }
+
+  // Function to calculate round-off error (using U*U^T - I or V*V^T - I)
+  function calculateRoundOffError(matrix) {
+    const product = numeric.dot(matrix, numeric.transpose(matrix));
+    const identity = numeric.identity(matrix.length);
+    let error = 0;
+    for (let i = 0; i < matrix.length; i++) {
+      for (let j = 0; j < matrix.length; j++) {
+        error += Math.pow(product[i][j] - identity[i][j], 2);
       }
-      function svdResult(decomposition) {
-        var resultContainer = document.getElementById("result");
+    }
+    return Math.sqrt(error);
+  }
 
-        // Clear any existing content in the result container
-        resultContainer.innerHTML = "";
+  // Create grids for U, S, and V matrices
+  var uGrid = createGrid(decomposition.U);
+  var sGrid = createGrid(decomposition.S);
+  var vGrid = createGrid(decomposition.V);
 
-        // Function to create a grid for the matrix
-        function createGrid(matrix) {
-          var matrixGrid = document.createElement("div");
-          matrixGrid.className = "inputBoxes";
-          // Set grid template columns based on the number of columns
-          var columns = matrix[0].length;
-          matrixGrid.style.gridTemplateColumns = `repeat(${columns}, 95px)`;
-          matrix.forEach((row) => {
-            row.forEach((value) => {
-              var input = document.createElement("input");
-              input.className = "resultbox";
-              input.value = value.toFixed(2); // Round to 2 decimal places
-              input.readOnly = true; // Make input read-only
-              matrixGrid.appendChild(input);
-            });
-          });
+  // Calculate the condition numbers for U and V
+  const uCondNumber = calculateConditionNumber(decomposition.S); // Singular values of U
+  const vCondNumber = calculateConditionNumber(decomposition.S); // Singular values of V
 
-          return matrixGrid;
-        }
+  // Calculate round-off errors for U and V
+  const uRoundOffError = calculateRoundOffError(decomposition.U);
+  const vRoundOffError = calculateRoundOffError(decomposition.V);
 
-        // Create grids for U, S, and V matrices
-        var uGrid = createGrid(decomposition.U);
-        var sGrid = createGrid(decomposition.S);
-        var vGrid = createGrid(decomposition.V);
+  var div1 = createMatrixSection(
+    "U Matrix",
+    uGrid,
+    decomposition.isUOrthogonal,
+    uCondNumber
+  );
+  var div2 = createMatrixSection("S Matrix Diagonal", sGrid);
+  var div3 = createMatrixSection(
+    "V Matrix",
+    vGrid,
+    decomposition.isVOrthogonal,
+    vCondNumber
+  );
 
-        // Create grid for U Matrix with title
-        var div1 = document.createElement("div");
-        div1.className = "flex-col";
-        var uTitle = document.createElement("div");
-        uTitle.className = "matrix-title";
-        uTitle.innerText = "U Matrix";
-        div1.appendChild(uTitle);
-        div1.appendChild(uGrid);
+  var divContainer = document.createElement("div");
+  divContainer.style.display = "flex";
+  divContainer.style.gap = "30px"; // optional spacing between columns
+  divContainer.appendChild(div1);
+  divContainer.appendChild(div2);
+  divContainer.appendChild(div3);
 
-        // Create grid for S Matrix with title
-        var div2 = document.createElement("div");
-        div2.className = "flex-col";
-        var sTitle = document.createElement("div");
-        sTitle.className = "matrix-title";
-        sTitle.innerText = "S Matrix";
-        div2.appendChild(sTitle);
-        div2.appendChild(sGrid);
+  resultContainer.appendChild(divContainer);
+}
 
-        // Create grid for V Matrix with title
-        var div3 = document.createElement("div");
-        div3.className = "flex-col";
-        var vTitle = document.createElement("div");
-        vTitle.className = "matrix-title";
-        vTitle.innerText = "V Matrix";
-        div3.appendChild(vTitle);
-        div3.appendChild(vGrid);
 
-        var divContainer = document.createElement("div");
-        divContainer.style.display = "flex";
-        divContainer.appendChild(div1);
-        divContainer.appendChild(div2);
-        divContainer.appendChild(div3);
-
-        // Append the new grids to the result container
-        resultContainer.appendChild(divContainer);
-      }
     </script>
     <script>
       function logMatrixValues(textareaId, gridId) {
@@ -878,8 +1029,12 @@ li::before {
           if (typeof eigenvalues === "string") {
             document.getElementById("result").innerHTML = eigenvalues;
           } else {
-            document.getElementById("overlayheading").innerText =
-              "Eigen Values";
+            document.getElementById("overlayheading").innerHTML =
+  '<span style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">' +
+  'Eigen Values: Eigenvalues are scalars that indicate how a linear transformation stretches or shrinks vectors along specific directions called eigenvectors. ' +
+  '<a href="https://virtual-labs.github.io/exp-matrix-decompositions-iitd/theory.html" target="_blank" style="color: #0077cc; text-decoration: none; font-weight: bold;">🔗 Click here</a>' +
+  '</span>';
+
             insertMatrix(matrixString);
             eigenvalueresult(eigenvalues);
           }
@@ -891,7 +1046,12 @@ li::before {
           const eigenvectors = findEigenvectors(matrixString);
           console.log(eigenvectors);
           toggleOverlay();
-          document.getElementById("overlayheading").innerText = "Eigen Vectors";
+          document.getElementById("overlayheading").innerHTML = 
+  '<span style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">' +
+  'Eigen Vectors: Eigenvectors are non-zero vectors that change only in scale when a linear transformation is applied ' +
+  '<a href="https://virtual-labs.github.io/exp-matrix-decompositions-iitd/theory.html" target="_blank" style="color: #0077cc; text-decoration: none; font-weight: bold;">🔗 Click here</a>' +
+  '</span>';
+
           if (typeof eigenvectors === "string") {
             document.getElementById("result").innerHTML = eigenvectors;
           } else {
@@ -906,8 +1066,12 @@ li::before {
           const eigenvectors = findEigenvectors(matrixString);
           const eigenvalues = findEigenvalues(matrixString);
           toggleOverlay();
-          document.getElementById("overlayheading").innerText =
-            "Eigen Value Decomposition";
+          document.getElementById("overlayheading").innerHTML =
+  '<span style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">' +
+  'Eigenvalue decomposition is a matrix factorization technique where a square matrix is decomposed into its eigenvalues and eigenvectors, such that the matrix can be written as a product of its eigenvectors and a diagonal matrix of its eigenvalues. ' +
+  '<a href="https://virtual-labs.github.io/exp-matrix-decompositions-iitd/theory.html" target="_blank" style="color: #0077cc; text-decoration: none; font-weight: bold;">🔗 Click here</a>' +
+  '</span>';
+
           if (
             typeof eigenvectors === "string" ||
             typeof eigenvalues === "string"
@@ -927,8 +1091,12 @@ li::before {
           const lu_decomposition = luDecomposition(matrixString);
           console.log(lu_decomposition);
           toggleOverlay();
-          document.getElementById("overlayheading").innerText =
-            "LU Decomposition";
+          document.getElementById("overlayheading").innerHTML =
+  '<span style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">' +
+  'LU Decomposition Using Doolittle\'s Method (with Partial Pivoting)<br>PA = LU ' +
+  '<a href="https://virtual-labs.github.io/exp-matrix-decompositions-iitd/theory.html" target="_blank" style="color: #0077cc; text-decoration: none; font-weight: bold;">🔗 Click here</a>' +
+  '</span>';
+
           if (typeof lu_decomposition === "string") {
             document.getElementById("result").innerHTML = lu_decomposition;
           } else {
@@ -943,8 +1111,12 @@ li::before {
           const sv_decomposition = svd(matrixString);
           console.log(sv_decomposition);
           toggleOverlay();
-          document.getElementById("overlayheading").innerText =
-            "Singular Value Decomposition";
+          document.getElementById("overlayheading").innerHTML =
+  '<span style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">' +
+  'Singular Value Decomposition (SVD) is a matrix factorization technique that decomposes a matrix into three components: a unitary matrix of left singular vectors, a diagonal matrix of singular values, and a unitary matrix of right singular vectors, enabling various applications like dimensionality reduction and data compression.' +
+  '<a href="https://virtual-labs.github.io/exp-matrix-decompositions-iitd/theory.html" target="_blank" style="color: #0077cc; text-decoration: none; font-weight: bold;">🔗 Click here</a>' +
+  '</span>';
+
           if (typeof sv_decomposition === "string") {
             document.getElementById("result").innerHTML = sv_decomposition;
           } else {
