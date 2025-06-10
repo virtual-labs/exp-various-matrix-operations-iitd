@@ -116,7 +116,7 @@ li.step:hover {
   background-color: #f5e0ff;
   border-left: 5px solid #a855f7;
 }
-#matrixTextarea::placeholder, #matrixTextarea1::placeholder {
+#matrixTextarea::placeholder {
     color: black; /* This is Tailwind's gray-500 */
     white-space: pre-line;
   }
@@ -124,10 +124,10 @@ li.step:hover {
   </head>
   <body>
   	<div id = "instructions">
-    <h1 id ="inst">Instructions for Two Matrix Operations</h1>
+    <h1 id ="inst">Instructions for Basic Matrix Operations</h1>
 <ul>
 <li class="step step1">Step 1: For each section, you can input your matrix element values in two ways: either through the textarea or by filling the cells.</li>
-<li class="step step2">Step 2: After entering the matrix values, select the desired operation by clicking the corresponding button. Available operations include addition, multiplication, etc.</li>
+<li class="step step2">Step 2: After entering the matrix values, select the desired operation by clicking the corresponding button. Available operations include addition, multiplication, LU decomposition, SVD, etc.</li>
 </ul>
 
 	</div>
@@ -141,14 +141,13 @@ li.step:hover {
             <div class="flex flex-col items-center">
               <div class="calculations">
                 <!-- matrix -->
-                <div class="matrix flex items-center flex-col">
+                <div class="matrix flex items-center flex-col" style="visibility: hidden;">
                   <p class="text-[20px] text-center font-bold text-black my-5">
                     Matrix A
                   </p>
                   <!-- input -->
                   <div class="flex justify-around">
                     <textarea
-                    style="background-color: white; color: black;"
                       id="matrixTextarea1"
                       wrap="off"
                       spellcheck="false"
@@ -190,13 +189,36 @@ li.step:hover {
                       -
                     </button>
                   </div>
-                  <div class="operations">
+                  <div class="operations" style="display: none;">
                     <div class="part1 flex flex-col w-full">
-
+                      <button id="determinant1" value="Determinant det">
+                        Determinant
+                      </button>
+                      <button id="transpose1" value="Transpose tsp">
+                        Transpose
+                      </button>
+                      <button id="adjoint1" value="Adjoint adj">Adjoint</button>
+                      <button id="cofactor1" value="Cofactor cft">
+                        Cofactor
+                      </button>
+                      <button id="minor1" value="Minor mnr">Minor</button>
+                    </div>
+                    <div class="part2 flex flex-col w-[100%]">
+                      <button id="inverse1" value="Inverse inv">Inverse</button>
+                      <button id="diagonalize1" value="Diagonalise dig">
+                        Diagonalise
+                      </button>
+                      <button id="trace1" value="Trace trc">Trace</button>
+                      <button id="ref1" value="Row Echelon Form ref">
+                        Reduced Row Echelon Form
+                      </button>
+                      <button id="rankofmatrix1" value="Rank of matrix">
+                        Rank of Matrix
+                      </button>
                     </div>
                   </div>
                 </div>
-                <div class="middle_part">
+                <div class="middle_part" style="display: none;">
                   <button id="division" class="calc" value="Division div">
                     A / B
                   </button>
@@ -224,23 +246,23 @@ li.step:hover {
                 <!-- matrix -->
                 <div class="matrix flex items-center flex-col">
                   <p class="text-[20px] text-center font-bold text-black my-5">
-                    Matrix B
+                    Matrix
                   </p>
                   <!-- input -->
                   <div class="flex justify-around">
-                    <textarea
-                    style="background-color: white; color: black;"
-                      id="matrixTextarea"
-                      wrap="off"
-                      spellcheck="false"
-                      autocapitalize="off"
-                      autocomplete="off"
-                      class="input_area"
-                      placeholder="1  2 3
-4 -5 6
-7 -1 2/3"
-                      required=""
-                    ></textarea>
+                  <textarea
+                  style="background-color: white; color: black;"
+                  id="matrixTextarea"
+                  wrap="off"
+                  spellcheck="false"
+                  autocapitalize="off"
+                  autocomplete="off"
+                  class="input_area"
+                  placeholder="1  2 3
+                4 -5 6
+                7 -1 2/3"
+                  required
+                ></textarea>
                   </div>
                   <div class="inputBoxes hidden" id="matrixGrid"></div>
                   <div class="Buttons">
@@ -273,7 +295,30 @@ li.step:hover {
                   </div>
                   <div class="operations">
                     <div class="part1 flex flex-col w-full">
-
+                      <button id="determinant" value="Determinant det">
+                        Determinant
+                      </button>
+                      <button id="transpose" value="Transpose tsp">
+                        Transpose
+                      </button>
+                      <button id="adjoint" value="Adjoint adj">Adjoint</button>
+                      <button id="cofactor" value="Cofactor cft">
+                        Cofactor
+                      </button>
+                      <button id="minor" value="Minor mnr">Minor</button>
+                    </div>
+                    <div class="part2 flex flex-col w-[100%]">
+                      <button id="inverse" value="Inverse inv">Inverse</button>
+                      <button id="diagonalize" value="Diagonalise dig">
+                        Diagonalise
+                      </button>
+                      <button id="trace" value="Trace trc">Trace</button>
+                      <button id="ref" value="Row Echelon Form ref">
+                        Reduced Row Echelon Form
+                      </button>
+                      <button id="rankofmatrix" value="Rank of Matrix">
+                        Rank of Matrix
+                      </button>
                     </div>
                   </div>
                 </div>
