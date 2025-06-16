@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<!-- MathJax v3 CDN -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
       <div class="px-6 pb-6 flex-1">
@@ -17,363 +22,121 @@
         <p>These foundational matrices enable efficient computation, representation, and manipulation of signals, serving as the building blocks for more complex signal processing tasks.</p>
         </div></div>
 <br/><br/>
-<p>
-				<strong>Properties of Matrix Operations</strong><a></a>
-			</p>
-			<p>
-				<strong>Properties</strong><strong>&#xa0;</strong><strong>of Addition</strong>
-			</p>
-			<p>
-				The basic properties of addition for real numbers also hold true for matrices.&#xa0;
-			</p>
-			<p>
-				Let&#xa0;A,&#xa0;B&#xa0;and&#xa0;C&#xa0;be&#xa0;m x n&#xa0;matrices
-			</p>
-			<ol>
-				<li>
-					A + B&#xa0; =&#xa0; B + A&#xa0;&#xa0;&#xa0;&#xa0;commutative
-				</li>
-				<li>
-					A + (B + C)&#xa0; =&#xa0; (A + B) + C&#xa0;&#xa0;&#xa0;&#xa0;associative
-				</li>
-				<li>
-					There is a unique&#xa0;m x n&#xa0;matrix&#xa0;O&#xa0;with&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;A + O&#xa0; =&#xa0; A&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;additive identity
-				</li>
-				<li>
-					For any&#xa0;&#xa0;m x n&#xa0;matrix&#xa0;A&#xa0;there is an&#xa0;m x n&#xa0;matrix&#xa0;B&#xa0;(called&#xa0;-A) with&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;A + B&#xa0; =&#xa0; O&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;additive inverse
-				</li>
-			</ol>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				<strong>Properties of Matrix</strong><strong>&#xa0;</strong><a><strong>Multiplication</strong></a>
-			</p>
-			<p>
-				Unlike matrix addition, the properties of multiplication of real numbers do not all generalize to matrices.&#xa0; Matrices rarely commute even if&#xa0;AB&#xa0;and&#xa0;BA&#xa0;are both defined.&#xa0; There often is no multiplicative inverse of a matrix, even if the matrix is a square matrix.&#xa0; There are a few properties of multiplication of real numbers that generalize to matrices.&#xa0; We state them now.
-			</p>
-			<p>
-				Let&#xa0;A,&#xa0;B&#xa0;and&#xa0;C&#xa0;be matrices of dimensions such that the following are defined.&#xa0; Then
-			</p>
-			<ol>
-				<li>
-					A(BC)&#xa0; =&#xa0; (AB)C&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; associative
-				</li>
-				<li>
-					A(B + C)&#xa0; =&#xa0; AB + AC&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;distributive
-				</li>
-				<li>
-					(A + B)C&#xa0; =&#xa0; AC + BC&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;distributive
-				</li>
-				<li>
-					There are unique matrices&#xa0;I<sub>m</sub>&#xa0;and&#xa0;I<sub>n</sub>&#xa0;with&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; I<sub>m</sub>&#xa0;A&#xa0; =&#xa0; A I<sub>n</sub>&#xa0; =&#xa0; A&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;multiplicative identity
-				</li>
-			</ol>
-			<p>
-				<strong>&#xa0;</strong>
-			</p>
-			<p>
-				<strong>Properties of</strong><strong>&#xa0;</strong><a><strong>Scalar</strong></a><strong>&#xa0;</strong><strong>Multiplication</strong>
-			</p>
-			<p>
-				Since we can multiply a matrix by a scalar, we can investigate the properties that this multiplication has.&#xa0; All of the properties of multiplication of real numbers generalize.&#xa0; In particular, we have
-			</p>
-			<p>
-				Let&#xa0;r&#xa0;and&#xa0;s&#xa0;be real numbers and&#xa0;A&#xa0;and&#xa0;B&#xa0;be matrices.&#xa0; Then
-			</p>
-			<ol>
-				<li>
-					r(sA)&#xa0; =&#xa0; (rs)A&#xa0;
-				</li>
-				<li>
-					(r + s)A&#xa0; =&#xa0; rA + sA
-				</li>
-				<li>
-					r(A + B)&#xa0; =&#xa0; rA + rB
-				</li>
-				<li>
-					A(rB)&#xa0; =&#xa0; r(AB)&#xa0; =&#xa0; (rA)B
-				</li>
-			</ol>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				<strong>Properties of the</strong><strong>&#xa0;</strong><a><strong>Transpose</strong></a><strong>&#xa0;</strong><strong>of a Matrix</strong>
-			</p>
-			<p>
-				Recall that the transpose of a matrix is the operation of switching rows and columns.&#xa0; We state the following properties.&#xa0; We proved the first property in the last section.
-			</p>
-			<p>
-				Let&#xa0;r&#xa0;be a real number and&#xa0;A&#xa0;and&#xa0;B&#xa0;be matrices.&#xa0; Then
-			</p>
-			<ol>
-				<li>
-					(A<sup>T</sup>)<sup>T</sup>&#xa0; =&#xa0; A
-				</li>
-				<li>
-					(A + B)<sup>T</sup>&#xa0; =&#xa0; A<sup>T</sup>&#xa0;+ B<sup>T</sup>
-				</li>
-				<li>
-					(AB)<sup>T</sup>&#xa0; =&#xa0; B<sup>T</sup>A<sup>T</sup>
-				</li>
-				<li>
-					(rA)<sup>T</sup>&#xa0; =&#xa0; rA<sup>T</sup>
-				</li>
-			</ol>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				<strong>Properties of Determinants</strong>
-			</p>
-			<ol>
-				<li>
-					det(A) = &#xa0;det(AT)
-				</li>
-				<li>
-					If any row or column of a determinant, is multiplied by any scalar value, that is, a non-zero constant, the entire determinant gets multiplied by the same scalar, that is, if any row or column is multiplied by constant k, the determinant value gets multiplied by k.
-				</li>
-			</ol>
-			<p>
-				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; det(Δ’) = k det(Δ)
-			</p>
-			<ol start="3">
-				<li>
-					If all elements of any column or row are zero, then the determinant is zero
-				</li>
-				<li>
-					If all the elements in the determinant above or below the diagonal are zero, then the determinant is a product of diagonal elements
-				</li>
-			</ol>
-			<p>
-				<strong>&#xa0;</strong>
-			</p>
-			<p>
-				<strong>Minor, Co-factor, Adjoint, Inverse</strong>
-			</p>
-			<p>
-				[A]<sub>(i x k) </sub><strong>.</strong> [B]<sub>(k x j)</sub>
-			</p>
-			<p>
-				=<img src="1739254504_matrix-theory/1739254504_matrix-theory-1.png" width="226" height="68" alt="" />
-			</p>
-			<p>
-				=<img src="1739254504_matrix-theory/1739254504_matrix-theory-2.png" width="110" height="68" alt="" /> = [C]<sub>ij</sub>
-			</p>
-			<p>
-				Where, c<sub>ij</sub> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-3.png" width="19" height="21" alt="" /> a<sub>ik</sub>b<sub>kj</sub>
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				C<sup>T</sup> = <img src="1739254504_matrix-theory/1739254504_matrix-theory-4.png" width="110" height="68" alt="" /> = [C]<sub>ji</sub>
-			</p>
-			<p>
-				Where, C<sup>T </sup>is transpose of matrix C
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				<strong>1. a.)</strong>
-			</p>
-			<p>
-				<strong>(A.B)</strong><strong><sup>T</sup></strong><strong> = B</strong><strong><sup>T</sup></strong><strong>.A</strong><strong><sup>T</sup></strong>
-			</p>
-			<p>
-				(A.B)<sup>T</sup><sub>ij </sub>
-			</p>
-			<p>
-				= (A.B)<sub>ji</sub>
-			</p>
-			<p>
-				= a<sub>jk</sub>b<sub>ki</sub>
-			</p>
-			<p>
-				= b<sub>ki</sub>a<sub>jk</sub>
-			</p>
-			<p>
-				= (b<sup>T </sup>)<sub>ik </sub>(a<sup>T</sup>)<sub>kj</sub>
-			</p>
-			<p>
-				= (B<sup>T</sup>A<sup>T</sup>)<sub>ij</sub>
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				<strong>(1. b.)</strong>
-			</p>
-			<p>
-				<strong>B</strong><strong><sup>T</sup></strong><strong>.A</strong><strong><sup>T </sup></strong><strong>= (A.B)</strong><strong><sup>T</sup></strong>
-			</p>
-			<p>
-				&#xa0;(B<sup>T</sup>A<sup>T</sup>)<sub>ij</sub>
-			</p>
-			<p>
-				= (b<sup>T</sup>)<sub>ik</sub><sub>&#xa0; </sub><sub>.</sub><sub>&#xa0; </sub>(a<sup>T</sup>)<sub>kj</sub>
-			</p>
-			<p>
-				= (b)<sub>ki</sub><sub>&#xa0; </sub><sub>.</sub><sub>&#xa0; </sub>(a)<sub>jk</sub>
-			</p>
-			<p>
-				= (a)<sub>jk</sub> . (b)<sub>ki</sub><sub>&#xa0;&#xa0;&#xa0; </sub>
-			</p>
-			<p>
-				= (AB)<sub>ji</sub>
-			</p>
-			<p>
-				= (AB)<sup>T</sup><sub>ij</sub>
-			</p>
-			<p>
-				<sub>&#xa0;</sub>
-			</p>
-			<p>
-				Cofactor Matrix of a matrix A
-			</p>
-			<p>
-				[CO<sub>ij</sub>] =&#xa0; (-1)<sup>(i+j) </sup>*<img src="1739254504_matrix-theory/1739254504_matrix-theory-5.png" width="123" height="68" alt="" />
-			</p>
-			<p>
-				Where, <img src="1739254504_matrix-theory/1739254504_matrix-theory-6.png" width="274" height="68" alt="" />
-			</p>
-			<p>
-				M<sub>ij </sub>is the entry in the i<sup>th</sup> row and j<sup>th</sup> column
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				Adjoint of a matrix, A
-			</p>
-			<p>
-				Adj(A) = [CO<sub>ij</sub>]<sup>T</sup>
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				Now, the inverse of the matrix A
-			</p>
-			<p>
-				A<sup>-1</sup> = Adj(A) / det(A)
-			</p>
-			<p>
-				Where ‘det’ denotes the determinant
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				<strong>2. (AB)</strong><strong><sup>−1</sup></strong><strong>=B</strong><strong><sup>−1</sup></strong><strong>A</strong><strong><sup>−1</sup></strong>
-			</p>
-			<p>
-				If A and B are invertible matrices or Both A and B are <strong>n X n</strong> square matrices and determinants are not zeroes then
-			</p>
-			<p>
-				(AB)(AB)<sup>-1 </sup>= I 
-			</p>
-			<p>
-				Where I is the identity matrix of size <strong>n X n</strong>
-			</p>
-			<p>
-				&#xa0;Pre-multiply by A<sup>-1</sup>
-			</p>
-			<p>
-				(A<sup>-1 </sup>). (AB)(AB)<sup>-1</sup> = A<sup>-1</sup>I
-			</p>
-			<p>
-				Or, I.(B).(AB)<sup>-1</sup> = A<sup>-1</sup>
-			</p>
-			<p>
-				Or,&#xa0; (B).(AB)<sup>-1 </sup>= A<sup>-1</sup>
-			</p>
-			<p>
-				<sup>&#xa0;</sup>
-			</p>
-			<p>
-				Pre-multiply by B<sup>-1</sup>
-			</p>
-			<p>
-				(B<sup>-1 </sup>). (B).(AB)<sup>-1 </sup>= B<sup>-1</sup>A<sup>-1</sup>
-			</p>
-			<p>
-				Or, I(AB)<sup>-1 </sup>= B<sup>-1</sup>A<sup>-1</sup>
-			</p>
-			<p>
-				Or, (AB)<sup>-1 </sup>= B<sup>-1</sup>A<sup>-1</sup>
-			</p>
-			<p>
-				<strong>&#xa0;</strong>
-			</p>
-			<p>
-				<strong>3. Adj(A . B) = Adj(B) . Adj(A)</strong>
-			</p>
-			<p>
-				(AB)<sup>−1</sup>=adj(AB)/det(AB)
-			</p>
-			<p>
-				Or, adj(AB) = (AB)<sup>−1</sup>⋅det(AB)&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; . . . (1)
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				It is also known that, (AB)<sup>−1</sup>=B<sup>-1</sup>A<sup>−1</sup>
-			</p>
-			<p>
-				And, det(AB)=det(A)⋅det(B)&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; . . . (2)
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				Also
-			</p>
-			<p>
-				A<sup>−1</sup>=adj(A)/det(A) 
-			</p>
-			<p>
-				B<sup>−1</sup>=adj(B)/det(B)
-			</p>
-			<p>
-				Or, adj(A)=A<sup>-1</sup>det(A) 
-			</p>
-			<p>
-				Or, adj(B)=B<sup>−1</sup>det(B)
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				adj(B)⋅adj(A)=detA⋅detB⋅B<sup>−1</sup>⋅A<sup>−1</sup>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; . . . (3)
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				Putting (2) in equation (1)
-			</p>
-			<p>
-				adj(AB)=det(A)⋅det(B)⋅B<sup>−1</sup>⋅A<sup>−1</sup>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; . . . (4)
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				From (3) and (4)
-			</p>
-			<p>
-				adj(AB)=adj(B)⋅adj(A)
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				<strong>Eigenvalue and Eigenvector</strong>
-			</p>
+  <h2>Properties of Matrix Operations</h2>
+  <h2>Properties of Matrix Addition</h2>
+  <p>The fundamental properties of real number addition also apply to matrices.</p>
+  <p>Let \( A \), \( B \), and \( C \) be \( m \times n \) matrices:</p>
+  <ol>
+    <li><strong>Commutative Property</strong>: \( A + B = B + A \)</li>
+    <li><strong>Associative Property</strong>: \( A + (B + C) = (A + B) + C \)</li>
+    <li><strong>Additive Identity</strong>: There exists a unique \( m \times n \) zero matrix \( O \) such that \( A + O = A \)</li>
+    <li><strong>Additive Inverse</strong>: For every matrix \( A \), there exists \( -A \) such that \( A + (-A) = O \)</li>
+  </ol>
+  <h2>Properties of Matrix Multiplication</h2>
+  <p>Unlike addition, not all multiplication properties of real numbers apply to matrices.</p>
+  <ul>
+    <li>Matrix multiplication is <strong>not commutative</strong>: Even if both \( AB \) and \( BA \) are defined, they may not be equal.</li>
+    <li>A matrix may not have a <strong>multiplicative inverse</strong>, even if it is square.</li>
+  </ul>
+  <p>However, some properties <strong>do generalize</strong>. Let \( A \), \( B \), and \( C \) be matrices such that the operations are defined:</p>
+  <ol>
+    <li><strong>Associative Property</strong>: \( A(BC) = (AB)C \)</li>
+    <li><strong>Left Distributive Property</strong>: \( A(B + C) = AB + AC \)</li>
+    <li><strong>Right Distributive Property</strong>: \( (A + B)C = AC + BC \)</li>
+    <li><strong>Multiplicative Identity</strong>: \( I_m A = A \), \( A I_n = A \)</li>
+  </ol>
+  <h2>Properties of Scalar Multiplication</h2>
+  <p>Let \( r \), \( s \) be real numbers, and \( A \), \( B \) be matrices:</p>
+  <ol>
+    <li>\( r(sA) = (rs)A \)</li>
+    <li>\( (r + s)A = rA + sA \)</li>
+    <li>\( r(A + B) = rA + rB \)</li>
+    <li>\( A(rB) = r(AB) = (rA)B \) (if defined)</li>
+  </ol>
+  <h2>Properties of the Transpose of a Matrix</h2>
+  <p>Let \( r \) be real, and \( A \), \( B \) be matrices:</p>
+  <ol>
+    <li>\( (A^T)^T = A \)</li>
+    <li>\( (A + B)^T = A^T + B^T \)</li>
+    <li>\( (AB)^T = B^T A^T \)</li>
+    <li>\( (rA)^T = rA^T \)</li>
+  </ol>
+  <h2>Properties of Determinants</h2>
+  <ol>
+    <li>\( \det(A) = \det(A^T) \)</li>
+    <li>If any row/column is multiplied by \( k \), then \( \det(\Delta') = k \cdot \det(\Delta) \)</li>
+    <li>If a row or column is all zeros, then \( \det = 0 \)</li>
+    <li>If matrix is upper/lower triangular, \( \det = \) product of diagonal elements</li>
+  </ol>
+
+<h2>Matrix Theory: Minor, Cofactor, Adjoint, and Inverse</h2>
+
+<h2>Matrix Multiplication Representation</h2>
+<p>Let matrix \( A \) be of size \( i \times k \), and matrix \( B \) be of size \( k \times j \). Their product \( C = A \cdot B \) will result in a matrix of size \( i \times j \).</p>
+<p>The element in the \( i^{\text{th}} \) row and \( j^{\text{th}} \) column of the resulting matrix \( C \), denoted by \( c_{ij} \), is calculated as:</p>
+<p>\( c_{ij} = \sum_k a_{ik} \cdot b_{kj} \)</p>
+<p>The transpose of matrix \( C \), denoted as \( C^T \), swaps rows and columns, resulting in a matrix of size \( j \times i \):</p>
+<p>\( C^T = [C]_{j \times i} \), where \( C^T_{ji} = C_{ij} \)</p>
+
+<h2>1. Transpose of a Product</h2>
+
+<h3>1.a. Proof that \( (AB)^T = B^T A^T \)</h3>
+<p>The transpose of a product of two matrices equals the product of their transposes in reverse order. That is:</p>
+<p>\( (AB)^T = B^T A^T \)</p>
+<p>To see why this is true, consider the element at position \( (i, j) \) in \( (AB)^T \):</p>
+<p>\( (AB)^T_{ij} = (AB)_{ji} = \sum_k a_{jk} \cdot b_{ki} \)</p>
+<p>On the other hand, consider the element \( (i, j) \) in \( B^T A^T \):</p>
+<p>\( (B^T A^T)_{ij} = \sum_k b^T_{ik} \cdot a^T_{kj} = \sum_k b_{ki} \cdot a_{jk} \)</p>
+<p>Since both expressions are the same, we conclude:</p>
+<p>\( (AB)^T = B^T A^T \)</p>
+
+<h3>1.b. Reverse Direction \( B^T A^T = (AB)^T \)</h3>
+<p>We can also prove this identity starting from the right-hand side:</p>
+<p>\( (B^T A^T)_{ij} = \sum_k b^T_{ik} \cdot a^T_{kj} = \sum_k b_{ki} \cdot a_{jk} = (AB)_{ji} = (AB)^T_{ij} \)</p>
+
+<h2>2. Cofactor and Adjoint</h2>
+
+<h3>Cofactor Matrix</h3>
+<p>The cofactor of the element in the \( i^{\text{th}} \) row and \( j^{\text{th}} \) column of a square matrix \( A \) is given by:</p>
+<p>\( \text{CO}_{ij} = (-1)^{i+j} \cdot M_{ij} \)</p>
+<p>Where \( M_{ij} \) is the <strong>minor</strong> of the element, i.e., the determinant of the submatrix formed by deleting the \( i^{\text{th}} \) row and \( j^{\text{th}} \) column from \( A \).</p>
+
+<h3>Adjoint</h3>
+<p>The adjoint (or adjugate) of a square matrix \( A \) is the transpose of the matrix of cofactors:</p>
+<p>\( \text{Adj}(A) = [\text{CO}_{ij}]^T \)</p>
+
+<h2>3. Inverse of a Matrix</h2>
+<p>If matrix \( A \) is invertible (i.e., \( \det(A) \ne 0 \)), then the inverse of \( A \) is given by:</p>
+<p>\( A^{-1} = \frac{\text{Adj}(A)}{\det(A)} \)</p>
+
+<h2>4. Inverse of a Product</h2>
+<p>The inverse of a product of two invertible matrices is the product of their inverses in reverse order:</p>
+<p>\( (AB)^{-1} = B^{-1} A^{-1} \)</p>
+<p><strong>Proof:</strong></p>
+<p>Start with the identity:</p>
+<p>\( (AB)(AB)^{-1} = I \)</p>
+<p>Pre-multiply both sides by \( A^{-1} \):</p>
+<p>\( A^{-1}(AB)(AB)^{-1} = A^{-1} \Rightarrow B(AB)^{-1} = A^{-1} \)</p>
+<p>Now pre-multiply both sides by \( B^{-1} \):</p>
+<p>\( B^{-1}B(AB)^{-1} = B^{-1}A^{-1} \Rightarrow (AB)^{-1} = B^{-1}A^{-1} \)</p>
+
+<h2>5. Adjoint of a Product</h2>
+<p>The adjoint of the product of two matrices equals the product of their adjoints in reverse order:</p>
+<p>\( \text{Adj}(AB) = \text{Adj}(B) \cdot \text{Adj}(A) \)</p>
+
+<p><strong>Why this works:</strong></p>
+<p>From the inverse formula:</p>
+<p>\( (AB)^{-1} = \frac{\text{Adj}(AB)}{\det(AB)} \)</p>
+<p>We also have:</p>
+<p>\( (AB)^{-1} = B^{-1} A^{-1} \), and \( \det(AB) = \det(A) \cdot \det(B) \)</p>
+<p>Substitute the inverse formulas:</p>
+<p>\( A^{-1} = \frac{\text{Adj}(A)}{\det(A)} \), and \( B^{-1} = \frac{\text{Adj}(B)}{\det(B)} \)</p>
+<p>Multiply the adjoints accordingly:</p>
+<p>\( \text{Adj}(B) \cdot \text{Adj}(A) = \det(A) \cdot \det(B) \cdot B^{-1} \cdot A^{-1} \)</p>
+<p>Thus, from the original inverse formula:</p>
+<p>\( \text{Adj}(AB) = \text{Adj}(B) \cdot \text{Adj}(A) \)</p>
+
+<h2 id = "ev">Eigenvalue and Eigenvector</h2>
 			<p>
 				Let’s assume a square matrix <strong>A</strong>
 			</p>
@@ -415,106 +178,6 @@
 			</p>
 			<p>
 				The eigenvectors corresponding to λ<sub>1 </sub>are called dominant eigenvectors of <strong>A</strong>.
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				<strong>Procedure</strong>
-			</p>
-			<ol>
-				<li>
-					Choose an <strong>n X n </strong>matrix
-				</li>
-			</ol>
-			<p>
-				<strong><em>The number of rows and columns should be the same (or matrix dimension mismatched)</em></strong>
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<ol start="2">
-				<li>
-					Like the Jacobi and Gauss-Seidel methods, the power method for approximating eigenvalues is iterative. First, we assume that matrix <strong>A</strong> has a dominant eigenvalue with corresponding dominant eigenvectors. Then we choose an initial approximation <strong>x</strong><strong><sub>0</sub></strong> of one of the
-				</li>
-			</ol>
-			<p>
-				dominant eigenvectors of <strong>A</strong>. This initial approximation must be a nonzero vector in R<em><sup>n </sup></em>
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				Finally, we form the sequence given by
-			</p>
-			<p>
-				<strong>x</strong><strong><sub>1</sub></strong><strong> = Ax</strong><strong><sub>0</sub></strong>
-			</p>
-			<p>
-				<strong>x</strong><strong><sub>2</sub></strong><strong> = Ax</strong><strong><sub>1 </sub></strong><strong>= A(Ax</strong><strong><sub>0</sub></strong><strong>) = A</strong><strong><sup>2</sup></strong><strong>x</strong><strong><sub>0</sub></strong>
-			</p>
-			<p>
-				<strong>x</strong><strong><sub>3</sub></strong><strong> = Ax</strong><strong><sub>2 </sub></strong><strong>= A(A</strong><strong><sup>2</sup></strong><strong>x</strong><strong><sub>0</sub></strong><strong>) = A</strong><strong><sup>3</sup></strong><strong>x</strong><strong><sub>0</sub></strong>
-			</p>
-			<p>
-				<strong><sub>. . .</sub></strong>
-			</p>
-			<p>
-				<strong>x</strong><strong><sub>n</sub></strong><strong> = Ax</strong><strong><sub>n-1 </sub></strong><strong>= A(A</strong><strong><sup>n-1</sup></strong><strong>x</strong><strong><sub>0</sub></strong><strong>) = A</strong><strong><sup>n</sup></strong><strong>x</strong><strong><sub>0</sub></strong>
-			</p>
-			<p>
-				<em>(In the above, </em><strong><em>x</em></strong><strong><em><sub>1 </sub></em></strong><em>denotes</em><strong><em> </em></strong><em>the</em><strong><em> </em></strong><em>value of vector </em><strong><em>x </em></strong><em>at the first iteration and so on)</em>
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				Compare the updated value of <strong>x </strong>with its previous value (obtained from the previous iteration)
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				For large powers of k, and by properly scaling this sequence, we will see that we obtain a good approximation of the dominant eigenvector of <strong>A</strong>. 
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<ol start="3">
-				<li>
-					Repeat the iteration process until convergence
-				</li>
-			</ol>
-			<p>
-				&#xa0;
-			</p>
-			<ol start="4">
-				<li>
-					The formula for finding the corresponding eigenvalue from eigenvector x.
-				</li>
-			</ol>
-			<p>
-				If <strong>x </strong>is an eigenvector of <strong>A</strong>, then its corresponding eigenvalue is given by 
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				λ = (<strong>Ax.x / x.x</strong>)
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<ol start="5">
-				<li>
-					If they do not converge even after many iterations (maybe after 1000 iterations), then
-				</li>
-			</ol>
-			<p>
-				<strong><em>Entered matrix has no dominant eigenvalue</em></strong>
 			</p>
 			<p>
 				&#xa0;
@@ -615,9 +278,7 @@
 			<p>
 				&#xa0;
 			</p>
-			<p>
-				<strong>Singular Value Decomposition (SVD)</strong>
-			</p>
+			<h2 id = "svd">Singular Value Decomposition (SVD)</h2>
 			<p>
 				<strong>Theory:</strong>
 			</p>
@@ -723,9 +384,7 @@
 			<p>
 				&#xa0;
 			</p>
-			<p>
-				<strong>LU Decomposition</strong>
-			</p>
+			<h2 id = "lu">LU Decomposition</h2>
 			<p>
 				LU Decomposition is a method to find solutions of linear equations.
 			</p>
@@ -752,56 +411,6 @@
 			</p>
 			<p>
 				<strong><em>L= lower triangular matrix; U= upper triangular matrix</em></strong>
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				<strong>Procedure-</strong>
-			</p>
-			<ol>
-				<li>
-					Choose a matrix (<strong>m X n) </strong>(e.g., 3X 3, 3 X 4, 4 X 4, etc.,)
-				</li>
-			</ol>
-			<p>
-				&#xa0;
-			</p>
-			<ol start="2">
-				<li>
-					Initialize the <strong>L</strong> and <strong>U </strong>matrices. For L matrix, take a matrix with all diagonal elements assigned to 1, and the remaining components are zero. L matrix size will be (<strong>m X m</strong>). 
-				</li>
-			</ol>
-			<p>
-				&#xa0;
-			</p>
-			<ol start="3">
-				<li>
-					Consider the <strong>U</strong> matrix's elements to be same to those of the <strong>A</strong> matrix. So, size of matrix <strong>U </strong>will be as same as matrix<strong> A</strong>.
-				</li>
-			</ol>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<ol start="4">
-				<li>
-					4. Next, execute row operations on the <strong>U</strong> matrix to make sure that all of the components below the diagonal are zeroes. For instance, to make an element in row 2 or R2 at the (i,j)th position zero, we would first do 
-				</li>
-			</ol>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				"R2 - (-2)*R1" 
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				and then set the value ‘(-2)’ at the (i,j)th place of the L Matrix.
 			</p>
 			<p>
 				&#xa0;
@@ -945,9 +554,7 @@
 			<p>
 				&#xa0;
 			</p>
-			<p>
-				<strong>Row Echelon Form</strong>
-			</p>
+			<h2>Row Echelon Form</h2>
 			<p>
 				A matrix is in row echelon form if
 			</p>
@@ -967,35 +574,6 @@
 			</ul>
 			<p>
 				&#xa0;
-			</p>
-			<p>
-				<strong>Procedure</strong>
-			</p>
-			<ol>
-				<li>
-					Choose an m X n matrix
-				</li>
-				<li>
-					All zero rows are at the bottom. 
-				</li>
-				<li>
-					Choose the leading entry in the first non-zero row and swap it with the first row if necessary. Or, the leading entry/element in the first row must be non-zero.
-				</li>
-				<li>
-					Divide the first row by the leading entry so that the leading entry becomes 1.
-				</li>
-				<li>
-					Use row operations to make all entries in the first column below the leading entry equal to 0.
-				</li>
-				<li>
-					Repeat steps 3 through 5 for each subsequent row, working from top to bottom.
-				</li>
-			</ol>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				These conditions also imply that all entries in a column below a leading coefficient are zeros
 			</p>
 			<p>
 				&#xa0;
@@ -1039,98 +617,7 @@
 			<p>
 				&#xa0;
 			</p>
-			<p>
-				<strong>Reduced Row Echelon Form (RREF)</strong>
-			</p>
-			<p>
-				<strong>Procedure</strong>
-			</p>
-			<ol>
-				<li>
-					Choose an m X n matrix
-				</li>
-				<li>
-					All zero rows are at the bottom. 
-				</li>
-				<li>
-					Choose the leading entry in the first non-zero row and swap it with the first row if necessary.
-				</li>
-				<li>
-					Divide the first row by the leading entry so that the leading entry becomes 1.
-				</li>
-				<li>
-					Use row operations to make all entries in the first column above and below the leading entry equal to 0.
-				</li>
-				<li>
-					Repeat steps 3 through 5 for each subsequent row, working from top to bottom.
-				</li>
-				<li>
-					After all, rows have been processed, the matrix is in reduced row echelon form.
-				</li>
-			</ol>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				<strong>Example:</strong>
-			</p>
-			<p>
-				Given matrix <strong>A </strong>= <img src="1739254504_matrix-theory/1739254504_matrix-theory-60.png" width="94" height="61" alt="" />
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				R2 ← R2 – 2*R1 <em>(R1 denotes row 1 and so on)</em>
-			</p>
-			<p>
-				<img src="1739254504_matrix-theory/1739254504_matrix-theory-61.png" width="94" height="61" alt="" />
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				R3 ← R3 – 3*R1
-			</p>
-			<p>
-				<img src="1739254504_matrix-theory/1739254504_matrix-theory-62.png" width="83" height="61" alt="" />
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				R1 ← R1 – 2*R2
-			</p>
-			<p>
-				<img src="1739254504_matrix-theory/1739254504_matrix-theory-63.png" width="83" height="61" alt="" />
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				R1 ← R1 – R3
-			</p>
-			<p>
-				<img src="1739254504_matrix-theory/1739254504_matrix-theory-64.png" width="83" height="61" alt="" />
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				R2 ← R2 – R3
-			</p>
-			<p>
-				<img src="1739254504_matrix-theory/1739254504_matrix-theory-65.png" width="83" height="61" alt="" />
-			</p>
-			<p>
-				&#xa0;
-			</p>
-			<p>
-				<strong>Rank of a Matrix</strong>
-			</p>
+			<h2>Rank of a Matrix</h2>
 			<p>
 				<strong>Theory:</strong>
 			</p>
@@ -1178,47 +665,5 @@
 			<p>
 				&#xa0;
 			</p>
-			<p>
-				<strong>Rank of a Matrix in Reduced Row Echelon Form (RREF)</strong>
-			</p>
-			<p>
-				<strong>Theory:</strong>
-			</p>
-			<ol>
-				<li>
-					<strong>Reduced Row Echelon Form (RREF)</strong>: A matrix is in reduced row echelon form when:
-					<ul>
-						<li>
-							It is in row echelon form (REF).
-						</li>
-						<li>
-							Each leading entry (pivot) is 1.
-						</li>
-						<li>
-							Each leading 1 is the only non-zero entry in its column.
-						</li>
-						<li>
-							All rows with leading 1s are above rows of all zeros.
-						</li>
-					</ul>
-				</li>
-			</ol>
-			<p>
-				&#xa0;
-			</p>
-			<ol start="2">
-				<li>
-					<strong>Finding the Rank</strong>:
-					<ul>
-						<li>
-							<strong>Count Leading 1s</strong>: In RREF, the rank of the matrix is equal to the number of leading 1s. Each leading 1 represents a pivot position in a linearly independent row.
-						</li>
-						<li>
-							<strong>Process</strong>: Convert the matrix to RREF using row operations (pivoting, scaling, and clearing entries above and below pivots) and count the number of leading 1s to determine the rank.
-						</li>
-					</ul>
-				</li>
-			</ol>
- 
 </body>
 </html>
