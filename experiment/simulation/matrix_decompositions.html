@@ -103,7 +103,7 @@ li.step {
   margin: 12px 0;
   padding: 12px 15px;
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, background-color 0.2s ease;
@@ -148,8 +148,12 @@ li.step:hover {
   <div id = "instructions">
     <h1 id ="inst">Instructions for Performing Matrix Decomposition Operations</h1>
 <ul>
-<li class="step step1">Step 1: For each section, you can input your matrix element values in two ways: either through the textarea or by filling the cells.</li>
-<li class="step step2">Step 2: After entering the matrix values, click the buttons for the various matrix decomposition methods to perform the operation.</li>
+  <li class="step step1">
+    Step 1: For each section, you can enter your matrix element values in two ways: either using the textarea or by filling in the cells.
+  </li>
+  <li class="step step2">
+    Step 2: After entering the matrix values, click the buttons corresponding to the various matrix decomposition methods to perform the operation.
+  </li>
 </ul>
 <p>&#9888; <strong>Disclaimer:</strong> This calculator only works for square matrices.</p>
 
@@ -1032,7 +1036,7 @@ function svdResult(decomposition) {
             document.getElementById("overlayheading").innerHTML =
   '<span style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">' +
   'Eigen Values: Eigenvalues are scalars that indicate how a linear transformation stretches or shrinks vectors along specific directions called eigenvectors. ' +
-  '<a href="https://virtual-labs.github.io/exp-matrix-decompositions-iitd/theory.html" target="_blank" style="color: #0077cc; text-decoration: none; font-weight: bold;">🔗 Click here</a>' +
+  '<a href="https://virtual-labs.github.io/exp-matrix-decompositions-iitd/theory.html#ev" target="_blank" style="color: #0077cc; text-decoration: none; font-weight: bold;">🔗 Click here</a>' +
   '</span>';
 
             insertMatrix(matrixString);
@@ -1049,7 +1053,7 @@ function svdResult(decomposition) {
           document.getElementById("overlayheading").innerHTML = 
   '<span style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">' +
   'Eigen Vectors: Eigenvectors are non-zero vectors that change only in scale when a linear transformation is applied ' +
-  '<a href="https://virtual-labs.github.io/exp-matrix-decompositions-iitd/theory.html" target="_blank" style="color: #0077cc; text-decoration: none; font-weight: bold;">🔗 Click here</a>' +
+  '<a href="https://virtual-labs.github.io/exp-matrix-decompositions-iitd/theory.html#ev" target="_blank" style="color: #0077cc; text-decoration: none; font-weight: bold;">🔗 Click here</a>' +
   '</span>';
 
           if (typeof eigenvectors === "string") {
@@ -1069,7 +1073,7 @@ function svdResult(decomposition) {
           document.getElementById("overlayheading").innerHTML =
   '<span style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">' +
   'Eigenvalue decomposition is a matrix factorization technique where a square matrix is decomposed into its eigenvalues and eigenvectors, such that the matrix can be written as a product of its eigenvectors and a diagonal matrix of its eigenvalues. ' +
-  '<a href="https://virtual-labs.github.io/exp-matrix-decompositions-iitd/theory.html" target="_blank" style="color: #0077cc; text-decoration: none; font-weight: bold;">🔗 Click here</a>' +
+  '<a href="https://virtual-labs.github.io/exp-matrix-decompositions-iitd/theory.html#ev" target="_blank" style="color: #0077cc; text-decoration: none; font-weight: bold;">🔗 Click here</a>' +
   '</span>';
 
           if (
@@ -1094,7 +1098,7 @@ function svdResult(decomposition) {
           document.getElementById("overlayheading").innerHTML =
   '<span style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">' +
   'LU Decomposition Using Doolittle\'s Method (with Partial Pivoting)<br>PA = LU ' +
-  '<a href="https://virtual-labs.github.io/exp-matrix-decompositions-iitd/theory.html" target="_blank" style="color: #0077cc; text-decoration: none; font-weight: bold;">🔗 Click here</a>' +
+  '<a href="https://virtual-labs.github.io/exp-matrix-decompositions-iitd/theory.html#lu" target="_blank" style="color: #0077cc; text-decoration: none; font-weight: bold;">🔗 Click here</a>' +
   '</span>';
 
           if (typeof lu_decomposition === "string") {
@@ -1114,7 +1118,7 @@ function svdResult(decomposition) {
           document.getElementById("overlayheading").innerHTML =
   '<span style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">' +
   'Singular Value Decomposition (SVD) is a matrix factorization technique that decomposes a matrix into three components: a unitary matrix of left singular vectors, a diagonal matrix of singular values, and a unitary matrix of right singular vectors, enabling various applications like dimensionality reduction and data compression.' +
-  '<a href="https://virtual-labs.github.io/exp-matrix-decompositions-iitd/theory.html" target="_blank" style="color: #0077cc; text-decoration: none; font-weight: bold;">🔗 Click here</a>' +
+  '<a href="https://virtual-labs.github.io/exp-matrix-decompositions-iitd/theory.html#svd" target="_blank" style="color: #0077cc; text-decoration: none; font-weight: bold;">🔗 Click here</a>' +
   '</span>';
 
           if (typeof sv_decomposition === "string") {
