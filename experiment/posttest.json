@@ -11,10 +11,10 @@
         "d": "0"
       },
       "explanations": {
-        "a": "Incorrect.",
-        "b": "Incorrect.",
-        "c": "Correct.",
-        "d": "Incorrect."
+        "a": "Incorrect. The rows are not all multiples of each other.",
+        "b": "Incorrect. The matrix has three linearly independent rows.",
+        "c": "Correct. The determinant is non-zero, so rank = 3.",
+        "d": "Incorrect. The matrix is not the zero matrix."
       },
       "correctAnswer": "c",
       "difficulty": "hard"
@@ -29,10 +29,10 @@
         "d": "2"
       },
       "explanations": {
-        "a": "Incorrect.",
-        "b": "Incorrect.",
-        "c": "Correct.",
-        "d": "Incorrect."
+        "a": "Incorrect. The minor is computed from the remaining 2×2 determinant.",
+        "b": "Incorrect. Determinant calculation is incorrect.",
+        "c": "Correct. Removing row 1 and column 3 gives a 2×2 matrix whose determinant is −8.",
+        "d": "Incorrect. The 2×2 determinant was miscalculated."
       },
       "correctAnswer": "c",
       "difficulty": "hard"
@@ -47,10 +47,10 @@
         "d": "-6"
       },
       "explanations": {
-        "a": "Incorrect.",
-        "b": "Correct.",
-        "c": "Incorrect.",
-        "d": "Incorrect."
+        "a": "Incorrect. The sign and determinant were not computed correctly.",
+        "b": "Correct. The cofactor equals (−1)^(2+1) times the minor, giving 10.",
+        "c": "Incorrect. The minor was miscalculated.",
+        "d": "Incorrect. The sign factor was not applied properly."
       },
       "correctAnswer": "b",
       "difficulty": "hard"
@@ -65,10 +65,10 @@
         "d": "-4"
       },
       "explanations": {
-        "a": "Incorrect.",
-        "b": "Incorrect.",
-        "c": "Correct.",
-        "d": "Incorrect."
+        "a": "Incorrect. The 2×2 determinant is not 4.",
+        "b": "Incorrect. Determinant value is incorrect.",
+        "c": "Correct. Removing row 3 and column 2 gives determinant −6.",
+        "d": "Incorrect. The minor was computed incorrectly."
       },
       "correctAnswer": "c",
       "difficulty": "hard"
@@ -83,10 +83,10 @@
         "d": "3, -3"
       },
       "explanations": {
-        "a": "Correct.",
-        "b": "Incorrect.",
-        "c": "Incorrect.",
-        "d": "Incorrect."
+        "a": "Correct. Solving |A − λI| = 0 gives eigenvalues 4 and −1.",
+        "b": "Incorrect. These are not solutions of the characteristic polynomial.",
+        "c": "Incorrect. Does not satisfy the characteristic equation.",
+        "d": "Incorrect. These values do not solve |A − λI| = 0."
       },
       "correctAnswer": "a",
       "difficulty": "hard"
@@ -101,10 +101,10 @@
         "d": "<span>[1 &nbsp; 3]</span> and <span>[1 &nbsp; -2]</span>"
       },
       "explanations": {
-        "a": "Correct.",
-        "b": "Incorrect.",
-        "c": "Incorrect.",
-        "d": "Incorrect."
+        "a": "Correct. Each vector satisfies (A − λI)x = 0 for the corresponding eigenvalue.",
+        "b": "Incorrect. These vectors do not satisfy the eigenvector equation.",
+        "c": "Incorrect. They do not produce scalar multiples under A.",
+        "d": "Incorrect. These are not valid eigenvectors."
       },
       "correctAnswer": "a",
       "difficulty": "hard"
@@ -119,10 +119,10 @@
         "d": "Complex"
       },
       "explanations": {
-        "a": "Correct.",
-        "b": "Incorrect.",
-        "c": "Incorrect.",
-        "d": "Incorrect."
+        "a": "Correct. Hermitian matrices always have real eigenvalues.",
+        "b": "Incorrect. Eigenvalues need not be positive unless the matrix is positive definite.",
+        "c": "Incorrect. Hermitian matrices do not have purely imaginary eigenvalues.",
+        "d": "Incorrect. Eigenvalues are real."
       },
       "correctAnswer": "a",
       "difficulty": "intermediate"
@@ -137,10 +137,10 @@
         "d": "<span>[1-2j &nbsp; 5+2j &nbsp; -6-2j]</span><br><span>[-1+3j &nbsp; -1+5j &nbsp; -3+j]</span><br><span>[2-3j &nbsp; -2+4j &nbsp; 2-j]</span>"
       },
       "explanations": {
-        "a": "Correct conjugate transpose.",
-        "b": "Incorrect — no transpose.",
-        "c": "Incorrect — original matrix.",
-        "d": "Incorrect structure."
+        "a": "Correct. The conjugate transpose requires taking complex conjugates and transposing.",
+        "b": "Incorrect. Conjugation was applied without transposing.",
+        "c": "Incorrect. This is the original matrix.",
+        "d": "Incorrect. Conjugation and transpose were not both applied correctly."
       },
       "correctAnswer": "a",
       "difficulty": "hard"

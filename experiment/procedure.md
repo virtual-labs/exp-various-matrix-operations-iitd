@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,18 +6,19 @@
 </head>
 <body>
     <ul>
-        <li>The simulations are divided into three sections:
+        <li>The simulations are divided into four sections:
             <ul>
-                <li><strong>Matrix Operations</strong></li>
-                <li><strong>System of Equations Calculator</strong></li>
-                <li><strong>Matrix Decompositions</strong></li>
+                <li><strong>1. Basic Matrix Operations</strong></li>
+                <li><strong>2. Two Matrix Operations</strong></li>
+                <li><strong>3. Matrix Decompositions</strong></li>
+                <li><strong>4. System of Equations Calculator</strong></li>
             </ul>
         </li>
       <br/><br/>
           <p>
         <strong>Steps</strong>:
             </p>
-        <li>1. For each section, you can input your matrix element values in two ways:
+        <li>1. For <strong>each section</strong>, you can input your matrix element values in two ways:
             <ul>
                 <li><strong>Textarea</strong>:
                     <ul>
@@ -37,9 +37,14 @@
         <li>2. After entering the matrix values, select the desired operation by clicking the corresponding button:
             <ul>
                 <li><strong>Available operations include</strong>:</li>
-                <li>Determinant</li>
-                <li>Eigenvalue Decomposition</li>
-                <li>LU Decomposition, etc.</li>
+                <li><strong>a. i.e., for Basic Matrix Operations</strong>:</li>
+                <li>Determinant, inverse, transpose, etc.</li>
+                <li><strong>b. for Two Matrix Operations</strong>:</li>
+                <li>Addition, Multiplication, Division, etc.</li>
+                <li><strong>c. for Matrix Decompositions</strong>:</li>
+                <li>Eigenvalue Decomposition, LU Decomposition, etc.</li>
+                <li><strong>d. System of Equations Calculator</strong>:</li>
+                <li>Enter the coefficients of the variables and solve.</li>
             </ul>
         </li>
     </ul>
