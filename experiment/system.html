@@ -357,64 +357,99 @@
   
   
   <h2 id="system">System of Linear Equations</h2>
-  <p>A system of linear equations consists of multiple linear equations involving the same set of variables. Solving such systems helps determine the values of unknowns that satisfy all equations simultaneously.</p>
 
+  <p>A system of linear equations consists of multiple linear equations involving the same set of variables. Solving such systems helps determine the values of unknowns that satisfy all equations simultaneously.</p>
+  
   <p>Consider a system of \( m \) equations with \( n \) unknowns, represented in matrix form as:</p>
   <div class="math-left">\( A\vec{x} = \vec{b} \)</div>
+  
   <p>where:</p>
   <ul>
     <li>\( A \) is an \( m \times n \) coefficient matrix</li>
     <li>\( \vec{x} \) is an \( n \times 1 \) vector of unknowns</li>
     <li>\( \vec{b} \) is an \( m \times 1 \) constant vector</li>
   </ul>
-
+  
   <h3>Example:</h3>
+  
   <p>Suppose we have the following system:</p>
+  
   <div class="math-left">
-    \[
-    \begin{aligned}
-    x + 2y &= 5 \\
-    3x + 4y &= 11
-    \end{aligned}
-    \]
+  \[
+  \begin{aligned}
+  x + 2y &= 5 \\
+  3x + 4y &= 11
+  \end{aligned}
+  \]
   </div>
-
-  <p>It can be written in matrix form as:</p>
+  
+  <h3>Step-by-Step Solution (Standard Elimination Method)</h3>
+  
+  <p><strong>Step 1: Eliminate one variable.</strong></p>
+  
+  <p>Multiply the first equation by 3 so that the coefficients of \( x \) match:</p>
+  
   <div class="math-left">
-    \[
-    \begin{bmatrix}
-    1 & 2 \\
-    3 & 4
-    \end{bmatrix}
-    \begin{bmatrix}
-    x \\
-    y
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-    5 \\
-    11
-    \end{bmatrix}
-    \]
+  \[
+  3(x + 2y = 5)
+  \]
+  \[
+  3x + 6y = 15
+  \]
   </div>
-
-  <h3>Solution Methods:</h3>
-  <p>There are several techniques to solve such systems:</p>
-  <ul>
-    <li><strong>Gaussian Elimination</strong>: Reduces the system to row echelon form and then back-substitutes to find the solution.</li>
-    <li><strong>Matrix Inversion</strong>: If \( A \) is square and invertible, the solution is \( \vec{x} = A^{-1}\vec{b} \).</li>
-    <li><strong>LU Decomposition</strong>: Factors \( A \) into \( LU \) and solves via forward and backward substitution.</li>
-  </ul>
-
+  
+  <p>Now subtract the second equation:</p>
+  
+  <div class="math-left">
+  \[
+  (3x + 6y) - (3x + 4y) = 15 - 11
+  \]
+  \[
+  2y = 4
+  \]
+  </div>
+  
+  <p><strong>Step 2: Solve for \( y \).</strong></p>
+  
+  <div class="math-left">
+  \[
+  y = 2
+  \]
+  </div>
+  
+  <p><strong>Step 3: Substitute back to find \( x \).</strong></p>
+  
+  <p>Substitute \( y = 2 \) into the first equation:</p>
+  
+  <div class="math-left">
+  \[
+  x + 2(2) = 5
+  \]
+  \[
+  x + 4 = 5
+  \]
+  \[
+  x = 1
+  \]
+  </div>
+  
+  <h3>Final Solution:</h3>
+  
+  <div class="math-left">
+  \[
+  x = 1, \quad y = 2
+  \]
+  </div>
+  
   <h3>Interpreting Solutions:</h3>
   <ul>
-    <li><strong>Unique Solution</strong>: The system has one solution (e.g., lines intersect at a single point).</li>
-    <li><strong>Infinite Solutions</strong>: The equations are dependent (e.g., same line).</li>
-    <li><strong>No Solution</strong>: The system is inconsistent (e.g., parallel lines).</li>
+    <li><strong>Unique Solution:</strong> The system has exactly one solution.</li>
+    <li><strong>Infinite Solutions:</strong> The equations represent the same line.</li>
+    <li><strong>No Solution:</strong> The equations represent parallel lines.</li>
   </ul>
-
+  
   <p>Systems of linear equations are fundamental in engineering, physics, and computer science for modeling real-world problems.</p>
-
+  
 
           </div>
           <div class="bug-report-mobile">
