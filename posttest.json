@@ -1,0 +1,482 @@
+{
+  "version": 2,
+  "css": "pre { font-family: 'Times New Roman', serif; font-size: 16px; line-height: 1.6; display: inline-block; padding: 4px 10px; position: relative; border-left: 2px solid black; border-right: 2px solid black; margin: 2px 0; }",
+  "questions": [
+    {
+      "question": "1. The rank of A = <pre>\n2  -3  1\n1  -2  5\n-4  6  -7</pre> is:",
+      "answers": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "0"
+      },
+      "explanations": {
+        "a": "Incorrect. The rows are not all multiples of each other.",
+        "b": "Incorrect. The matrix has three linearly independent rows.",
+        "c": "Correct. The determinant is non-zero, so rank = 3.",
+        "d": "Incorrect. The matrix is not the zero matrix."
+      },
+      "correctAnswer": "c",
+      "difficulty": "hard"
+    },
+    {
+      "question": "2. The minor M(1,3) of A = <pre>\n1  -2  5\n-4  2  -3\n-5  3  -2</pre> is:",
+      "answers": {
+        "a": "-2",
+        "b": "-5",
+        "c": "-8",
+        "d": "2"
+      },
+      "explanations": {
+        "a": "Incorrect. The minor is computed from the remaining 2×2 determinant.",
+        "b": "Incorrect. Determinant calculation is incorrect.",
+        "c": "Correct. Removing row 1 and column 3 gives a 2×2 matrix whose determinant is −8.",
+        "d": "Incorrect. The 2×2 determinant was miscalculated."
+      },
+      "correctAnswer": "c",
+      "difficulty": "hard"
+    },
+    {
+      "question": "3. The cofactor C(2,1) of A = <pre>\n3  -2  1\n6  -1  -5\n-2  4  -3</pre> is:",
+      "answers": {
+        "a": "-2",
+        "b": "10",
+        "c": "6",
+        "d": "-6"
+      },
+      "explanations": {
+        "a": "Incorrect. The sign and determinant were not computed correctly.",
+        "b": "Correct. The cofactor equals (−1)^(2+1) times the minor, giving 10.",
+        "c": "Incorrect. The minor was miscalculated.",
+        "d": "Incorrect. The sign factor was not applied properly."
+      },
+      "correctAnswer": "b",
+      "difficulty": "hard"
+    },
+    {
+      "question": "4. The minor M(3,2) of A = <pre>\n3  -2  -3\n-4  1  6\n1  -2  3</pre> is:",
+      "answers": {
+        "a": "4",
+        "b": "6",
+        "c": "-6",
+        "d": "-4"
+      },
+      "explanations": {
+        "a": "Incorrect. The 2×2 determinant is not 4.",
+        "b": "Incorrect. Determinant value is incorrect.",
+        "c": "Correct. Removing row 3 and column 2 gives determinant −6.",
+        "d": "Incorrect. The minor was computed incorrectly."
+      },
+      "correctAnswer": "c",
+      "difficulty": "hard"
+    },
+    {
+      "question": "5. Eigenvalues of A = <pre>\n2  3\n2  1</pre> are:",
+      "answers": {
+        "a": "4, -1",
+        "b": "2, 3",
+        "c": "1, -2",
+        "d": "3, -3"
+      },
+      "explanations": {
+        "a": "Correct. Solving |A − λI| = 0 gives eigenvalues 4 and −1.",
+        "b": "Incorrect. These are not solutions of the characteristic polynomial.",
+        "c": "Incorrect. Does not satisfy the characteristic equation.",
+        "d": "Incorrect. These values do not solve |A − λI| = 0."
+      },
+      "correctAnswer": "a",
+      "difficulty": "hard"
+    },
+    {
+      "question": "6. Eigenvectors of A = <pre>\n0  1\n-2  -3</pre> are:",
+      "answers": {
+        "a": "<pre>\n1  -2</pre> and <pre>\n1  -1</pre>",
+        "b": "<pre>\n1  1</pre> and <pre>\n1  -1</pre>",
+        "c": "<pre>\n1  2</pre> and <pre>\n1  -3</pre>",
+        "d": "<pre>\n1  3</pre> and <pre>\n1  -2</pre>"
+      },
+      "explanations": {
+        "a": "Correct. Each vector satisfies (A − λI)x = 0 for the corresponding eigenvalue.",
+        "b": "Incorrect. These vectors do not satisfy the eigenvector equation.",
+        "c": "Incorrect. They do not produce scalar multiples under A.",
+        "d": "Incorrect. These are not valid eigenvectors."
+      },
+      "correctAnswer": "a",
+      "difficulty": "hard"
+    },
+    {
+      "question": "7. Eigenvalues of a Hermitian matrix are:",
+      "answers": {
+        "a": "Real but not necessarily positive",
+        "b": "Always positive",
+        "c": "Purely imaginary",
+        "d": "Complex"
+      },
+      "explanations": {
+        "a": "Correct. Hermitian matrices always have real eigenvalues.",
+        "b": "Incorrect. Eigenvalues need not be positive unless the matrix is positive definite.",
+        "c": "Incorrect. Hermitian matrices do not have purely imaginary eigenvalues.",
+        "d": "Incorrect. Eigenvalues are real."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. The conjugate transpose of matrix A = <pre>\n1+2j  5-2j  -6+2j\n-1-3j  -1-5j  -3-j\n2+3j  -2-4j  2+j</pre> is:",
+      "answers": {
+        "a": "<pre>\n1-2j  -1+3j  2-3j\n5+2j  -1+5j  -2+4j\n-6-2j  -3+j  2-j</pre>",
+        "b": "<pre>\n1+2j  -1-3j  2+3j\n5-2j  -1-5j  -2-4j\n-6+2j  -3-j  2+j</pre>",
+        "c": "<pre>\n1+2j  5-2j  -6+2j\n-1-3j  -1-5j  -3-j\n2+3j  -2-4j  2+j</pre>",
+        "d": "<pre>\n1-2j  5+2j  -6-2j\n-1+3j  -1+5j  -3+j\n2-3j  -2+4j  2-j</pre>"
+      },
+      "explanations": {
+        "a": "Correct. The conjugate transpose requires taking complex conjugates and transposing.",
+        "b": "Incorrect. Conjugation was applied without transposing.",
+        "c": "Incorrect. This is the original matrix.",
+        "d": "Incorrect. Conjugation and transpose were not both applied correctly."
+      },
+      "correctAnswer": "a",
+      "difficulty": "hard"
+    },
+    {
+      "question": "9. Let A be a real n×n matrix. If A is both orthogonal and symmetric, what must A be?",
+      "answers": {
+        "a": "A diagonal matrix with entries ±1",
+        "b": "A rotation matrix",
+        "c": "A nilpotent matrix",
+        "d": "A skew-symmetric matrix"
+      },
+      "explanations": {
+        "a": "Correct. A real matrix that is both symmetric and orthogonal must satisfy A² = I and A = Aᵗ, so it is diagonal with ±1 entries.",
+        "b": "Incorrect. Rotation matrices are not symmetric.",
+        "c": "Incorrect. A nilpotent matrix cannot be orthogonal.",
+        "d": "Incorrect. A matrix cannot be both symmetric and skew-symmetric unless it's the zero matrix."
+      },
+      "correctAnswer": "a",
+      "difficulty": "hard"
+    },
+    {
+      "question": "10. If A is a non-zero nilpotent matrix, what is true about its determinant and trace?",
+      "answers": {
+        "a": "Both are non-zero",
+        "b": "Trace is zero, determinant is zero",
+        "c": "Trace is non-zero, determinant is zero",
+        "d": "Trace is zero, determinant is non-zero"
+      },
+      "explanations": {
+        "a": "Incorrect. Nilpotent matrices have all eigenvalues 0.",
+        "b": "Correct. Since all eigenvalues are 0, both trace and determinant are 0.",
+        "c": "Incorrect. Eigenvalues are all 0, so trace must be 0.",
+        "d": "Incorrect. If the trace is 0, the determinant must also be 0 for nilpotent matrices."
+      },
+      "correctAnswer": "b",
+      "difficulty": "hard"
+    },
+    {
+      "question": "11. Let A be a square matrix such that A is similar to a diagonal matrix D. What can be said about the minimal polynomial of A?",
+      "answers": {
+        "a": "It must be (x - λ₁)...(x - λₙ)",
+        "b": "It must be the same as the characteristic polynomial",
+        "c": "It must split into linear factors over ℂ",
+        "d": "It must be irreducible"
+      },
+      "explanations": {
+        "a": "Incorrect. This is true only if all eigenvalues are distinct.",
+        "b": "Incorrect. This is not necessary; they can differ.",
+        "c": "Correct. A diagonalizable matrix has a minimal polynomial with only linear factors over ℂ.",
+        "d": "Incorrect. Minimal polynomial need not be irreducible."
+      },
+      "correctAnswer": "c",
+      "difficulty": "hard"
+    },
+    {
+      "question": "12. Let A be an n×n matrix over ℂ such that Aⁿ = I. Which of the following must be true about the eigenvalues of A?",
+      "answers": {
+        "a": "They are all real",
+        "b": "They are nth roots of unity",
+        "c": "They are all equal to 1",
+        "d": "They are all zero"
+      },
+      "explanations": {
+        "a": "Incorrect. Eigenvalues could be complex.",
+        "b": "Correct. If Aⁿ = I, then each eigenvalue λ satisfies λⁿ = 1.",
+        "c": "Incorrect. Eigenvalues can be any nth root of unity, not just 1.",
+        "d": "Incorrect. Aⁿ = I excludes the zero eigenvalue."
+      },
+      "correctAnswer": "b",
+      "difficulty": "hard"
+    },
+    {
+      "question": "13. Suppose A is a real symmetric matrix and λ is an eigenvalue of A with eigenvector x. Which of the following is always true?",
+      "answers": {
+        "a": "x is complex",
+        "b": "λ is complex",
+        "c": "λ is real and x is real",
+        "d": "λ is real and x can be chosen to be real"
+      },
+      "explanations": {
+        "a": "Incorrect. Eigenvectors of real symmetric matrices can be chosen to be real.",
+        "b": "Incorrect. Real symmetric matrices have real eigenvalues.",
+        "c": "Incorrect. x is not necessarily real unless chosen so.",
+        "d": "Correct. A real symmetric matrix always has real eigenvalues and real eigenvectors can be chosen."
+      },
+      "correctAnswer": "d",
+      "difficulty": "hard"
+    },
+    {
+      "question": "14. Let A be a diagonalizable matrix with a repeated eigenvalue λ. Which of the following is true?",
+      "answers": {
+        "a": "The geometric multiplicity of λ must be 1",
+        "b": "The geometric multiplicity of λ equals its algebraic multiplicity",
+        "c": "The algebraic multiplicity of λ is 1",
+        "d": "The matrix must be defective"
+      },
+      "explanations": {
+        "a": "Incorrect. Geometric multiplicity must be at least 1.",
+        "b": "Correct. For a matrix to be diagonalizable, geometric multiplicity must equal algebraic multiplicity for all eigenvalues.",
+        "c": "Incorrect. λ is repeated, so algebraic multiplicity > 1.",
+        "d": "Incorrect. A defective matrix is not diagonalizable."
+      },
+      "correctAnswer": "b",
+      "difficulty": "hard"
+    },
+    {
+      "question": "15. Let A be an upper triangular matrix. What can be said about its eigenvalues?",
+      "answers": {
+        "a": "They are all zero",
+        "b": "They are all equal",
+        "c": "They are the entries on the main diagonal",
+        "d": "They are the sum of each row"
+      },
+      "explanations": {
+        "a": "Incorrect. A triangular matrix may have non-zero diagonal elements.",
+        "b": "Incorrect. Diagonal entries may differ.",
+        "c": "Correct. The eigenvalues of a triangular matrix are the diagonal entries.",
+        "d": "Incorrect. The sum of each row is unrelated to eigenvalues."
+      },
+      "correctAnswer": "c",
+      "difficulty": "hard"
+    },
+    {
+      "question": "16. Suppose A is an n×n matrix such that A is not invertible. Which of the following is necessarily true?",
+      "answers": {
+        "a": "All eigenvalues are zero",
+        "b": "A is diagonalizable",
+        "c": "0 is an eigenvalue of A",
+        "d": "A has full rank"
+      },
+      "explanations": {
+        "a": "Incorrect. A non-invertible matrix may have some nonzero eigenvalues.",
+        "b": "Incorrect. Not all non-invertible matrices are diagonalizable.",
+        "c": "Correct. If A is not invertible, then det(A) = 0, so 0 is an eigenvalue.",
+        "d": "Incorrect. Non-invertibility implies rank < n."
+      },
+      "correctAnswer": "c",
+      "difficulty": "hard"
+    },
+    {
+      "question": "17. Let A be an n×n real matrix such that Aᵗ = A⁻¹. What type of matrix is A?",
+      "answers": {
+        "a": "Symmetric",
+        "b": "Orthogonal",
+        "c": "Diagonal",
+        "d": "Skew-symmetric"
+      },
+      "explanations": {
+        "a": "Incorrect. Aᵗ = A⁻¹ implies orthogonality, not symmetry.",
+        "b": "Correct. This is the defining property of an orthogonal matrix.",
+        "c": "Incorrect. Diagonal matrices are not necessarily orthogonal.",
+        "d": "Incorrect. Skew-symmetric matrices satisfy Aᵗ = -A."
+      },
+      "correctAnswer": "b",
+      "difficulty": "hard"
+    },
+    {
+      "question": "18. Let A be a non-diagonalizable n×n matrix. Which of the following must be true?",
+      "answers": {
+        "a": "A is defective",
+        "b": "All eigenvalues are distinct",
+        "c": "A is symmetric",
+        "d": "A is invertible"
+      },
+      "explanations": {
+        "a": "Correct. A non-diagonalizable matrix is defective, i.e., it does not have a complete basis of eigenvectors.",
+        "b": "Incorrect. If all eigenvalues were distinct, A would be diagonalizable.",
+        "c": "Incorrect. Symmetric matrices are always diagonalizable.",
+        "d": "Incorrect. Non-diagonalizability does not imply invertibility."
+      },
+      "correctAnswer": "a",
+      "difficulty": "hard"
+    },
+    {
+      "question": "19. Let A be an n×n matrix such that A^k = 0 for some positive integer k. What can be said about the minimal polynomial of A?",
+      "answers": {
+        "a": "It must be x",
+        "b": "It must divide x^k",
+        "c": "It must be irreducible",
+        "d": "It must be of degree n"
+      },
+      "explanations": {
+        "a": "Incorrect. x might not be the minimal polynomial unless A = 0.",
+        "b": "Correct. The minimal polynomial must annihilate A, so it must divide x^k.",
+        "c": "Incorrect. Nilpotent matrices have reducible minimal polynomials.",
+        "d": "Incorrect. The degree of the minimal polynomial can be less than n."
+      },
+      "correctAnswer": "b",
+      "difficulty": "hard"
+    },
+    {
+      "question": "20. Let V be a vector space of dimension n and let T: V → V be a linear operator such that T² = T. Which of the following is necessarily true?",
+      "answers": {
+        "a": "T is the identity operator",
+        "b": "T is nilpotent",
+        "c": "T is diagonalizable",
+        "d": "T is invertible"
+      },
+      "explanations": {
+        "a": "Incorrect. T could be a projection operator and not the identity.",
+        "b": "Incorrect. T² = T is not the condition for nilpotency.",
+        "c": "Correct. A projection operator satisfies T² = T and is diagonalizable with eigenvalues 0 and 1.",
+        "d": "Incorrect. A projection operator is not invertible unless it’s the identity."
+      },
+      "correctAnswer": "c",
+      "difficulty": "hard"
+    },
+    {
+      "question": "21. Which condition is necessary for a square matrix A to be diagonalizable?",
+      "answers": {
+        "a": "A must be symmetric",
+        "b": "A must have distinct eigenvalues",
+        "c": "The geometric multiplicity of each eigenvalue equals its algebraic multiplicity",
+        "d": "A must be invertible"
+      },
+      "explanations": {
+        "a": "Incorrect. While symmetric matrices are diagonalizable, symmetry is not necessary.",
+        "b": "Incorrect. Having distinct eigenvalues is sufficient but not necessary.",
+        "c": "Correct. This is the necessary and sufficient condition for diagonalizability.",
+        "d": "Incorrect. Diagonalizability does not require A to be invertible."
+      },
+      "correctAnswer": "c",
+      "difficulty": "hard"
+    },
+    {
+      "question": "22. Let T: ℝⁿ → ℝⁿ be a linear operator such that T has no non-trivial invariant subspaces. Which of the following must be true?",
+      "answers": {
+        "a": "T is a scalar multiple of the identity",
+        "b": "T is not diagonalizable",
+        "c": "T is irreducible and acts like a cyclic shift",
+        "d": "T is the zero map"
+      },
+      "explanations": {
+        "a": "Incorrect. A scalar multiple of the identity has every subspace invariant.",
+        "b": "Incorrect. Some non-diagonalizable operators still have invariant subspaces.",
+        "c": "Correct. Having no nontrivial invariant subspaces means T is irreducible and cyclic.",
+        "d": "Incorrect. The zero map has all subspaces invariant."
+      },
+      "correctAnswer": "c",
+      "difficulty": "hard"
+    },
+    {
+      "question": "23. Let A be a square matrix. If A is diagonalizable, which of the following is true?",
+      "answers": {
+        "a": "There exists an invertible matrix P such that A = PDP⁻¹",
+        "b": "A is always symmetric",
+        "c": "A has only one eigenvalue",
+        "d": "A must be orthogonal"
+      },
+      "explanations": {
+        "a": "Correct. Diagonalizability implies A = PDP⁻¹ where D is diagonal.",
+        "b": "Incorrect. Symmetry is not required for diagonalizability.",
+        "c": "Incorrect. A can have multiple eigenvalues and still be diagonalizable.",
+        "d": "Incorrect. Orthogonality is a stronger condition than diagonalizability."
+      },
+      "correctAnswer": "a",
+      "difficulty": "hard"
+    },
+    {
+      "question": "24. Let A be a 4×4 real matrix such that A^T = -A. What can be said about the eigenvalues of A?",
+      "answers": {
+        "a": "They are all real",
+        "b": "They are all purely imaginary or zero",
+        "c": "They are all 1 or -1",
+        "d": "They are all non-negative"
+      },
+      "explanations": {
+        "a": "Incorrect. Skew-symmetric matrices have imaginary eigenvalues.",
+        "b": "Correct. A real skew-symmetric matrix has purely imaginary eigenvalues or zero.",
+        "c": "Incorrect. That applies to some orthogonal matrices, not skew-symmetric ones.",
+        "d": "Incorrect. Imaginary eigenvalues are neither negative nor positive real numbers."
+      },
+      "correctAnswer": "b",
+      "difficulty": "hard"
+    },
+    {
+      "question": "25. If A and B are n×n matrices such that AB = BA, which of the following is always true?",
+      "answers": {
+        "a": "A and B are both diagonalizable",
+        "b": "A and B are similar",
+        "c": "AB is symmetric",
+        "d": "A and B share a common eigenvector (if over ℂ)"
+      },
+      "explanations": {
+        "a": "Incorrect. Commutativity does not imply diagonalizability.",
+        "b": "Incorrect. Commutativity does not imply similarity.",
+        "c": "Incorrect. Symmetry depends on the individual matrices.",
+        "d": "Correct. Over ℂ, commuting matrices have a common eigenvector."
+      },
+      "correctAnswer": "d",
+      "difficulty": "hard"
+    },
+    {
+      "question": "26. Let V be an inner product space and T: V → V be a linear operator such that ⟨T(x), y⟩ = ⟨x, T(y)⟩ for all x, y ∈ V. Which of the following must be true?",
+      "answers": {
+        "a": "T is self-adjoint (Hermitian)",
+        "b": "T is unitary",
+        "c": "T is nilpotent",
+        "d": "T is skew-symmetric"
+      },
+      "explanations": {
+        "a": "Correct. The definition matches the property of self-adjoint (Hermitian) operators.",
+        "b": "Incorrect. Unitary requires T*T = I, not the given condition.",
+        "c": "Incorrect. Nilpotency is unrelated to the inner product identity.",
+        "d": "Incorrect. Skew-symmetric would involve a negative in the inner product condition."
+      },
+      "correctAnswer": "a",
+      "difficulty": "hard"
+    },
+    {
+      "question": "27. Suppose A is a real matrix such that A^T A = A A^T. Which of the following is necessarily true?",
+      "answers": {
+        "a": "A is symmetric",
+        "b": "A is diagonalizable",
+        "c": "A is normal",
+        "d": "A is orthogonal"
+      },
+      "explanations": {
+        "a": "Incorrect. This condition does not imply symmetry.",
+        "b": "Incorrect. Diagonalizability requires more conditions.",
+        "c": "Correct. A real matrix satisfying A^T A = A A^T is normal.",
+        "d": "Incorrect. Orthogonality requires A^T A = I."
+      },
+      "correctAnswer": "c",
+      "difficulty": "hard"
+    },
+    {
+      "question": "28. If A is a square matrix and A² = 0, which of the following must be true?",
+      "answers": {
+        "a": "A is invertible",
+        "b": "A has full rank",
+        "c": "All eigenvalues of A are zero",
+        "d": "A is a diagonal matrix"
+      },
+      "explanations": {
+        "a": "Incorrect. A² = 0 implies A is not invertible.",
+        "b": "Incorrect. If A² = 0, A must be rank-deficient.",
+        "c": "Correct. If A² = 0, A is nilpotent, and all its eigenvalues must be zero.",
+        "d": "Incorrect. A nilpotent matrix cannot be diagonal unless it's the zero matrix."
+      },
+      "correctAnswer": "c",
+      "difficulty": "hard"
+    }
+  ]
+}

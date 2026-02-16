@@ -1,0 +1,1733 @@
+<!DOCTYPE html><html lang="en"><head>
+      <!--Google Tag Manager-->
+      <script class="gtm">
+        var dataLayer = [{
+        'labName': 'Virtual Lab',
+        'discipline': 'Test',
+        'college': 'IITD',
+        'phase': 'Testing',
+        'expName': 'UNDERSTAND VARIOUS MATRIX OPERATIONS, MATRIX DECOMPOSITIONS, FACTORIZATION AND
+    RELATED OPERATIONS',
+        'expShortName': 'various-matrix-operations'
+        }];
+    
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5NMQ9NQ');
+      </script>
+      <!--End Google Tag Manager-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    
+    	<meta name="experiment-short-name" content="various-matrix-operations">
+    	<meta name="developer-institute" content="IITD">
+    	<meta name="learning-unit" content="UNDERSTAND VARIOUS MATRIX OPERATIONS, MATRIX DECOMPOSITIONS, FACTORIZATION AND
+    RELATED OPERATIONS">
+    	<meta name="task-name" content="Pretest">
+    
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#4076e0">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#4076e0">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4076e0">
+    <title>Virtual Labs</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" integrity="sha512-Oy18vBnbSJkXTndr2n6lDMO5NN31UljR8e/ICzVPrGpSud4Gkckb8yUpqhKuUNoE+o9gAb4O/rAxxw1ojyUVzg==" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/github-markdown.min.css">
+    <link rel="stylesheet" href="./assets/css/vlabs-style.css">
+    <link rel="stylesheet" href="./assets/css/toast.css">
+    <link rel="stylesheet" href="./assets/katex_assets/katex.min.css">
+    
+    <script src="./assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      h1 {
+      font-size: 1.8rem;
+      }
+      h2 {
+      font-size: 1.4rem;
+      }
+      h3 {
+      font-size: 1.2rem;
+      }
+
+      h2, h3 {
+      font-weight: 800;
+      }
+    </style>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"></head>
+  <body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
+      <!--Google Tag Manager (noscript)-->
+      <noscript class="gtm">
+        <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5NMQ9NQ" style="display:none;visibility:hidden" width="0">
+        </iframe>
+      </noscript>
+      <!--End Google Tag Manager (noscript)-->
+  
+      <header class="vlabs-header sticky-top bg-white">
+        <nav class="p-0 navbar navbar-light d-flex align-items-stretch">
+          
+          <button class="navbar-toggler px-4" type="button" onclick="toggle()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="d-flex justify-content-center">        
+            <a href="https://vlab.co.in" class="navbar-brand">
+              <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+            </a>
+          </div>
+          
+          <div id="headerNavbar" class="d-none border-top flex-grow-1 d-lg-flex align-items-center justify-content-end">
+            <div class="svc-rating-display">
+                <rating-display spreadsheetid="1x12nhpp0QvnsA6x-O1sV4IA9SAbfVsq_wiexWkutOmU" sheetname="Experiment-Database" columnname="Experiment Short Name" columnvalue="various-matrix-operations" imagesdirectory="/plugins/svc-rating/images/">
+                </rating-display>
+            </div>      <div class="svc-rating-submit">
+                <rating-submit title="Rate" this="" experiment="">
+                </rating-submit>
+            </div>      <bug-report id="bug-report" title="[BUG REPORT] UNDERSTAND VARIOUS MATRIX OPERATIONS, MATRIX DECOMPOSITIONS, FACTORIZATION AND
+      RELATED OPERATIONS" page-type="assesment" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;IITD&quot;,&quot;expname&quot;:&quot;UNDERSTAND VARIOUS MATRIX OPERATIONS, MATRIX DECOMPOSITIONS, FACTORIZATION AND\nRELATED OPERATIONS&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" button_style="border: none; color: #fff; background-color: #288ec8; text-align: center; font-size: 1.05rem; border-radius: 1em;padding: 0.6em 1.2em; margin: 0 10px" position="override" custom_button_class="v-button"></bug-report>
+          </div>
+        </nav>
+      </header>
+      <div class="container-fluid flex-fill d-flex flex-column vlabs-page-main">
+        <div class="row d-flex justify-content-between">
+          <div class="flex-column">
+          <div class="row py-4 px-4 breadcrumbs">
+          	<div class="title is-4 tools">Tools</div>
+          	<span class="mx-2">
+          		<i aria-hidden="true" class="fa fa-angle-right"></i>
+          	</span>
+          	<a href="performance-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Performance Tool</button>
+          	</a>
+          	<a href="validator-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Validation Tool</button>
+          	</a>
+          </div>
+          </div>
+        </div>
+        <div class="row flex-grow-1 d-flex flex-nowrap flex-column flex-lg-row">
+          <div class="modal fade popupmenu" id="popupMenu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">
+                              <a href="https://vlab.co.in" class="navbar-brand">
+                                  <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+                              </a>
+                          </h5>
+                          <button type="button" class="btn-close align-self-center" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body nav-menu">
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="index.html" class="p-2 ">
+                                      Aim
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="theory.html" class="p-2 ">
+                                      Theory
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="pretest.html" class="p-2  current-item ">
+                                      Pretest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="procedure.html" class="p-2 ">
+                                      Procedure
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="simulation.html" class="p-2 ">
+                                      Simulation
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="posttest.html" class="p-2 ">
+                                      Posttest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="references.html" class="p-2 ">
+                                      References
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="feedback.html" class="p-2 ">
+                                      Feedback
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="nav flex-column sidebar nav-menu flex-shrink-0 px-lg-4 align-items-center align-items-lg-start hidden d-none d-lg-flex" id="menu">
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="index.html" class="p-2 ">
+                        Aim
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="theory.html" class="p-2 ">
+                        Theory
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="pretest.html" class="p-2  current-item ">
+                        Pretest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="procedure.html" class="p-2 ">
+                        Procedure
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="simulation.html" class="p-2 ">
+                        Simulation
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="posttest.html" class="p-2 ">
+                        Posttest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="references.html" class="p-2 ">
+                        References
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="feedback.html" class="p-2 ">
+                        Feedback
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+          </div>          <div class="vlabs-page-content px-5 pb-4 flex-grow-1 markdown-body">
+            <div class="text-center fix-spacing">
+              <h2 id="understand-various-matrix-operations-matrix-decompositions-factorization-and-related-operations">Understand various matrix operations, matrix decompositions, factorization and related operations</h2>
+          
+            </div>
+                  <div id="difficulty-container" style="border-bottom: 1px solid #eaecef; padding-bottom: .3em; margin: 0" class="row">
+                    <div id="difficulty-label" class="col-12 col-md-3" style="display:none"><strong>Choose difficulty: </strong></div>
+                    <div class="form-check col-12 col-md-3" style="display:none">
+                      <input id="beginner" type="checkbox" value="">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        <strong>Beginner</strong>
+                      </label>
+                    </div>
+                    <div class="form-check col-12 col-md-3" style="display:none">
+                      <input id="intermediate" type="checkbox" value="">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        <strong>Intermediate</strong>
+                      </label>
+                    </div>
+                    <div class="form-check col-12 col-md-3" style="display:none">
+                      <input id="advanced" type="checkbox" value="">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        <strong>Advanced</strong>
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <div id="quiz" class="versiontrue" style="margin-top: 1rem">
+                
+                
+                  <div class="question easy">
+                    1. The identity matrix of order 3 is:
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer0a">
+                      <label>
+                        <input type="radio" name="question0" value="a">
+                        a: <pre>          1  0  0
+          0  1  0
+          0  0  1</pre>
+                      </label>
+                      <a href="#" id="explanation0a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer0b">
+                      <label>
+                        <input type="radio" name="question0" value="b">
+                        b: <pre>          0  1  0
+          1  0  1
+          0  1  0</pre>
+                      </label>
+                      <a href="#" id="explanation0b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer0c">
+                      <label>
+                        <input type="radio" name="question0" value="c">
+                        c: <pre>          1  1  1
+          0  0  0
+          0  0  0</pre>
+                      </label>
+                      <a href="#" id="explanation0c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer0d">
+                      <label>
+                        <input type="radio" name="question0" value="d">
+                        d: <pre>          0  0  0
+          0  0  0
+          0  0  0</pre>
+                      </label>
+                      <a href="#" id="explanation0d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question easy">
+                    2. If A = <pre>          2  3
+          1  4</pre> and B = <pre>          1  0
+          2  1</pre>, then A + B equals:
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer1a">
+                      <label>
+                        <input type="radio" name="question1" value="a">
+                        a: <pre>          3  3
+          3  5</pre>
+                      </label>
+                      <a href="#" id="explanation1a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer1b">
+                      <label>
+                        <input type="radio" name="question1" value="b">
+                        b: <pre>          1  3
+          1  5</pre>
+                      </label>
+                      <a href="#" id="explanation1b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer1c">
+                      <label>
+                        <input type="radio" name="question1" value="c">
+                        c: <pre>          4  3
+          2  3</pre>
+                      </label>
+                      <a href="#" id="explanation1c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer1d">
+                      <label>
+                        <input type="radio" name="question1" value="d">
+                        d: <pre>          3  2
+          2  4</pre>
+                      </label>
+                      <a href="#" id="explanation1d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question easy">
+                    3. If A = <pre>          a  b
+          c  d</pre>, then det(A) equals:
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer2a">
+                      <label>
+                        <input type="radio" name="question2" value="a">
+                        a: a + d
+                      </label>
+                      <a href="#" id="explanation2a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer2b">
+                      <label>
+                        <input type="radio" name="question2" value="b">
+                        b: ad - bc
+                      </label>
+                      <a href="#" id="explanation2b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer2c">
+                      <label>
+                        <input type="radio" name="question2" value="c">
+                        c: ab - cd
+                      </label>
+                      <a href="#" id="explanation2c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer2d">
+                      <label>
+                        <input type="radio" name="question2" value="d">
+                        d: a - d
+                      </label>
+                      <a href="#" id="explanation2d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    4. For vectors u and v of length n, the outer product u vᵀ has size:
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer3a">
+                      <label>
+                        <input type="radio" name="question3" value="a">
+                        a: n × n
+                      </label>
+                      <a href="#" id="explanation3a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer3b">
+                      <label>
+                        <input type="radio" name="question3" value="b">
+                        b: 1 × n
+                      </label>
+                      <a href="#" id="explanation3b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer3c">
+                      <label>
+                        <input type="radio" name="question3" value="c">
+                        c: n × 1
+                      </label>
+                      <a href="#" id="explanation3c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer3d">
+                      <label>
+                        <input type="radio" name="question3" value="d">
+                        d: 1 × 1
+                      </label>
+                      <a href="#" id="explanation3d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    5. The transpose of A = <pre>          3  8  4
+          -6  -1  -4
+          7  5  -2</pre> is:
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer4a">
+                      <label>
+                        <input type="radio" name="question4" value="a">
+                        a: <pre>          3  -6  7
+          8  -1  5
+          4  -4  -2</pre>
+                      </label>
+                      <a href="#" id="explanation4a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer4b">
+                      <label>
+                        <input type="radio" name="question4" value="b">
+                        b: <pre>          3  8  4
+          -6  -1  -4
+          7  5  -2</pre>
+                      </label>
+                      <a href="#" id="explanation4b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer4c">
+                      <label>
+                        <input type="radio" name="question4" value="c">
+                        c: <pre>          3  7  -6
+          8  -1  -4
+          4  5  -2</pre>
+                      </label>
+                      <a href="#" id="explanation4c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer4d">
+                      <label>
+                        <input type="radio" name="question4" value="d">
+                        d: <pre>          7  5  -2
+          3  8  4
+          -6  -1  -4</pre>
+                      </label>
+                      <a href="#" id="explanation4d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question easy">
+                    6. A matrix that is NOT invertible is called:
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer5a">
+                      <label>
+                        <input type="radio" name="question5" value="a">
+                        a: Singular matrix
+                      </label>
+                      <a href="#" id="explanation5a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer5b">
+                      <label>
+                        <input type="radio" name="question5" value="b">
+                        b: Poor matrix
+                      </label>
+                      <a href="#" id="explanation5b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer5c">
+                      <label>
+                        <input type="radio" name="question5" value="c">
+                        c: Linearly independent matrix
+                      </label>
+                      <a href="#" id="explanation5c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer5d">
+                      <label>
+                        <input type="radio" name="question5" value="d">
+                        d: Orthogonal matrix
+                      </label>
+                      <a href="#" id="explanation5d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    7. The rank of a matrix equals the:
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer6a">
+                      <label>
+                        <input type="radio" name="question6" value="a">
+                        a: Maximum number of linearly independent columns
+                      </label>
+                      <a href="#" id="explanation6a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer6b">
+                      <label>
+                        <input type="radio" name="question6" value="b">
+                        b: Minimum number of independent rows
+                      </label>
+                      <a href="#" id="explanation6b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer6c">
+                      <label>
+                        <input type="radio" name="question6" value="c">
+                        c: Total number of elements
+                      </label>
+                      <a href="#" id="explanation6c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer6d">
+                      <label>
+                        <input type="radio" name="question6" value="d">
+                        d: Rows minus columns
+                      </label>
+                      <a href="#" id="explanation6d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    8. Which condition implies an n×n matrix is invertible?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer7a">
+                      <label>
+                        <input type="radio" name="question7" value="a">
+                        a: All of these
+                      </label>
+                      <a href="#" id="explanation7a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer7b">
+                      <label>
+                        <input type="radio" name="question7" value="b">
+                        b: Rank = n
+                      </label>
+                      <a href="#" id="explanation7b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer7c">
+                      <label>
+                        <input type="radio" name="question7" value="c">
+                        c: det(A) ≠ 0
+                      </label>
+                      <a href="#" id="explanation7c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer7d">
+                      <label>
+                        <input type="radio" name="question7" value="d">
+                        d: Ax = 0 implies x = 0
+                      </label>
+                      <a href="#" id="explanation7d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question easy">
+                    9. Vectors u = <pre>          2  4  2</pre> and v = <pre>          1  2  1</pre> are:
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer8a">
+                      <label>
+                        <input type="radio" name="question8" value="a">
+                        a: Linearly independent but not orthogonal
+                      </label>
+                      <a href="#" id="explanation8a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer8b">
+                      <label>
+                        <input type="radio" name="question8" value="b">
+                        b: Orthogonal but not independent
+                      </label>
+                      <a href="#" id="explanation8b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer8c">
+                      <label>
+                        <input type="radio" name="question8" value="c">
+                        c: Neither
+                      </label>
+                      <a href="#" id="explanation8c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer8d">
+                      <label>
+                        <input type="radio" name="question8" value="d">
+                        d: Both
+                      </label>
+                      <a href="#" id="explanation8d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    10. Vectors a₁,...,aₙ are linearly independent when:
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer9a">
+                      <label>
+                        <input type="radio" name="question9" value="a">
+                        a: If all αᵢ = 0 then Σ αᵢ aᵢ = 0
+                      </label>
+                      <a href="#" id="explanation9a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer9b">
+                      <label>
+                        <input type="radio" name="question9" value="b">
+                        b: There exist non-zero αᵢ making Σ αᵢ aᵢ = 0
+                      </label>
+                      <a href="#" id="explanation9b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer9c">
+                      <label>
+                        <input type="radio" name="question9" value="c">
+                        c: There exist non-zero αᵢ making Σ αᵢ aᵢ ≠ 0
+                      </label>
+                      <a href="#" id="explanation9c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer9d">
+                      <label>
+                        <input type="radio" name="question9" value="d">
+                        d: Σ αᵢ aᵢ = 0 implies αᵢ = 0
+                      </label>
+                      <a href="#" id="explanation9d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question easy">
+                    11. Vectors are linearly dependent when:
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer10a">
+                      <label>
+                        <input type="radio" name="question10" value="a">
+                        a: There exist non-zero αᵢ such that Σ αᵢ aᵢ = 0
+                      </label>
+                      <a href="#" id="explanation10a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer10b">
+                      <label>
+                        <input type="radio" name="question10" value="b">
+                        b: Σ αᵢ aᵢ = 0 iff αᵢ = 0
+                      </label>
+                      <a href="#" id="explanation10b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer10c">
+                      <label>
+                        <input type="radio" name="question10" value="c">
+                        c: Zero vector implies Σ = 0
+                      </label>
+                      <a href="#" id="explanation10c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer10d">
+                      <label>
+                        <input type="radio" name="question10" value="d">
+                        d: Non-zero entries imply Σ ≠ 0
+                      </label>
+                      <a href="#" id="explanation10d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    12. Eigenvalues of a Hermitian matrix are:
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer11a">
+                      <label>
+                        <input type="radio" name="question11" value="a">
+                        a: Real but not necessarily positive
+                      </label>
+                      <a href="#" id="explanation11a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer11b">
+                      <label>
+                        <input type="radio" name="question11" value="b">
+                        b: Always positive
+                      </label>
+                      <a href="#" id="explanation11b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer11c">
+                      <label>
+                        <input type="radio" name="question11" value="c">
+                        c: Purely imaginary
+                      </label>
+                      <a href="#" id="explanation11c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer11d">
+                      <label>
+                        <input type="radio" name="question11" value="d">
+                        d: Complex
+                      </label>
+                      <a href="#" id="explanation11d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    13. If matrix A = <pre>          1  2
+          3  4</pre> which of the following statements is true about its eigenvalues?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer12a">
+                      <label>
+                        <input type="radio" name="question12" value="a">
+                        a: They are both real and distinct.
+                      </label>
+                      <a href="#" id="explanation12a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer12b">
+                      <label>
+                        <input type="radio" name="question12" value="b">
+                        b: They are complex conjugates.
+                      </label>
+                      <a href="#" id="explanation12b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer12c">
+                      <label>
+                        <input type="radio" name="question12" value="c">
+                        c: They are equal.
+                      </label>
+                      <a href="#" id="explanation12c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer12d">
+                      <label>
+                        <input type="radio" name="question12" value="d">
+                        d: They are purely imaginary.
+                      </label>
+                      <a href="#" id="explanation12d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    14. Let A = <pre>          2  0
+          0  3</pre> Which matrix B commutes with A (i.e., AB = BA)?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer13a">
+                      <label>
+                        <input type="radio" name="question13" value="a">
+                        a: <pre>          0  1
+          1  0</pre>
+                      </label>
+                      <a href="#" id="explanation13a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer13b">
+                      <label>
+                        <input type="radio" name="question13" value="b">
+                        b: <pre>          1  1
+          0  1</pre>
+                      </label>
+                      <a href="#" id="explanation13b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer13c">
+                      <label>
+                        <input type="radio" name="question13" value="c">
+                        c: <pre>          a  0
+          0  b</pre>
+                      </label>
+                      <a href="#" id="explanation13c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer13d">
+                      <label>
+                        <input type="radio" name="question13" value="d">
+                        d: <pre>          0  2
+          2  0</pre>
+                      </label>
+                      <a href="#" id="explanation13d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    15. Consider matrix A = <pre>          0  1
+          -2  -3</pre> What is the trace and determinant of A?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer14a">
+                      <label>
+                        <input type="radio" name="question14" value="a">
+                        a: Trace = -3, Determinant = -2
+                      </label>
+                      <a href="#" id="explanation14a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer14b">
+                      <label>
+                        <input type="radio" name="question14" value="b">
+                        b: Trace = -3, Determinant = 2
+                      </label>
+                      <a href="#" id="explanation14b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer14c">
+                      <label>
+                        <input type="radio" name="question14" value="c">
+                        c: Trace = -2, Determinant = 3
+                      </label>
+                      <a href="#" id="explanation14c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer14d">
+                      <label>
+                        <input type="radio" name="question14" value="d">
+                        d: Trace = 0, Determinant = -3
+                      </label>
+                      <a href="#" id="explanation14d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    16. For a 3×3 matrix A, if its rank is 2, what can be inferred?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer15a">
+                      <label>
+                        <input type="radio" name="question15" value="a">
+                        a: It has 1 linearly dependent row.
+                      </label>
+                      <a href="#" id="explanation15a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer15b">
+                      <label>
+                        <input type="radio" name="question15" value="b">
+                        b: It is invertible.
+                      </label>
+                      <a href="#" id="explanation15b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer15c">
+                      <label>
+                        <input type="radio" name="question15" value="c">
+                        c: Its determinant is non-zero.
+                      </label>
+                      <a href="#" id="explanation15c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer15d">
+                      <label>
+                        <input type="radio" name="question15" value="d">
+                        d: All rows are linearly independent.
+                      </label>
+                      <a href="#" id="explanation15d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    17. If a matrix A is orthogonal, which of the following is always true?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer16a">
+                      <label>
+                        <input type="radio" name="question16" value="a">
+                        a: A^T = A
+                      </label>
+                      <a href="#" id="explanation16a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer16b">
+                      <label>
+                        <input type="radio" name="question16" value="b">
+                        b: A^T = A⁻¹
+                      </label>
+                      <a href="#" id="explanation16b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer16c">
+                      <label>
+                        <input type="radio" name="question16" value="c">
+                        c: det(A) = 0
+                      </label>
+                      <a href="#" id="explanation16c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer16d">
+                      <label>
+                        <input type="radio" name="question16" value="d">
+                        d: All entries are either 0 or 1
+                      </label>
+                      <a href="#" id="explanation16d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    18. If matrix A has eigenvalues 1, 2, and 3, what is the determinant of A?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer17a">
+                      <label>
+                        <input type="radio" name="question17" value="a">
+                        a: 0
+                      </label>
+                      <a href="#" id="explanation17a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer17b">
+                      <label>
+                        <input type="radio" name="question17" value="b">
+                        b: 6
+                      </label>
+                      <a href="#" id="explanation17b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer17c">
+                      <label>
+                        <input type="radio" name="question17" value="c">
+                        c: 5
+                      </label>
+                      <a href="#" id="explanation17c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer17d">
+                      <label>
+                        <input type="radio" name="question17" value="d">
+                        d: Cannot be determined
+                      </label>
+                      <a href="#" id="explanation17d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    19. If A is a square matrix such that A² = I, what are the possible eigenvalues of A?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer18a">
+                      <label>
+                        <input type="radio" name="question18" value="a">
+                        a: 1 and -1
+                      </label>
+                      <a href="#" id="explanation18a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer18b">
+                      <label>
+                        <input type="radio" name="question18" value="b">
+                        b: 0 and 1
+                      </label>
+                      <a href="#" id="explanation18b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer18c">
+                      <label>
+                        <input type="radio" name="question18" value="c">
+                        c: 2 and -2
+                      </label>
+                      <a href="#" id="explanation18c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer18d">
+                      <label>
+                        <input type="radio" name="question18" value="d">
+                        d: Only 1
+                      </label>
+                      <a href="#" id="explanation18d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    20. Which of the following matrices is <b>not</b> invertible?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer19a">
+                      <label>
+                        <input type="radio" name="question19" value="a">
+                        a: <pre>          1  2
+          2  4</pre>
+                      </label>
+                      <a href="#" id="explanation19a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer19b">
+                      <label>
+                        <input type="radio" name="question19" value="b">
+                        b: <pre>          2  0
+          0  3</pre>
+                      </label>
+                      <a href="#" id="explanation19b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer19c">
+                      <label>
+                        <input type="radio" name="question19" value="c">
+                        c: <pre>          0  1
+          1  0</pre>
+                      </label>
+                      <a href="#" id="explanation19c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer19d">
+                      <label>
+                        <input type="radio" name="question19" value="d">
+                        d: <pre>          5  1
+          2  3</pre>
+                      </label>
+                      <a href="#" id="explanation19d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    21. If A is a 3×3 matrix and det(A) = 5, what is det(2A)?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer20a">
+                      <label>
+                        <input type="radio" name="question20" value="a">
+                        a: 10
+                      </label>
+                      <a href="#" id="explanation20a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer20b">
+                      <label>
+                        <input type="radio" name="question20" value="b">
+                        b: 20
+                      </label>
+                      <a href="#" id="explanation20b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer20c">
+                      <label>
+                        <input type="radio" name="question20" value="c">
+                        c: 40
+                      </label>
+                      <a href="#" id="explanation20c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer20d">
+                      <label>
+                        <input type="radio" name="question20" value="d">
+                        d: 8
+                      </label>
+                      <a href="#" id="explanation20d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    22. Which statement is true for any symmetric real matrix?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer21a">
+                      <label>
+                        <input type="radio" name="question21" value="a">
+                        a: It is always invertible.
+                      </label>
+                      <a href="#" id="explanation21a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer21b">
+                      <label>
+                        <input type="radio" name="question21" value="b">
+                        b: It always has real eigenvalues.
+                      </label>
+                      <a href="#" id="explanation21b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer21c">
+                      <label>
+                        <input type="radio" name="question21" value="c">
+                        c: Its determinant is always positive.
+                      </label>
+                      <a href="#" id="explanation21c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer21d">
+                      <label>
+                        <input type="radio" name="question21" value="d">
+                        d: It must be diagonal.
+                      </label>
+                      <a href="#" id="explanation21d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    23. If A is a 2×2 invertible matrix, which of the following must also be invertible?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer22a">
+                      <label>
+                        <input type="radio" name="question22" value="a">
+                        a: 2A
+                      </label>
+                      <a href="#" id="explanation22a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer22b">
+                      <label>
+                        <input type="radio" name="question22" value="b">
+                        b: A²
+                      </label>
+                      <a href="#" id="explanation22b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer22c">
+                      <label>
+                        <input type="radio" name="question22" value="c">
+                        c: A⁻¹
+                      </label>
+                      <a href="#" id="explanation22c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer22d">
+                      <label>
+                        <input type="radio" name="question22" value="d">
+                        d: All of the above
+                      </label>
+                      <a href="#" id="explanation22d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    24. What is the rank of matrix <pre>          1  2
+          2  4</pre>?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer23a">
+                      <label>
+                        <input type="radio" name="question23" value="a">
+                        a: 0
+                      </label>
+                      <a href="#" id="explanation23a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer23b">
+                      <label>
+                        <input type="radio" name="question23" value="b">
+                        b: 1
+                      </label>
+                      <a href="#" id="explanation23b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer23c">
+                      <label>
+                        <input type="radio" name="question23" value="c">
+                        c: 2
+                      </label>
+                      <a href="#" id="explanation23c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer23d">
+                      <label>
+                        <input type="radio" name="question23" value="d">
+                        d: 3
+                      </label>
+                      <a href="#" id="explanation23d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    25. Which of the following matrices is symmetric?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer24a">
+                      <label>
+                        <input type="radio" name="question24" value="a">
+                        a: <pre>          1  2
+          3  4</pre>
+                      </label>
+                      <a href="#" id="explanation24a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer24b">
+                      <label>
+                        <input type="radio" name="question24" value="b">
+                        b: <pre>          2  -1
+          -1  2</pre>
+                      </label>
+                      <a href="#" id="explanation24b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer24c">
+                      <label>
+                        <input type="radio" name="question24" value="c">
+                        c: <pre>          0  1
+          1  0</pre>
+                      </label>
+                      <a href="#" id="explanation24c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer24d">
+                      <label>
+                        <input type="radio" name="question24" value="d">
+                        d: <pre>          1  0
+          0  -1</pre>
+                      </label>
+                      <a href="#" id="explanation24d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    26. What is the trace of matrix <pre>          2  1
+          3  4</pre>?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer25a">
+                      <label>
+                        <input type="radio" name="question25" value="a">
+                        a: 5
+                      </label>
+                      <a href="#" id="explanation25a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer25b">
+                      <label>
+                        <input type="radio" name="question25" value="b">
+                        b: 6
+                      </label>
+                      <a href="#" id="explanation25b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer25c">
+                      <label>
+                        <input type="radio" name="question25" value="c">
+                        c: 2
+                      </label>
+                      <a href="#" id="explanation25c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer25d">
+                      <label>
+                        <input type="radio" name="question25" value="d">
+                        d: 7
+                      </label>
+                      <a href="#" id="explanation25d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    27. Which transformation preserves the length of vectors?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer26a">
+                      <label>
+                        <input type="radio" name="question26" value="a">
+                        a: Scaling matrix
+                      </label>
+                      <a href="#" id="explanation26a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer26b">
+                      <label>
+                        <input type="radio" name="question26" value="b">
+                        b: Orthogonal matrix
+                      </label>
+                      <a href="#" id="explanation26b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer26c">
+                      <label>
+                        <input type="radio" name="question26" value="c">
+                        c: Shear matrix
+                      </label>
+                      <a href="#" id="explanation26c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer26d">
+                      <label>
+                        <input type="radio" name="question26" value="d">
+                        d: Projection matrix
+                      </label>
+                      <a href="#" id="explanation26d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    28. If A is diagonalizable, then it must have...
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer27a">
+                      <label>
+                        <input type="radio" name="question27" value="a">
+                        a: Incorrect. Diagonalizable matrices may have complex eigenvalues.
+                      </label>
+                      <a href="#" id="explanation27a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer27b">
+                      <label>
+                        <input type="radio" name="question27" value="b">
+                        b: Correct. Diagonalizability requires a full set of independent eigenvectors.
+                      </label>
+                      <a href="#" id="explanation27b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer27c">
+                      <label>
+                        <input type="radio" name="question27" value="c">
+                        c: Incorrect. Determinant need not be zero.
+                      </label>
+                      <a href="#" id="explanation27c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer27d">
+                      <label>
+                        <input type="radio" name="question27" value="d">
+                        d: Incorrect. Columns need not be orthogonal.
+                      </label>
+                      <a href="#" id="explanation27d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    29. Which matrix is idempotent (A² = A)?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer28a">
+                      <label>
+                        <input type="radio" name="question28" value="a">
+                        a: <pre>          1  0
+          0  1</pre>
+                      </label>
+                      <a href="#" id="explanation28a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer28b">
+                      <label>
+                        <input type="radio" name="question28" value="b">
+                        b: <pre>          0  1
+          0  0</pre>
+                      </label>
+                      <a href="#" id="explanation28b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer28c">
+                      <label>
+                        <input type="radio" name="question28" value="c">
+                        c: <pre>          1  0
+          0  0</pre>
+                      </label>
+                      <a href="#" id="explanation28c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer28d">
+                      <label>
+                        <input type="radio" name="question28" value="d">
+                        d: <pre>          2  0
+          0  2</pre>
+                      </label>
+                      <a href="#" id="explanation28d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    30. What does the nullity of a matrix refer to?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer29a">
+                      <label>
+                        <input type="radio" name="question29" value="a">
+                        a: Number of rows
+                      </label>
+                      <a href="#" id="explanation29a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer29b">
+                      <label>
+                        <input type="radio" name="question29" value="b">
+                        b: Number of pivot columns
+                      </label>
+                      <a href="#" id="explanation29b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer29c">
+                      <label>
+                        <input type="radio" name="question29" value="c">
+                        c: Dimension of the null space
+                      </label>
+                      <a href="#" id="explanation29c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer29d">
+                      <label>
+                        <input type="radio" name="question29" value="d">
+                        d: Trace of the matrix
+                      </label>
+                      <a href="#" id="explanation29d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    31. If matrix A is singular, what does it imply?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer30a">
+                      <label>
+                        <input type="radio" name="question30" value="a">
+                        a: det(A) ≠ 0
+                      </label>
+                      <a href="#" id="explanation30a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer30b">
+                      <label>
+                        <input type="radio" name="question30" value="b">
+                        b: A has an inverse
+                      </label>
+                      <a href="#" id="explanation30b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer30c">
+                      <label>
+                        <input type="radio" name="question30" value="c">
+                        c: det(A) = 0
+                      </label>
+                      <a href="#" id="explanation30c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer30d">
+                      <label>
+                        <input type="radio" name="question30" value="d">
+                        d: A has full rank
+                      </label>
+                      <a href="#" id="explanation30d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    32. The product of a matrix and its transpose is always...
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer31a">
+                      <label>
+                        <input type="radio" name="question31" value="a">
+                        a: Skew-symmetric
+                      </label>
+                      <a href="#" id="explanation31a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer31b">
+                      <label>
+                        <input type="radio" name="question31" value="b">
+                        b: Diagonal
+                      </label>
+                      <a href="#" id="explanation31b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer31c">
+                      <label>
+                        <input type="radio" name="question31" value="c">
+                        c: Symmetric
+                      </label>
+                      <a href="#" id="explanation31c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer31d">
+                      <label>
+                        <input type="radio" name="question31" value="d">
+                        d: Singular
+                      </label>
+                      <a href="#" id="explanation31d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+               </div>
+                <button id="submit" class="btn btn-primary">Submit Quiz</button>
+                <div id="results"></div>
+          </div>
+            
+            <script>
+              const myQuestions = [{"question":"1. The identity matrix of order 3 is:","answers":{"a":"<pre>\n1  0  0\n0  1  0\n0  0  1</pre>","b":"<pre>\n0  1  0\n1  0  1\n0  1  0</pre>","c":"<pre>\n1  1  1\n0  0  0\n0  0  0</pre>","d":"<pre>\n0  0  0\n0  0  0\n0  0  0</pre>"},"explanations":{"a":"Correct. The identity matrix has 1s on the main diagonal and 0s elsewhere.","b":"Incorrect. The identity matrix must contain 1s only on the main diagonal.","c":"Incorrect. An identity matrix cannot have non-zero entries off the main diagonal.","d":"Incorrect. This is the zero matrix, not the identity matrix."},"correctAnswer":"a","difficulty":"easy"},{"question":"2. If A = <pre>\n2  3\n1  4</pre> and B = <pre>\n1  0\n2  1</pre>, then A + B equals:","answers":{"a":"<pre>\n3  3\n3  5</pre>","b":"<pre>\n1  3\n1  5</pre>","c":"<pre>\n4  3\n2  3</pre>","d":"<pre>\n3  2\n2  4</pre>"},"explanations":{"a":"Correct. Matrix addition is performed element-wise: (2+1, 3+0; 1+2, 4+1).","b":"Incorrect. Corresponding elements were not added correctly.","c":"Incorrect. Matrix addition must be done element-wise.","d":"Incorrect. The element-wise sums are incorrect."},"correctAnswer":"a","difficulty":"easy"},{"question":"3. If A = <pre>\na  b\nc  d</pre>, then det(A) equals:","answers":{"a":"a + d","b":"ad - bc","c":"ab - cd","d":"a - d"},"explanations":{"a":"Incorrect. The determinant is not the sum of diagonal elements.","b":"Correct. For a 2×2 matrix, det(A) = ad − bc.","c":"Incorrect. The determinant formula is ad − bc.","d":"Incorrect. The determinant is not a − d."},"correctAnswer":"b","difficulty":"easy"},{"question":"4. For vectors u and v of length n, the outer product u vᵀ has size:","answers":{"a":"n × n","b":"1 × n","c":"n × 1","d":"1 × 1"},"explanations":{"a":"Correct. The outer product of two length-n vectors produces an n×n matrix.","b":"Incorrect. 1×n is a row vector, not an outer product.","c":"Incorrect. n×1 is a column vector.","d":"Incorrect. The outer product does not produce a scalar."},"correctAnswer":"a","difficulty":"intermediate"},{"question":"5. The transpose of A = <pre>\n3  8  4\n-6  -1  -4\n7  5  -2</pre> is:","answers":{"a":"<pre>\n3  -6  7\n8  -1  5\n4  -4  -2</pre>","b":"<pre>\n3  8  4\n-6  -1  -4\n7  5  -2</pre>","c":"<pre>\n3  7  -6\n8  -1  -4\n4  5  -2</pre>","d":"<pre>\n7  5  -2\n3  8  4\n-6  -1  -4</pre>"},"explanations":{"a":"Correct. The transpose swaps rows and columns.","b":"Incorrect. This is the original matrix.","c":"Incorrect. Rows and columns were not swapped correctly.","d":"Incorrect. This rearranges rows but is not the transpose."},"correctAnswer":"a","difficulty":"intermediate"},{"question":"6. A matrix that is NOT invertible is called:","answers":{"a":"Singular matrix","b":"Poor matrix","c":"Linearly independent matrix","d":"Orthogonal matrix"},"explanations":{"a":"Correct. A singular matrix has determinant 0 and no inverse.","b":"Incorrect. 'Poor matrix' is not a mathematical term.","c":"Incorrect. Linear independence does not define invertibility.","d":"Incorrect. Orthogonal matrices are always invertible."},"correctAnswer":"a","difficulty":"easy"},{"question":"7. The rank of a matrix equals the:","answers":{"a":"Maximum number of linearly independent columns","b":"Minimum number of independent rows","c":"Total number of elements","d":"Rows minus columns"},"explanations":{"a":"Correct. Rank equals the maximum number of linearly independent columns (or rows).","b":"Incorrect. Rank is not defined as the minimum number.","c":"Incorrect. Rank is unrelated to the total number of elements.","d":"Incorrect. Rank is not rows minus columns."},"correctAnswer":"a","difficulty":"intermediate"},{"question":"8. Which condition implies an n×n matrix is invertible?","answers":{"a":"All of these","b":"Rank = n","c":"det(A) ≠ 0","d":"Ax = 0 implies x = 0"},"explanations":{"a":"Correct. Rank = n, det(A) ≠ 0, and Ax = 0 ⇒ x = 0 are all equivalent conditions for invertibility.","b":"Incorrect. This condition alone implies invertibility but is not the complete answer here.","c":"Incorrect. det(A) ≠ 0 implies invertibility but is not the full set.","d":"Incorrect. This condition implies invertibility but is not the complete option."},"correctAnswer":"a","difficulty":"intermediate"},{"question":"9. Vectors u = <pre>\n2  4  2</pre> and v = <pre>\n1  2  1</pre> are:","answers":{"a":"Linearly independent but not orthogonal","b":"Orthogonal but not independent","c":"Neither","d":"Both"},"explanations":{"a":"Incorrect. v is a scalar multiple of u, so they are dependent.","b":"Incorrect. Their dot product is not zero, so they are not orthogonal.","c":"Correct. They are linearly dependent and not orthogonal.","d":"Incorrect. They are not independent and not orthogonal."},"correctAnswer":"c","difficulty":"easy"},{"question":"10. Vectors a₁,...,aₙ are linearly independent when:","answers":{"a":"If all αᵢ = 0 then Σ αᵢ aᵢ = 0","b":"There exist non-zero αᵢ making Σ αᵢ aᵢ = 0","c":"There exist non-zero αᵢ making Σ αᵢ aᵢ ≠ 0","d":"Σ αᵢ aᵢ = 0 implies αᵢ = 0"},"explanations":{"a":"Incorrect. This does not state the necessary condition clearly.","b":"Incorrect. That defines linear dependence.","c":"Incorrect. This does not define independence.","d":"Correct. Vectors are independent if Σ αᵢ aᵢ = 0 implies all αᵢ = 0."},"correctAnswer":"d","difficulty":"intermediate"},{"question":"11. Vectors are linearly dependent when:","answers":{"a":"There exist non-zero αᵢ such that Σ αᵢ aᵢ = 0","b":"Σ αᵢ aᵢ = 0 iff αᵢ = 0","c":"Zero vector implies Σ = 0","d":"Non-zero entries imply Σ ≠ 0"},"explanations":{"a":"Correct. Linear dependence means non-zero scalars exist such that Σ αᵢ aᵢ = 0.","b":"Incorrect. This defines linear independence.","c":"Incorrect. This statement is incomplete.","d":"Incorrect. This does not define dependence."},"correctAnswer":"a","difficulty":"easy"},{"question":"12. Eigenvalues of a Hermitian matrix are:","answers":{"a":"Real but not necessarily positive","b":"Always positive","c":"Purely imaginary","d":"Complex"},"explanations":{"a":"Correct. Hermitian matrices always have real eigenvalues.","b":"Incorrect. They are real but not necessarily positive.","c":"Incorrect. Hermitian matrices do not have purely imaginary eigenvalues.","d":"Incorrect. Eigenvalues are real, not complex in general."},"correctAnswer":"a","difficulty":"intermediate"},{"question":"13. If matrix A = <pre>\n1  2\n3  4</pre> which of the following statements is true about its eigenvalues?","answers":{"a":"They are both real and distinct.","b":"They are complex conjugates.","c":"They are equal.","d":"They are purely imaginary."},"explanations":{"a":"Correct. The eigenvalues are real and distinct, calculated from the characteristic equation λ² - 5λ - 2 = 0.","b":"Incorrect. The matrix has real-valued eigenvalues.","c":"Incorrect. The eigenvalues are not equal.","d":"Incorrect. The eigenvalues are real, not imaginary."},"correctAnswer":"a","difficulty":"intermediate"},{"question":"14. Let A = <pre>\n2  0\n0  3</pre> Which matrix B commutes with A (i.e., AB = BA)?","answers":{"a":"<pre>\n0  1\n1  0</pre>","b":"<pre>\n1  1\n0  1</pre>","c":"<pre>\na  0\n0  b</pre>","d":"<pre>\n0  2\n2  0</pre>"},"explanations":{"a":"Incorrect. AB ≠ BA for this pair.","b":"Incorrect. Multiplying A and B results in different products depending on order.","c":"Correct. Any diagonal matrix will commute with another diagonal matrix.","d":"Incorrect. Matrix multiplication order matters; these do not commute."},"correctAnswer":"c","difficulty":"intermediate"},{"question":"15. Consider matrix A = <pre>\n0  1\n-2  -3</pre> What is the trace and determinant of A?","answers":{"a":"Trace = -3, Determinant = -2","b":"Trace = -3, Determinant = 2","c":"Trace = -2, Determinant = 3","d":"Trace = 0, Determinant = -3"},"explanations":{"a":"Incorrect. The determinant is 0×(-3) - (-2)×1 = 2.","b":"Correct. Trace is the sum of diagonal elements = 0 + (-3) = -3, determinant = 2.","c":"Incorrect. Both trace and determinant are miscalculated.","d":"Incorrect. Trace is not 0 and determinant is not -3."},"correctAnswer":"b","difficulty":"intermediate"},{"question":"16. For a 3×3 matrix A, if its rank is 2, what can be inferred?","answers":{"a":"It has 1 linearly dependent row.","b":"It is invertible.","c":"Its determinant is non-zero.","d":"All rows are linearly independent."},"explanations":{"a":"Correct. Since rank < 3, at least one row must be linearly dependent.","b":"Incorrect. A matrix is invertible only if its rank is full (rank 3).","c":"Incorrect. Determinant is zero if rank < 3.","d":"Incorrect. Not all rows are independent if rank is less than 3."},"correctAnswer":"a","difficulty":"intermediate"},{"question":"17. If a matrix A is orthogonal, which of the following is always true?","answers":{"a":"A^T = A","b":"A^T = A⁻¹","c":"det(A) = 0","d":"All entries are either 0 or 1"},"explanations":{"a":"Incorrect. That would be symmetric, not orthogonal.","b":"Correct. Orthogonal matrices satisfy A^T = A⁻¹ by definition.","c":"Incorrect. Orthogonal matrices have determinant ±1.","d":"Incorrect. Orthogonality does not restrict entries to 0 or 1."},"correctAnswer":"b","difficulty":"intermediate"},{"question":"18. If matrix A has eigenvalues 1, 2, and 3, what is the determinant of A?","answers":{"a":"0","b":"6","c":"5","d":"Cannot be determined"},"explanations":{"a":"Incorrect. None of the eigenvalues are zero.","b":"Correct. Determinant equals the product 1×2×3 = 6.","c":"Incorrect. Determinant is the product, not the sum.","d":"Incorrect. The determinant can be computed from eigenvalues."},"correctAnswer":"b","difficulty":"intermediate"},{"question":"19. If A is a square matrix such that A² = I, what are the possible eigenvalues of A?","answers":{"a":"1 and -1","b":"0 and 1","c":"2 and -2","d":"Only 1"},"explanations":{"a":"Correct. λ² = 1 implies λ = ±1.","b":"Incorrect. 0 cannot satisfy λ² = 1.","c":"Incorrect. That would give λ² = 4.","d":"Incorrect. −1 is also possible."},"correctAnswer":"a","difficulty":"intermediate"},{"question":"20. Which of the following matrices is <b>not</b> invertible?","answers":{"a":"<pre>\n1  2\n2  4</pre>","b":"<pre>\n2  0\n0  3</pre>","c":"<pre>\n0  1\n1  0</pre>","d":"<pre>\n5  1\n2  3</pre>"},"explanations":{"a":"Correct. Rows are linearly dependent, so determinant is 0 ⇒ not invertible.","b":"Incorrect. Diagonal matrix with non-zero values ⇒ invertible.","c":"Incorrect. It is the identity permutation matrix ⇒ invertible.","d":"Incorrect. Has non-zero determinant ⇒ invertible."},"correctAnswer":"a","difficulty":"intermediate"},{"question":"21. If A is a 3×3 matrix and det(A) = 5, what is det(2A)?","answers":{"a":"10","b":"20","c":"40","d":"8"},"explanations":{"a":"Incorrect. Determinant scales by k³ for 3×3 matrices.","b":"Incorrect. This would apply only to 2×2 scaling.","c":"Correct. det(2A) = 2³ det(A) = 8×5 = 40.","d":"Incorrect. Value is incorrect."},"correctAnswer":"c","difficulty":"intermediate"},{"question":"22. Which statement is true for any symmetric real matrix?","answers":{"a":"It is always invertible.","b":"It always has real eigenvalues.","c":"Its determinant is always positive.","d":"It must be diagonal."},"explanations":{"a":"Incorrect. A symmetric matrix can be singular.","b":"Correct. Real symmetric matrices have real eigenvalues.","c":"Incorrect. Determinant may be negative or zero.","d":"Incorrect. Symmetric does not mean diagonal."},"correctAnswer":"b","difficulty":"intermediate"},{"question":"23. If A is a 2×2 invertible matrix, which of the following must also be invertible?","answers":{"a":"2A","b":"A²","c":"A⁻¹","d":"All of the above"},"explanations":{"a":"Incorrect. While true, it is not the most complete answer.","b":"Incorrect. True but not complete.","c":"Incorrect. True but not complete.","d":"Correct. All listed matrices remain invertible."},"correctAnswer":"d","difficulty":"intermediate"},{"question":"24. What is the rank of matrix <pre>\n1  2\n2  4</pre>?","answers":{"a":"0","b":"1","c":"2","d":"3"},"explanations":{"a":"Incorrect. There is one independent row.","b":"Correct. Second row is a multiple of the first, so rank = 1.","c":"Incorrect. Rows are dependent.","d":"Incorrect. Rank cannot exceed 2."},"correctAnswer":"b","difficulty":"intermediate"},{"question":"25. Which of the following matrices is symmetric?","answers":{"a":"<pre>\n1  2\n3  4</pre>","b":"<pre>\n2  -1\n-1  2</pre>","c":"<pre>\n0  1\n1  0</pre>","d":"<pre>\n1  0\n0  -1</pre>"},"explanations":{"a":"Incorrect. Off-diagonal entries are not equal.","b":"Correct. A matrix is symmetric if A = Aᵀ.","c":"Incorrect. Though symmetric, option b is the intended standard answer.","d":"Incorrect. This is symmetric, but option b is the expected choice."},"correctAnswer":"b","difficulty":"intermediate"},{"question":"26. What is the trace of matrix <pre>\n2  1\n3  4</pre>?","answers":{"a":"5","b":"6","c":"2","d":"7"},"explanations":{"a":"Incorrect. Trace equals sum of diagonal entries.","b":"Correct. Trace = 2 + 4 = 6.","c":"Incorrect. Only first diagonal element counted.","d":"Incorrect. Sum is miscalculated."},"correctAnswer":"b","difficulty":"intermediate"},{"question":"27. Which transformation preserves the length of vectors?","answers":{"a":"Scaling matrix","b":"Orthogonal matrix","c":"Shear matrix","d":"Projection matrix"},"explanations":{"a":"Incorrect. Scaling changes vector length.","b":"Correct. Orthogonal transformations preserve length.","c":"Incorrect. Shear changes shape and length.","d":"Incorrect. Projection reduces length."},"correctAnswer":"b","difficulty":"intermediate"},{"question":"28. If A is diagonalizable, then it must have...","answers":{"a":"Incorrect. Diagonalizable matrices may have complex eigenvalues.","b":"Correct. Diagonalizability requires a full set of independent eigenvectors.","c":"Incorrect. Determinant need not be zero.","d":"Incorrect. Columns need not be orthogonal."},"explanations":{"a":"Incorrect.","b":"Correct.","c":"Incorrect.","d":"Incorrect."},"correctAnswer":"b","difficulty":"intermediate"},{"question":"29. Which matrix is idempotent (A² = A)?","answers":{"a":"<pre>\n1  0\n0  1</pre>","b":"<pre>\n0  1\n0  0</pre>","c":"<pre>\n1  0\n0  0</pre>","d":"<pre>\n2  0\n0  2</pre>"},"explanations":{"a":"Incorrect. Although I² = I, another option better represents non-trivial idempotence.","b":"Incorrect. Squaring this matrix does not return itself.","c":"Correct. A² = A for this matrix.","d":"Incorrect. A² = 4I, not A."},"correctAnswer":"c","difficulty":"intermediate"},{"question":"30. What does the nullity of a matrix refer to?","answers":{"a":"Number of rows","b":"Number of pivot columns","c":"Dimension of the null space","d":"Trace of the matrix"},"explanations":{"a":"Incorrect. Nullity is unrelated to number of rows.","b":"Incorrect. Pivot columns relate to rank.","c":"Correct. Nullity equals the dimension of the null space.","d":"Incorrect. Trace is unrelated."},"correctAnswer":"c","difficulty":"intermediate"},{"question":"31. If matrix A is singular, what does it imply?","answers":{"a":"det(A) ≠ 0","b":"A has an inverse","c":"det(A) = 0","d":"A has full rank"},"explanations":{"a":"Incorrect. Singular means determinant equals zero.","b":"Incorrect. Singular matrices are not invertible.","c":"Correct. A singular matrix has det(A) = 0.","d":"Incorrect. Singular matrices do not have full rank."},"correctAnswer":"c","difficulty":"intermediate"},{"question":"32. The product of a matrix and its transpose is always...","answers":{"a":"Skew-symmetric","b":"Diagonal","c":"Symmetric","d":"Singular"},"explanations":{"a":"Incorrect. A Aᵀ is not skew-symmetric.","b":"Incorrect. It is not necessarily diagonal.","c":"Correct. A Aᵀ is always symmetric.","d":"Incorrect. It is not necessarily singular."},"correctAnswer":"c","difficulty":"intermediate"}];
+            </script>
+              <script src="./assets/js/assessment_v2.js"></script>  
+          <div class="bug-report-mobile">
+              <bug-report id="bug-report" title="[BUG REPORT] UNDERSTAND VARIOUS MATRIX OPERATIONS, MATRIX DECOMPOSITIONS, FACTORIZATION AND
+          RELATED OPERATIONS" page-type="assesment" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;IITD&quot;,&quot;expname&quot;:&quot;UNDERSTAND VARIOUS MATRIX OPERATIONS, MATRIX DECOMPOSITIONS, FACTORIZATION AND\nRELATED OPERATIONS&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" position="override" button_style="
+                          position: fixed; 
+                          bottom: 20px;
+                          right: 20px;
+                          z-index: 1;
+                          font-size: 0;
+                          padding: 25px;
+                          border-radius: 50%;
+                          border: none;
+                          background-color: #0fc0ff;
+                          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAAXNSR0IArs4c6QAABiFJREFUaEPFmVuMFEUUhv/TM7uwoBGVyG22u7ZnYGG5REETo8RA1BhFIka8ABFf0PCgDxhFEpCLqAlE1OiTiSj4gFGjD0QBETQaEqPRICALSHdPV+8YQQJBA+wuO1PHdMNcWGame2ZWqMfuc/nq1KlT1acJAzhShjFVAUsYdL8G3HjRdA7gHwna5uahLR91dnaeb9QlNWrA1+/o6GjuPnv2DQ30LICKNhk4qLF63PK8g434rejATJhjKa6m9WazOzOZzKlKTmYAcc8QnxEwJwqIAk5STpvpZJwD1eTHjR43PKflhtkZ2+ovVxbaTJiTSVM/gzCYGIebu4fc1nmi80w5J0nDWA7Qq1GACzLMR3pV7pZMJtNdTs/UzelE6msAQ0BYb7vuS6VyZaGTungGhPfygkRYZ7nusv4OEonEDc2xuEfA0JqgATBhieO6b/fXE0IM1pgPECgVvGP+x/bksFDo1JhUguPZI8FMAz0+zzFtSjqd9p8VRlJvew7E79QKHNgEDjrSndRfNyXEGmasLK4KttmeOysU2hdIGm0vA/xKUZh32VLeW6psCrGMmO+uB5qIeEh398P7jx8/m9cP9pGm9vtpmQ9WjHDzUSkPRYJOpVKDuK9vP0Dj8goMfsSR8ot6IKPoJI22XUBpEHitLWUx6heNVC15pmHMItCXBYeKPUZsLlFWVYNQsVg2nU7v82XaW1tHZ4lGhUEztOlEKOQ4A/b5XHZyuc0aWqdNIbYSY3aY00veM/9te3KE/ywlxGpmrKpJP8h5ftCR8qtyeqHQY3XdVNAO5vMskvMGoRWrT9Ke90QlX6HQF6N16Y4OI28Ampn/jatcxx+ZzJ8NQScSiZZBWvzJwAhhJoCKUQhkaoVmnAZoJcC9WowOH02nf6gWl0iRLpQk3ZwOym0n0DVVg10rNAAF7Ig1xedYltUbtpCRoZO6Po1J+z7S6VcHdLCIClusLnfBgED7NVv1ZX8lYGKYwbrSo8Qogxc4Um5pOD1Mo20DgZ+PBFxPTpcYJuBUljDRdd1jdW/EcYnEmKwWSxNR05WADnwo2mB3pV+oGzopxDowlkYGbjDSF9ILpwd1D2mtdB2uuhEv3D+yfwG4/opCB5WVnrZk+v1yfqtCJ3X9TpC2pybggYj0BYcf29KdXwe0WArCuqsCzSxtT4qq0GareStIXXo3JjxGwNSrAh0crMFFq3jYEJ9wpPygkB6mYZwg0PCaAcsp1Hm4RPFtS5eK0LpxvqayVs3DlYIO7r0K8xUhlufRGKNrupLmFQcImsEZBhWaOxq4y5ZyRvXqIcSnYDwaZdkukRkgaGqK32RZ1on+/qt/buliFRFWXxXokonXBJ3S22Yz8darAc2sdjqed1/NddpvnMQUHwPRdTWBD0R6EBbbrltoGJX6D71PJ3V9E0h76kpCMzirNTWNLpfPPkcodNDXi6m9QLGqhE6gwUgzaKMj04sq+QmF9hVrjnYj0IwejmvtjuN4DUEbhjEqztgLoqCXEToagQavsKV8rZqPSJH2DaSEmMGMXZHSpE5oZnzneK7fL8w1DJ1sTU6CltvEwPj/88OWwRYx77Y9b3HD0KYuvqUL/Y5oo85I542TooesrnTF8yE0PUwh5hGj6tfxZTNpEBqKvUE9QyfW9bnV3t5+bV9P7yECxuTBFGOvRn5v5eJgTLzsUhUFmuGCcLJoBiNL/ZT7bVFYiWrrnTSM9QC9WBSmzy2ZnluqI4QYGQcWM/O8Qi+7EjSjB4xtTNqHjuf4HVHO20q1tiZZi/k/j1r8Z8zcRxyfanfZv/dnrJgeYw1jQo6xr+SOfY5j2oRq9VMIIWLA7QSMslz3raDGG8ZMJhoPpR1QmvrFdd2eSoFKGm0rAF5bfM97bCnvKp2c/64idFLXd4C0woWFwMstKV+PthPrk/L/R/aeOfcbCBOKq8uLLCk3llos/0tON+8hUt+U5O1Rao5PjtIcrA+3qOWvDEC78wFlIO1I1wyFTuptC0G8uWSZHrCl3N4oUFT9NiE2a4yFQW6DLUfKsaHQU0aMGHq2pWULM98Bpncdzy35yxXVdf1yftXK9vS8CUVjtBjWHHXdn0qt/Qf/x1JblU8EiAAAAABJRU5ErkJggg==);
+                          background-repeat: no-repeat;
+                          background-position: center;
+                          background-size: 30px;
+                          filter: invert(1);">
+              </bug-report>
+          </div>        </div>
+      </div>
+      <footer class="text-light pt-2 vlabs-footer d-flex flex-column">
+        <div class="row px-5 mx-0">
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Community Links</span>
+            <a href="https://www.sakshat.ac.in/" class="text-light">Sakshat Portal</a>
+            <a href="http://outreach.vlabs.ac.in/" class="text-light">Outreach Portal</a>
+            <a href="https://vlab.co.in/faq" class="text-light">FAQ: Virtual Labs</a>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Contact Us</span>
+            <span> Phone: General Information: 011-26582050 </span>
+            <span> Email: support@vlabs.ac.in </span>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Follow Us</span>
+            <div class="social-links">
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #55acee;" href="https://twitter.com/TheVirtualLabs">
+      	  <i class="fab fa-twitter"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #3b5998;" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/">
+      	  <i class="fab fa-facebook"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #e52d27;" href="https://www.youtube.com/watch?v=asxRaOgk6a0">
+      	  <i class="fab fa-youtube"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #2867B2;" href="https://in.linkedin.com/in/virtual-labs-008ba9136">
+      	  <i class="fab fa-linkedin"></i>
+      	</a>
+            </div>
+          </div>
+        </div>
+        <div class="m-0 py-2 text-center" style="font-family: &quot;Open Sans&quot;, sans-serif; background: #212121;">
+          <a class="text-primary font-weight-bold" href="https://www.gnu.org/licenses/agpl-3.0.en.html"> AGPL 3.0 </a>
+          &nbsp;&amp;&nbsp;
+          <a class="text-primary font-weight-bold" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> Creative Commons (CC BY-NC-SA 4.0) </a>
+        </div>
+      </footer>
+    <script src="./assets/js/toggleSidebar.js"></script>
+    <script src="./assets/js/event-handler.js"></script>
+
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register("sw.js");
+        });
+      }
+    </script>
+  
+
+<script type="module" src="https://cdn.vlabs.ac.in/bug-report/vlabs-bug-report.js"></script><script type="module" src="/exp-various-matrix-operations-iitd/plugins/svc-rating/index.js"></script><script type="module" src="/exp-various-matrix-operations-iitd/plugins/svc-rating/config.js"></script><script type="module" src="https://apis.google.com/js/api.js"></script></body></html>

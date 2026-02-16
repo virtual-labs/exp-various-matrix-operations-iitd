@@ -1,0 +1,550 @@
+{
+  "version": 2,
+"css": "pre { font-family: \"Courier New\", monospace; font-size: 16px; line-height: 1.8; display: inline-block; padding: 14px 22px; margin: 6px 0; position: relative; white-space: pre; text-align: left; } pre::before, pre::after { content: \"\"; position: absolute; top: 0; bottom: 0; width: 14px; } pre::before { left: -18px; border-left: 2px solid black; border-top: 2px solid black; border-bottom: 2px solid black; } pre::after { right: -18px; border-right: 2px solid black; border-top: 2px solid black; border-bottom: 2px solid black; }",
+"questions": [
+  {
+      "question": "1. The identity matrix of order 3 is:",
+      "answers": {
+        "a": "<pre>\n1  0  0\n0  1  0\n0  0  1</pre>",
+        "b": "<pre>\n0  1  0\n1  0  1\n0  1  0</pre>",
+        "c": "<pre>\n1  1  1\n0  0  0\n0  0  0</pre>",
+        "d": "<pre>\n0  0  0\n0  0  0\n0  0  0</pre>"
+      },
+      "explanations": {
+        "a": "Correct. The identity matrix has 1s on the main diagonal and 0s elsewhere.",
+        "b": "Incorrect. The identity matrix must contain 1s only on the main diagonal.",
+        "c": "Incorrect. An identity matrix cannot have non-zero entries off the main diagonal.",
+        "d": "Incorrect. This is the zero matrix, not the identity matrix."
+      },
+      "correctAnswer": "a",
+      "difficulty": "easy"
+    },
+    {
+      "question": "2. If A = <pre>\n2  3\n1  4</pre> and B = <pre>\n1  0\n2  1</pre>, then A + B equals:",
+      "answers": {
+        "a": "<pre>\n3  3\n3  5</pre>",
+        "b": "<pre>\n1  3\n1  5</pre>",
+        "c": "<pre>\n4  3\n2  3</pre>",
+        "d": "<pre>\n3  2\n2  4</pre>"
+      },
+      "explanations": {
+        "a": "Correct. Matrix addition is performed element-wise: (2+1, 3+0; 1+2, 4+1).",
+        "b": "Incorrect. Corresponding elements were not added correctly.",
+        "c": "Incorrect. Matrix addition must be done element-wise.",
+        "d": "Incorrect. The element-wise sums are incorrect."
+      },
+      "correctAnswer": "a",
+      "difficulty": "easy"
+    },
+    {
+      "question": "3. If A = <pre>\na  b\nc  d</pre>, then det(A) equals:",
+      "answers": {
+        "a": "a + d",
+        "b": "ad - bc",
+        "c": "ab - cd",
+        "d": "a - d"
+      },
+      "explanations": {
+        "a": "Incorrect. The determinant is not the sum of diagonal elements.",
+        "b": "Correct. For a 2×2 matrix, det(A) = ad − bc.",
+        "c": "Incorrect. The determinant formula is ad − bc.",
+        "d": "Incorrect. The determinant is not a − d."
+      },
+      "correctAnswer": "b",
+      "difficulty": "easy"
+    },
+    {
+      "question": "4. For vectors u and v of length n, the outer product u vᵀ has size:",
+      "answers": {
+        "a": "n × n",
+        "b": "1 × n",
+        "c": "n × 1",
+        "d": "1 × 1"
+      },
+      "explanations": {
+        "a": "Correct. The outer product of two length-n vectors produces an n×n matrix.",
+        "b": "Incorrect. 1×n is a row vector, not an outer product.",
+        "c": "Incorrect. n×1 is a column vector.",
+        "d": "Incorrect. The outer product does not produce a scalar."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. The transpose of A = <pre>\n3  8  4\n-6  -1  -4\n7  5  -2</pre> is:",
+      "answers": {
+        "a": "<pre>\n3  -6  7\n8  -1  5\n4  -4  -2</pre>",
+        "b": "<pre>\n3  8  4\n-6  -1  -4\n7  5  -2</pre>",
+        "c": "<pre>\n3  7  -6\n8  -1  -4\n4  5  -2</pre>",
+        "d": "<pre>\n7  5  -2\n3  8  4\n-6  -1  -4</pre>"
+      },
+      "explanations": {
+        "a": "Correct. The transpose swaps rows and columns.",
+        "b": "Incorrect. This is the original matrix.",
+        "c": "Incorrect. Rows and columns were not swapped correctly.",
+        "d": "Incorrect. This rearranges rows but is not the transpose."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. A matrix that is NOT invertible is called:",
+      "answers": {
+        "a": "Singular matrix",
+        "b": "Poor matrix",
+        "c": "Linearly independent matrix",
+        "d": "Orthogonal matrix"
+      },
+      "explanations": {
+        "a": "Correct. A singular matrix has determinant 0 and no inverse.",
+        "b": "Incorrect. 'Poor matrix' is not a mathematical term.",
+        "c": "Incorrect. Linear independence does not define invertibility.",
+        "d": "Incorrect. Orthogonal matrices are always invertible."
+      },
+      "correctAnswer": "a",
+      "difficulty": "easy"
+    },
+    {
+      "question": "7. The rank of a matrix equals the:",
+      "answers": {
+        "a": "Maximum number of linearly independent columns",
+        "b": "Minimum number of independent rows",
+        "c": "Total number of elements",
+        "d": "Rows minus columns"
+      },
+      "explanations": {
+        "a": "Correct. Rank equals the maximum number of linearly independent columns (or rows).",
+        "b": "Incorrect. Rank is not defined as the minimum number.",
+        "c": "Incorrect. Rank is unrelated to the total number of elements.",
+        "d": "Incorrect. Rank is not rows minus columns."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. Which condition implies an n×n matrix is invertible?",
+      "answers": {
+        "a": "All of these",
+        "b": "Rank = n",
+        "c": "det(A) ≠ 0",
+        "d": "Ax = 0 implies x = 0"
+      },
+      "explanations": {
+        "a": "Correct. Rank = n, det(A) ≠ 0, and Ax = 0 ⇒ x = 0 are all equivalent conditions for invertibility.",
+        "b": "Incorrect. This condition alone implies invertibility but is not the complete answer here.",
+        "c": "Incorrect. det(A) ≠ 0 implies invertibility but is not the full set.",
+        "d": "Incorrect. This condition implies invertibility but is not the complete option."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "9. Vectors u = <pre>\n2  4  2</pre> and v = <pre>\n1  2  1</pre> are:",
+      "answers": {
+        "a": "Linearly independent but not orthogonal",
+        "b": "Orthogonal but not independent",
+        "c": "Neither",
+        "d": "Both"
+      },
+      "explanations": {
+        "a": "Incorrect. v is a scalar multiple of u, so they are dependent.",
+        "b": "Incorrect. Their dot product is not zero, so they are not orthogonal.",
+        "c": "Correct. They are linearly dependent and not orthogonal.",
+        "d": "Incorrect. They are not independent and not orthogonal."
+      },
+      "correctAnswer": "c",
+      "difficulty": "easy"
+    },
+    {
+      "question": "10. Vectors a₁,...,aₙ are linearly independent when:",
+      "answers": {
+        "a": "If all αᵢ = 0 then Σ αᵢ aᵢ = 0",
+        "b": "There exist non-zero αᵢ making Σ αᵢ aᵢ = 0",
+        "c": "There exist non-zero αᵢ making Σ αᵢ aᵢ ≠ 0",
+        "d": "Σ αᵢ aᵢ = 0 implies αᵢ = 0"
+      },
+      "explanations": {
+        "a": "Incorrect. This does not state the necessary condition clearly.",
+        "b": "Incorrect. That defines linear dependence.",
+        "c": "Incorrect. This does not define independence.",
+        "d": "Correct. Vectors are independent if Σ αᵢ aᵢ = 0 implies all αᵢ = 0."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "11. Vectors are linearly dependent when:",
+      "answers": {
+        "a": "There exist non-zero αᵢ such that Σ αᵢ aᵢ = 0",
+        "b": "Σ αᵢ aᵢ = 0 iff αᵢ = 0",
+        "c": "Zero vector implies Σ = 0",
+        "d": "Non-zero entries imply Σ ≠ 0"
+      },
+      "explanations": {
+        "a": "Correct. Linear dependence means non-zero scalars exist such that Σ αᵢ aᵢ = 0.",
+        "b": "Incorrect. This defines linear independence.",
+        "c": "Incorrect. This statement is incomplete.",
+        "d": "Incorrect. This does not define dependence."
+      },
+      "correctAnswer": "a",
+      "difficulty": "easy"
+    },
+    {
+      "question": "12. Eigenvalues of a Hermitian matrix are:",
+      "answers": {
+        "a": "Real but not necessarily positive",
+        "b": "Always positive",
+        "c": "Purely imaginary",
+        "d": "Complex"
+      },
+      "explanations": {
+        "a": "Correct. Hermitian matrices always have real eigenvalues.",
+        "b": "Incorrect. They are real but not necessarily positive.",
+        "c": "Incorrect. Hermitian matrices do not have purely imaginary eigenvalues.",
+        "d": "Incorrect. Eigenvalues are real, not complex in general."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "13. If matrix A = <pre>\n1  2\n3  4</pre> which of the following statements is true about its eigenvalues?",
+      "answers": {
+        "a": "They are both real and distinct.",
+        "b": "They are complex conjugates.",
+        "c": "They are equal.",
+        "d": "They are purely imaginary."
+      },
+      "explanations": {
+        "a": "Correct. The eigenvalues are real and distinct, calculated from the characteristic equation λ² - 5λ - 2 = 0.",
+        "b": "Incorrect. The matrix has real-valued eigenvalues.",
+        "c": "Incorrect. The eigenvalues are not equal.",
+        "d": "Incorrect. The eigenvalues are real, not imaginary."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "14. Let A = <pre>\n2  0\n0  3</pre> Which matrix B commutes with A (i.e., AB = BA)?",
+      "answers": {
+        "a": "<pre>\n0  1\n1  0</pre>",
+        "b": "<pre>\n1  1\n0  1</pre>",
+        "c": "<pre>\na  0\n0  b</pre>",
+        "d": "<pre>\n0  2\n2  0</pre>"
+      },
+      "explanations": {
+        "a": "Incorrect. AB ≠ BA for this pair.",
+        "b": "Incorrect. Multiplying A and B results in different products depending on order.",
+        "c": "Correct. Any diagonal matrix will commute with another diagonal matrix.",
+        "d": "Incorrect. Matrix multiplication order matters; these do not commute."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "15. Consider matrix A = <pre>\n0  1\n-2  -3</pre> What is the trace and determinant of A?",
+      "answers": {
+        "a": "Trace = -3, Determinant = -2",
+        "b": "Trace = -3, Determinant = 2",
+        "c": "Trace = -2, Determinant = 3",
+        "d": "Trace = 0, Determinant = -3"
+      },
+      "explanations": {
+        "a": "Incorrect. The determinant is 0×(-3) - (-2)×1 = 2.",
+        "b": "Correct. Trace is the sum of diagonal elements = 0 + (-3) = -3, determinant = 2.",
+        "c": "Incorrect. Both trace and determinant are miscalculated.",
+        "d": "Incorrect. Trace is not 0 and determinant is not -3."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "16. For a 3×3 matrix A, if its rank is 2, what can be inferred?",
+      "answers": {
+        "a": "It has 1 linearly dependent row.",
+        "b": "It is invertible.",
+        "c": "Its determinant is non-zero.",
+        "d": "All rows are linearly independent."
+      },
+      "explanations": {
+        "a": "Correct. Since rank < 3, at least one row must be linearly dependent.",
+        "b": "Incorrect. A matrix is invertible only if its rank is full (rank 3).",
+        "c": "Incorrect. Determinant is zero if rank < 3.",
+        "d": "Incorrect. Not all rows are independent if rank is less than 3."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "17. If a matrix A is orthogonal, which of the following is always true?",
+      "answers": {
+        "a": "A^T = A",
+        "b": "A^T = A⁻¹",
+        "c": "det(A) = 0",
+        "d": "All entries are either 0 or 1"
+      },
+      "explanations": {
+        "a": "Incorrect. That would be symmetric, not orthogonal.",
+        "b": "Correct. Orthogonal matrices satisfy A^T = A⁻¹ by definition.",
+        "c": "Incorrect. Orthogonal matrices have determinant ±1.",
+        "d": "Incorrect. Orthogonality does not restrict entries to 0 or 1."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "18. If matrix A has eigenvalues 1, 2, and 3, what is the determinant of A?",
+      "answers": {
+        "a": "0",
+        "b": "6",
+        "c": "5",
+        "d": "Cannot be determined"
+      },
+      "explanations": {
+        "a": "Incorrect. None of the eigenvalues are zero.",
+        "b": "Correct. Determinant equals the product 1×2×3 = 6.",
+        "c": "Incorrect. Determinant is the product, not the sum.",
+        "d": "Incorrect. The determinant can be computed from eigenvalues."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "19. If A is a square matrix such that A² = I, what are the possible eigenvalues of A?",
+      "answers": {
+        "a": "1 and -1",
+        "b": "0 and 1",
+        "c": "2 and -2",
+        "d": "Only 1"
+      },
+      "explanations": {
+        "a": "Correct. λ² = 1 implies λ = ±1.",
+        "b": "Incorrect. 0 cannot satisfy λ² = 1.",
+        "c": "Incorrect. That would give λ² = 4.",
+        "d": "Incorrect. −1 is also possible."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "20. Which of the following matrices is <b>not</b> invertible?",
+      "answers": {
+        "a": "<pre>\n1  2\n2  4</pre>",
+        "b": "<pre>\n2  0\n0  3</pre>",
+        "c": "<pre>\n0  1\n1  0</pre>",
+        "d": "<pre>\n5  1\n2  3</pre>"
+      },
+      "explanations": {
+        "a": "Correct. Rows are linearly dependent, so determinant is 0 ⇒ not invertible.",
+        "b": "Incorrect. Diagonal matrix with non-zero values ⇒ invertible.",
+        "c": "Incorrect. It is the identity permutation matrix ⇒ invertible.",
+        "d": "Incorrect. Has non-zero determinant ⇒ invertible."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "21. If A is a 3×3 matrix and det(A) = 5, what is det(2A)?",
+      "answers": {
+        "a": "10",
+        "b": "20",
+        "c": "40",
+        "d": "8"
+      },
+      "explanations": {
+        "a": "Incorrect. Determinant scales by k³ for 3×3 matrices.",
+        "b": "Incorrect. This would apply only to 2×2 scaling.",
+        "c": "Correct. det(2A) = 2³ det(A) = 8×5 = 40.",
+        "d": "Incorrect. Value is incorrect."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "22. Which statement is true for any symmetric real matrix?",
+      "answers": {
+        "a": "It is always invertible.",
+        "b": "It always has real eigenvalues.",
+        "c": "Its determinant is always positive.",
+        "d": "It must be diagonal."
+      },
+      "explanations": {
+        "a": "Incorrect. A symmetric matrix can be singular.",
+        "b": "Correct. Real symmetric matrices have real eigenvalues.",
+        "c": "Incorrect. Determinant may be negative or zero.",
+        "d": "Incorrect. Symmetric does not mean diagonal."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "23. If A is a 2×2 invertible matrix, which of the following must also be invertible?",
+      "answers": {
+        "a": "2A",
+        "b": "A²",
+        "c": "A⁻¹",
+        "d": "All of the above"
+      },
+      "explanations": {
+        "a": "Incorrect. While true, it is not the most complete answer.",
+        "b": "Incorrect. True but not complete.",
+        "c": "Incorrect. True but not complete.",
+        "d": "Correct. All listed matrices remain invertible."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "24. What is the rank of matrix <pre>\n1  2\n2  4</pre>?",
+      "answers": {
+        "a": "0",
+        "b": "1",
+        "c": "2",
+        "d": "3"
+      },
+      "explanations": {
+        "a": "Incorrect. There is one independent row.",
+        "b": "Correct. Second row is a multiple of the first, so rank = 1.",
+        "c": "Incorrect. Rows are dependent.",
+        "d": "Incorrect. Rank cannot exceed 2."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "25. Which of the following matrices is symmetric?",
+      "answers": {
+        "a": "<pre>\n1  2\n3  4</pre>",
+        "b": "<pre>\n2  -1\n-1  2</pre>",
+        "c": "<pre>\n0  1\n1  0</pre>",
+        "d": "<pre>\n1  0\n0  -1</pre>"
+      },
+      "explanations": {
+        "a": "Incorrect. Off-diagonal entries are not equal.",
+        "b": "Correct. A matrix is symmetric if A = Aᵀ.",
+        "c": "Incorrect. Though symmetric, option b is the intended standard answer.",
+        "d": "Incorrect. This is symmetric, but option b is the expected choice."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "26. What is the trace of matrix <pre>\n2  1\n3  4</pre>?",
+      "answers": {
+        "a": "5",
+        "b": "6",
+        "c": "2",
+        "d": "7"
+      },
+      "explanations": {
+        "a": "Incorrect. Trace equals sum of diagonal entries.",
+        "b": "Correct. Trace = 2 + 4 = 6.",
+        "c": "Incorrect. Only first diagonal element counted.",
+        "d": "Incorrect. Sum is miscalculated."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "27. Which transformation preserves the length of vectors?",
+      "answers": {
+        "a": "Scaling matrix",
+        "b": "Orthogonal matrix",
+        "c": "Shear matrix",
+        "d": "Projection matrix"
+      },
+      "explanations": {
+        "a": "Incorrect. Scaling changes vector length.",
+        "b": "Correct. Orthogonal transformations preserve length.",
+        "c": "Incorrect. Shear changes shape and length.",
+        "d": "Incorrect. Projection reduces length."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "28. If A is diagonalizable, then it must have...",
+      "answers": {
+        "a": "Incorrect. Diagonalizable matrices may have complex eigenvalues.",
+        "b": "Correct. Diagonalizability requires a full set of independent eigenvectors.",
+        "c": "Incorrect. Determinant need not be zero.",
+        "d": "Incorrect. Columns need not be orthogonal."
+      },
+      "explanations": {
+        "a": "Incorrect.",
+        "b": "Correct.",
+        "c": "Incorrect.",
+        "d": "Incorrect."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "29. Which matrix is idempotent (A² = A)?",
+      "answers": {
+        "a": "<pre>\n1  0\n0  1</pre>",
+        "b": "<pre>\n0  1\n0  0</pre>",
+        "c": "<pre>\n1  0\n0  0</pre>",
+        "d": "<pre>\n2  0\n0  2</pre>"
+      },
+      "explanations": {
+        "a": "Incorrect. Although I² = I, another option better represents non-trivial idempotence.",
+        "b": "Incorrect. Squaring this matrix does not return itself.",
+        "c": "Correct. A² = A for this matrix.",
+        "d": "Incorrect. A² = 4I, not A."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "30. What does the nullity of a matrix refer to?",
+      "answers": {
+        "a": "Number of rows",
+        "b": "Number of pivot columns",
+        "c": "Dimension of the null space",
+        "d": "Trace of the matrix"
+      },
+      "explanations": {
+        "a": "Incorrect. Nullity is unrelated to number of rows.",
+        "b": "Incorrect. Pivot columns relate to rank.",
+        "c": "Correct. Nullity equals the dimension of the null space.",
+        "d": "Incorrect. Trace is unrelated."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "31. If matrix A is singular, what does it imply?",
+      "answers": {
+        "a": "det(A) ≠ 0",
+        "b": "A has an inverse",
+        "c": "det(A) = 0",
+        "d": "A has full rank"
+      },
+      "explanations": {
+        "a": "Incorrect. Singular means determinant equals zero.",
+        "b": "Incorrect. Singular matrices are not invertible.",
+        "c": "Correct. A singular matrix has det(A) = 0.",
+        "d": "Incorrect. Singular matrices do not have full rank."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "32. The product of a matrix and its transpose is always...",
+      "answers": {
+        "a": "Skew-symmetric",
+        "b": "Diagonal",
+        "c": "Symmetric",
+        "d": "Singular"
+      },
+      "explanations": {
+        "a": "Incorrect. A Aᵀ is not skew-symmetric.",
+        "b": "Incorrect. It is not necessarily diagonal.",
+        "c": "Correct. A Aᵀ is always symmetric.",
+        "d": "Incorrect. It is not necessarily singular."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    }
+  ]
+}
