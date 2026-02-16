@@ -1,14 +1,14 @@
 {
-  "version": 2.0,
+  "version": 2,
+  "css": "pre { font-family: 'Times New Roman', serif; font-size: 16px; line-height: 1.6; display: inline-block; padding: 4px 10px; position: relative; border-left: 2px solid black; border-right: 2px solid black; margin: 2px 0; }",
   "questions": [
-
     {
       "question": "1. The identity matrix of order 3 is:",
       "answers": {
-        "a": "<br><span>[1 &nbsp; 0 &nbsp; 0]</span><br><span>[0 &nbsp; 1 &nbsp; 0]</span><br><span>[0 &nbsp; 0 &nbsp; 1]</span>",
-        "b": "<br><span>[0 &nbsp; 1 &nbsp; 0]</span><br><span>[1 &nbsp; 0 &nbsp; 1]</span><br><span>[0 &nbsp; 1 &nbsp; 0]</span>",
-        "c": "<br><span>[1 &nbsp; 1 &nbsp; 1]</span><br><span>[0 &nbsp; 0 &nbsp; 0]</span><br><span>[0 &nbsp; 0 &nbsp; 0]</span>",
-        "d": "<br><span>[0 &nbsp; 0 &nbsp; 0]</span><br><span>[0 &nbsp; 0 &nbsp; 0]</span><br><span>[0 &nbsp; 0 &nbsp; 0]</span>"
+        "a": "<pre>1  0  0\n0  1  0\n0  0  1</pre>",
+        "b": "<pre>0  1  0\n1  0  1\n0  1  0</pre>",
+        "c": "<pre>1  1  1\n0  0  0\n0  0  0</pre>",
+        "d": "<pre>0  0  0\n0  0  0\n0  0  0</pre>"
       },
       "explanations": {
         "a": "Correct. The identity matrix has 1s on the main diagonal and 0s elsewhere.",
@@ -19,14 +19,13 @@
       "correctAnswer": "a",
       "difficulty": "easy"
     },
-
     {
-      "question": "2. If A = <br><span>[2 &nbsp; 3]</span><br><span>[1 &nbsp; 4]</span><br>and B = <br><span>[1 &nbsp; 0]</span><br><span>[2 &nbsp; 1]</span><br>then A + B equals:",
+      "question": "2. If A = <pre>2  3\n1  4</pre> and B = <pre>1  0\n2  1</pre>, then A + B equals:",
       "answers": {
-        "a": "<br><span>[3 &nbsp; 3]</span><br><span>[3 &nbsp; 5]</span>",
-        "b": "<br><span>[1 &nbsp; 3]</span><br><span>[1 &nbsp; 5]</span>",
-        "c": "<br><span>[4 &nbsp; 3]</span><br><span>[2 &nbsp; 3]</span>",
-        "d": "<br><span>[3 &nbsp; 2]</span><br><span>[2 &nbsp; 4]</span>"
+        "a": "<pre>3  3\n3  5</pre>",
+        "b": "<pre>1  3\n1  5</pre>",
+        "c": "<pre>4  3\n2  3</pre>",
+        "d": "<pre>3  2\n2  4</pre>"
       },
       "explanations": {
         "a": "Correct. Matrix addition is performed element-wise: (2+1, 3+0; 1+2, 4+1).",
@@ -37,9 +36,8 @@
       "correctAnswer": "a",
       "difficulty": "easy"
     },
-
     {
-      "question": "3. If A = <br><span>[a &nbsp; b]</span><br><span>[c &nbsp; d]</span><br>then det(A) equals:",
+      "question": "3. If A = <pre>a  b\nc  d</pre>, then det(A) equals:",
       "answers": {
         "a": "a + d",
         "b": "ad - bc",
@@ -55,9 +53,8 @@
       "correctAnswer": "b",
       "difficulty": "easy"
     },
-
     {
-      "question": "4. For vectors u and v of length n, the outer product u v<sup>T</sup> has size:",
+      "question": "4. For vectors u and v of length n, the outer product u vᵀ has size:",
       "answers": {
         "a": "n × n",
         "b": "1 × n",
@@ -73,14 +70,13 @@
       "correctAnswer": "a",
       "difficulty": "intermediate"
     },
-
     {
-      "question": "5. The transpose of A = <br><span>[3 &nbsp; 8 &nbsp; 4]</span><br><span>[-6 &nbsp; -1 &nbsp; -4]</span><br><span>[7 &nbsp; 5 &nbsp; -2]</span> is:",
+      "question": "5. The transpose of A = <pre>3  8  4\n-6  -1  -4\n7  5  -2</pre> is:",
       "answers": {
-        "a": "<br><span>[3 &nbsp; -6 &nbsp; 7]</span><br><span>[8 &nbsp; -1 &nbsp; 5]</span><br><span>[4 &nbsp; -4 &nbsp; -2]</span>",
-        "b": "<br><span>[3 &nbsp; 8 &nbsp; 4]</span><br><span>[-6 &nbsp; -1 &nbsp; -4]</span><br><span>[7 &nbsp; 5 &nbsp; -2]</span>",
-        "c": "<br><span>[3 &nbsp; 7 &nbsp; -6]</span><br><span>[8 &nbsp; -1 &nbsp; -4]</span><br><span>[4 &nbsp; 5 &nbsp; -2]</span>",
-        "d": "<br><span>[7 &nbsp; 5 &nbsp; -2]</span><br><span>[3 &nbsp; 8 &nbsp; 4]</span><br><span>[-6 &nbsp; -1 &nbsp; -4]</span>"
+        "a": "<pre>3  -6  7\n8  -1  5\n4  -4  -2</pre>",
+        "b": "<pre>3  8  4\n-6  -1  -4\n7  5  -2</pre>",
+        "c": "<pre>3  7  -6\n8  -1  -4\n4  5  -2</pre>",
+        "d": "<pre>7  5  -2\n3  8  4\n-6  -1  -4</pre>"
       },
       "explanations": {
         "a": "Correct. The transpose swaps rows and columns.",
@@ -91,7 +87,6 @@
       "correctAnswer": "a",
       "difficulty": "intermediate"
     },
-
     {
       "question": "6. A matrix that is NOT invertible is called:",
       "answers": {
@@ -109,7 +104,6 @@
       "correctAnswer": "a",
       "difficulty": "easy"
     },
-
     {
       "question": "7. The rank of a matrix equals the:",
       "answers": {
@@ -127,7 +121,6 @@
       "correctAnswer": "a",
       "difficulty": "intermediate"
     },
-
     {
       "question": "8. Which condition implies an n×n matrix is invertible?",
       "answers": {
@@ -145,9 +138,8 @@
       "correctAnswer": "a",
       "difficulty": "intermediate"
     },
-
     {
-      "question": "9. Vectors u = <span>[2 &nbsp; 4 &nbsp; 2]</span> and v = <span>[1 &nbsp; 2 &nbsp; 1]</span> are:",
+      "question": "9. Vectors u = <pre>2  4  2</pre> and v = <pre>1  2  1</pre> are:",
       "answers": {
         "a": "Linearly independent but not orthogonal",
         "b": "Orthogonal but not independent",
@@ -163,35 +155,33 @@
       "correctAnswer": "c",
       "difficulty": "easy"
     },
-
     {
-      "question": "10. Vectors a1,...,an are linearly independent when:",
+      "question": "10. Vectors a₁,...,aₙ are linearly independent when:",
       "answers": {
-        "a": "If all αi = 0 then Σ αi ai = 0",
-        "b": "There exist non-zero αi making Σ αi ai = 0",
-        "c": "There exist non-zero αi making Σ αi ai ≠ 0",
-        "d": "Σ αi ai = 0 implies αi = 0"
+        "a": "If all αᵢ = 0 then Σ αᵢ aᵢ = 0",
+        "b": "There exist non-zero αᵢ making Σ αᵢ aᵢ = 0",
+        "c": "There exist non-zero αᵢ making Σ αᵢ aᵢ ≠ 0",
+        "d": "Σ αᵢ aᵢ = 0 implies αᵢ = 0"
       },
       "explanations": {
         "a": "Incorrect. This does not state the necessary condition clearly.",
         "b": "Incorrect. That defines linear dependence.",
         "c": "Incorrect. This does not define independence.",
-        "d": "Correct. Vectors are independent if Σ αi ai = 0 implies all αi = 0."
+        "d": "Correct. Vectors are independent if Σ αᵢ aᵢ = 0 implies all αᵢ = 0."
       },
       "correctAnswer": "d",
       "difficulty": "intermediate"
     },
-
     {
       "question": "11. Vectors are linearly dependent when:",
       "answers": {
-        "a": "There exist non-zero αi such that Σ αi ai = 0",
-        "b": "Σ αi ai = 0 iff αi = 0",
+        "a": "There exist non-zero αᵢ such that Σ αᵢ aᵢ = 0",
+        "b": "Σ αᵢ aᵢ = 0 iff αᵢ = 0",
         "c": "Zero vector implies Σ = 0",
         "d": "Non-zero entries imply Σ ≠ 0"
       },
       "explanations": {
-        "a": "Correct. Linear dependence means non-zero scalars exist such that Σ αi ai = 0.",
+        "a": "Correct. Linear dependence means non-zero scalars exist such that Σ αᵢ aᵢ = 0.",
         "b": "Incorrect. This defines linear independence.",
         "c": "Incorrect. This statement is incomplete.",
         "d": "Incorrect. This does not define dependence."
@@ -199,7 +189,6 @@
       "correctAnswer": "a",
       "difficulty": "easy"
     },
-
     {
       "question": "12. Eigenvalues of a Hermitian matrix are:",
       "answers": {
@@ -217,9 +206,8 @@
       "correctAnswer": "a",
       "difficulty": "intermediate"
     },
-
     {
-      "question": "13. If matrix A = <br><span>[1 &nbsp; 2]</span><br><span>[3 &nbsp; 4]</span><br>which of the following statements is true about its eigenvalues?",
+      "question": "13. If matrix A = <pre>1  2\n3  4</pre> which of the following statements is true about its eigenvalues?",
       "answers": {
         "a": "They are both real and distinct.",
         "b": "They are complex conjugates.",
@@ -235,14 +223,13 @@
       "correctAnswer": "a",
       "difficulty": "intermediate"
     },
-
     {
-      "question": "14. Let A = <br><span>[2 &nbsp; 0]</span><br><span>[0 &nbsp; 3]</span><br>Which matrix B commutes with A (i.e., AB = BA)?",
+      "question": "14. Let A = <pre>2  0\n0  3</pre> Which matrix B commutes with A (i.e., AB = BA)?",
       "answers": {
-        "a": "<br><span>[0 &nbsp; 1]</span><br><span>[1 &nbsp; 0]</span>",
-        "b": "<br><span>[1 &nbsp; 1]</span><br><span>[0 &nbsp; 1]</span>",
-        "c": "<br><span>[a &nbsp; 0]</span><br><span>[0 &nbsp; b]</span>",
-        "d": "<br><span>[0 &nbsp; 2]</span><br><span>[2 &nbsp; 0]</span>"
+        "a": "<pre>0  1\n1  0</pre>",
+        "b": "<pre>1  1\n0  1</pre>",
+        "c": "<pre>a  0\n0  b</pre>",
+        "d": "<pre>0  2\n2  0</pre>"
       },
       "explanations": {
         "a": "Incorrect. AB ≠ BA for this pair.",
@@ -253,9 +240,8 @@
       "correctAnswer": "c",
       "difficulty": "intermediate"
     },
-
     {
-      "question": "15. Consider matrix A = <br><span>[0 &nbsp; 1]</span><br><span>[-2 &nbsp; -3]</span><br>What is the trace and determinant of A?",
+      "question": "15. Consider matrix A = <pre>0  1\n-2  -3</pre> What is the trace and determinant of A?",
       "answers": {
         "a": "Trace = -3, Determinant = -2",
         "b": "Trace = -3, Determinant = 2",
@@ -271,7 +257,6 @@
       "correctAnswer": "b",
       "difficulty": "intermediate"
     },
-
     {
       "question": "16. For a 3×3 matrix A, if its rank is 2, what can be inferred?",
       "answers": {
@@ -289,7 +274,6 @@
       "correctAnswer": "a",
       "difficulty": "intermediate"
     },
-
     {
       "question": "17. If a matrix A is orthogonal, which of the following is always true?",
       "answers": {
@@ -307,7 +291,6 @@
       "correctAnswer": "b",
       "difficulty": "intermediate"
     },
-
     {
       "question": "18. If matrix A has eigenvalues 1, 2, and 3, what is the determinant of A?",
       "answers": {
@@ -325,7 +308,6 @@
       "correctAnswer": "b",
       "difficulty": "intermediate"
     },
-
     {
       "question": "19. If A is a square matrix such that A² = I, what are the possible eigenvalues of A?",
       "answers": {
@@ -343,14 +325,13 @@
       "correctAnswer": "a",
       "difficulty": "intermediate"
     },
-
     {
       "question": "20. Which of the following matrices is <b>not</b> invertible?",
       "answers": {
-        "a": "<br><span>[1 &nbsp; 2]</span><br><span>[2 &nbsp; 4]</span>",
-        "b": "<br><span>[2 &nbsp; 0]</span><br><span>[0 &nbsp; 3]</span>",
-        "c": "<br><span>[0 &nbsp; 1]</span><br><span>[1 &nbsp; 0]</span>",
-        "d": "<br><span>[5 &nbsp; 1]</span><br><span>[2 &nbsp; 3]</span>"
+        "a": "<pre>1  2\n2  4</pre>",
+        "b": "<pre>2  0\n0  3</pre>",
+        "c": "<pre>0  1\n1  0</pre>",
+        "d": "<pre>5  1\n2  3</pre>"
       },
       "explanations": {
         "a": "Correct. Rows are linearly dependent, so determinant is 0 ⇒ not invertible.",
@@ -361,7 +342,6 @@
       "correctAnswer": "a",
       "difficulty": "intermediate"
     },
-
     {
       "question": "21. If A is a 3×3 matrix and det(A) = 5, what is det(2A)?",
       "answers": {
@@ -379,7 +359,6 @@
       "correctAnswer": "c",
       "difficulty": "intermediate"
     },
-
     {
       "question": "22. Which statement is true for any symmetric real matrix?",
       "answers": {
@@ -397,7 +376,6 @@
       "correctAnswer": "b",
       "difficulty": "intermediate"
     },
-
     {
       "question": "23. If A is a 2×2 invertible matrix, which of the following must also be invertible?",
       "answers": {
@@ -415,9 +393,8 @@
       "correctAnswer": "d",
       "difficulty": "intermediate"
     },
-
     {
-      "question": "24. What is the rank of matrix <br><span>[1 &nbsp; 2]</span><br><span>[2 &nbsp; 4]</span>?",
+      "question": "24. What is the rank of matrix <pre>1  2\n2  4</pre>?",
       "answers": {
         "a": "0",
         "b": "1",
@@ -433,14 +410,13 @@
       "correctAnswer": "b",
       "difficulty": "intermediate"
     },
-
     {
       "question": "25. Which of the following matrices is symmetric?",
       "answers": {
-        "a": "<br><span>[1 &nbsp; 2]</span><br><span>[3 &nbsp; 4]</span>",
-        "b": "<br><span>[2 &nbsp; -1]</span><br><span>[-1 &nbsp; 2]</span>",
-        "c": "<br><span>[0 &nbsp; 1]</span><br><span>[1 &nbsp; 0]</span>",
-        "d": "<br><span>[1 &nbsp; 0]</span><br><span>[0 &nbsp; -1]</span>"
+        "a": "<pre>1  2\n3  4</pre>",
+        "b": "<pre>2  -1\n-1  2</pre>",
+        "c": "<pre>0  1\n1  0</pre>",
+        "d": "<pre>1  0\n0  -1</pre>"
       },
       "explanations": {
         "a": "Incorrect. Off-diagonal entries are not equal.",
@@ -451,9 +427,8 @@
       "correctAnswer": "b",
       "difficulty": "intermediate"
     },
-
     {
-      "question": "26. What is the trace of matrix <br><span>[2 &nbsp; 1]</span><br><span>[3 &nbsp; 4]</span>?",
+      "question": "26. What is the trace of matrix <pre>2  1\n3  4</pre>?",
       "answers": {
         "a": "5",
         "b": "6",
@@ -469,7 +444,6 @@
       "correctAnswer": "b",
       "difficulty": "intermediate"
     },
-
     {
       "question": "27. Which transformation preserves the length of vectors?",
       "answers": {
@@ -487,7 +461,6 @@
       "correctAnswer": "b",
       "difficulty": "intermediate"
     },
-
     {
       "question": "28. If A is diagonalizable, then it must have...",
       "answers": {
@@ -505,14 +478,13 @@
       "correctAnswer": "b",
       "difficulty": "intermediate"
     },
-
     {
       "question": "29. Which matrix is idempotent (A² = A)?",
       "answers": {
-        "a": "<br><span>[1 &nbsp; 0]</span><br><span>[0 &nbsp; 1]</span>",
-        "b": "<br><span>[0 &nbsp; 1]</span><br><span>[0 &nbsp; 0]</span>",
-        "c": "<br><span>[1 &nbsp; 0]</span><br><span>[0 &nbsp; 0]</span>",
-        "d": "<br><span>[2 &nbsp; 0]</span><br><span>[0 &nbsp; 2]</span>"
+        "a": "<pre>1  0\n0  1</pre>",
+        "b": "<pre>0  1\n0  0</pre>",
+        "c": "<pre>1  0\n0  0</pre>",
+        "d": "<pre>2  0\n0  2</pre>"
       },
       "explanations": {
         "a": "Incorrect. Although I² = I, another option better represents non-trivial idempotence.",
@@ -523,7 +495,6 @@
       "correctAnswer": "c",
       "difficulty": "intermediate"
     },
-
     {
       "question": "30. What does the nullity of a matrix refer to?",
       "answers": {
@@ -541,7 +512,6 @@
       "correctAnswer": "c",
       "difficulty": "intermediate"
     },
-
     {
       "question": "31. If matrix A is singular, what does it imply?",
       "answers": {
@@ -559,7 +529,6 @@
       "correctAnswer": "c",
       "difficulty": "intermediate"
     },
-
     {
       "question": "32. The product of a matrix and its transpose is always...",
       "answers": {
@@ -577,6 +546,5 @@
       "correctAnswer": "c",
       "difficulty": "intermediate"
     }
-
   ]
 }
