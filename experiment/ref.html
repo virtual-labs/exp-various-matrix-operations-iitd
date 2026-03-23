@@ -353,37 +353,66 @@
               white-space: pre-wrap;
               text-align: left;
             }
+            .math-block {
+              font-family: KaTeX_Main, serif;
+              font-size: 1.1em;
+              white-space: pre-wrap;
+              text-align: center;
+            }
           </style>
   
   
-<h2 id = "ref">Row Echelon Form (REF)</h2>
-<p>Row echelon form is a simplified matrix form where each leading entry is to the right of the one above, making it ideal for solving linear systems using back-substitution.</p>
+  <h2 id="ref">Row Echelon Form (REF)</h2>
+  <p>Row Echelon Form (REF) is a way to organize a matrix so it is easier to solve systems of linear equations. In REF, each row starts with a number called a <strong>pivot</strong>, which is the first non-zero number in that row. The pivot of each row is always to the right of the pivot in the row above, and all the numbers below each pivot are zero. This gives the matrix a step-like or triangular shape.</p>  
+  <p><strong>Pivot:</strong> In REF, a pivot is the first non-zero element in a row, which is used as a reference to eliminate entries below it in the same column. Choosing a pivot carefully ensures that elimination works correctly and numerical calculations are stable.</p>
+  
+  <p><strong>In row operations,</strong> R1, R2, R3 represent the rows of the matrix. For example, R1 is the first row, R2 is the second row, and R3 is the third row. When we write an operation like <code>R2 ← R2 - R1</code>, it means we are updating row 2 by subtracting row 1 from it. These operations are used to create zeros below pivots.</p>
+  
+  <p>A matrix is in <strong>Row Echelon Form</strong> if:</p>
+  <ul>
+      <li>All rows consisting entirely of zeros are at the bottom.</li>
+      <li>The leading entry (pivot) of each non-zero row is strictly to the right of the pivot in the row above.</li>
+      <li>All entries below a pivot are zeros.</li>
+  </ul> 
+  
+  <h3>Input Matrix:</h3>
+  <div class="math-block">
+  \( A = \begin{bmatrix} 1 & -2 & 1 \\ 1 & -1 & 2 \\ 0 & -2 & 2 \end{bmatrix} \)
+  </div>  
+  
+  <h3>Step 1: Eliminate below the first pivot</h3>
+  <p>The first pivot is <strong>1</strong> in row 1, column 1. To make all entries below this pivot zero, we perform row operations:</p>
+  <ul>
+      <li>\( R_2 \leftarrow R_2 - R_1 \) → subtract row 1 from row 2</li>
+      <li>\( R_3 \leftarrow R_3 - 0\cdot R_1 \) → no change as R3,1 is already 0</li>
+  </ul>
+  <div class="math-block">
+  \( \begin{bmatrix} 1 & -2 & 1 \\ 0 & 1 & 1 \\ 0 & -2 & 2 \end{bmatrix} \)
+  </div>  
+  
+  <h3>Step 2: Eliminate below the pivot in the 2nd column</h3>
+  <p>The second pivot is <strong>1</strong> in row 2, column 2. We eliminate the entry below it in row 3:</p>
+  <ul>
+      <li>\( R_3 \leftarrow R_3 + 2R_2 \) → add 2 times row 2 to row 3 to make the entry below pivot zero</li>
+  </ul>
+  <div class="math-block">
+  \( \begin{bmatrix} 1 & -2 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 4 \end{bmatrix} \)
+  </div>  
+  
+  <h3>Step 3: Confirm pivots</h3>
+  <p>The pivots are the first non-zero entries in each row:</p>
+  <ul>
+      <li>Pivot 1: \( A_{11} = 1 \)</li>
+      <li>Pivot 2: \( A_{22} = 1 \)</li>
+      <li>Pivot 3: \( A_{33} = 4 \)</li>
+  </ul>
+  <p>All entries below these pivots are zero, confirming the matrix is in row echelon form.</p>
+  
+  <h3>Step 4: Final Row Echelon Form (REF)</h3>
+  <div class="math-block">
+  \( \text{REF}(A) = \begin{bmatrix} 1 & -2 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 4 \end{bmatrix} \)
+  </div>  
 
-<p>A matrix is in <strong>Row Echelon Form</strong> if:</p>
-<ul>
-	<li>All rows of all zeroes are at the bottom.</li>
-	<li>The leading entry of each non-zero row is to the right of the leading entry of the row above it.</li>
-	<li>All entries below a pivot are zeros.</li>
-</ul>		  
-<h3>Input Matrix:</h3>
-<div class="math-block">
-	\( A = \begin{bmatrix} 1 & -2 & 1 \\ 1 & -1 & 2 \\ 0 & -2 & 2 \end{bmatrix} \)
-</div>		  
-<h3>Step 1: Eliminate below first pivot</h3>
-<p>Apply \( R_2 \leftarrow R_2 - R_1 \)</p>
-<div class="math-block">
-	\( \begin{bmatrix} 1 & -2 & 1 \\ 0 & 1 & 1 \\ 0 & -2 & 2 \end{bmatrix} \)
-</div>		  
-<h3>Step 2: Eliminate below pivot in 2nd column</h3>
-<p>Apply \( R_3 \leftarrow R_3 + 2R_2 \)</p>
-<div class="math-block">
-	\( \begin{bmatrix} 1 & -2 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 4 \end{bmatrix} \)
-</div>		  
-<h3>Final REF:</h3>
-<div class="math-block">
-	\( \text{REF}(A) = \begin{bmatrix} 1 & -2 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 4 \end{bmatrix} \)
-</div>		  
-<p>This matrix is now in row echelon form.</p>
 
 
           </div>

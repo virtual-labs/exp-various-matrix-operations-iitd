@@ -356,44 +356,62 @@
           </style>
   
   
-<h2 id = "rank">Rank of a Matrix</h2>
-<p>
-	<strong>Theory:</strong>
-</p>
-<p>
-	<strong>Definition</strong>: The rank of a matrix is defined as the maximum number of linearly independent rows (or columns) in the matrix. It can also be seen as the dimension of the row space or column space of the matrix.
-</p>
-<p>
-	&#xa0;
-</p>
-<h3>Input Matrix:</h3>
-<div class="math-block">
-	\( A = \begin{bmatrix} 1 & -2 & 1 \\ 1 & -1 & 2 \\ 0 & -2 & 2 \end{bmatrix} \)
-</div>		  
-<h3>Step 1: Eliminate below first pivot</h3>
-<p>Apply \( R_2 \leftarrow R_2 - R_1 \)</p>
-<div class="math-block">
-	\( \begin{bmatrix} 1 & -2 & 1 \\ 0 & 1 & 1 \\ 0 & -2 & 2 \end{bmatrix} \)
-</div>		  
-<h3>Step 2: Eliminate below pivot in 2nd column</h3>
-<p>Apply \( R_3 \leftarrow R_3 + 2R_2 \)</p>
-<div class="math-block">
-	\( \begin{bmatrix} 1 & -2 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 4 \end{bmatrix} \)
-</div>		  
-<h3>Final Row Echelon Form (REF):</h3>
-<div class="math-block">
-	\( \text{REF}(A) = \begin{bmatrix} 1 & -2 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 4 \end{bmatrix} \)
-</div>		  
-<p>This matrix has <strong>3 non-zero rows</strong>, so:</p>
-<p><strong>Rank(A) = 3</strong></p>	  
-<hr>		  
-<h3>Example 2: Zero Matrix (No Rank)</h3>
-<div class="math-left">
-	B = 
-	\( \begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix} \)
-</div>		  
-<p>There are no non-zero rows.</p>
-<p><strong>Rank(B) = 0</strong></p>
+  <h2 id="rank">Rank of a Matrix</h2>
+  <p>
+    <strong>Definition:</strong> The rank of a matrix is the maximum number of linearly independent rows or columns. Rank tells us how many independent equations we actually have.
+  </p>
+  
+  <p>
+    In practice, we often find the rank by transforming a matrix into <strong>Row Echelon Form (REF)</strong>. Each row in REF has a leading entry called a <strong>pivot</strong>, which is the first non-zero element in that row. All entries below each pivot are zero. The number of non-zero rows in REF equals the rank of the matrix.
+  </p>
+  
+  <p>
+    <strong>R1, R2, R3</strong> represent the rows of the matrix. When we write operations like <code>R2 ← R2 - R1</code>, it means we are updating row 2 by subtracting row 1 from it. These row operations simplify the matrix to find pivots and calculate the rank.
+  </p>
+  
+  <h3>Example 1: Finding Rank</h3>
+  
+  <h4>Input Matrix:</h4>
+  <div class="math-block">
+    \( A = \begin{bmatrix} 1 & -2 & 1 \\ 1 & -1 & 2 \\ 0 & -2 & 2 \end{bmatrix} \)
+  </div>
+  
+  <h4>Step 1: Eliminate below first pivot (Column 1)</h4>
+  <p>Pivot in column 1 is <strong>1</strong> in R1. Apply row operation to make entries below pivot zero:</p>
+  <ul>
+    <li>\( R_2 \leftarrow R_2 - R_1 \)</li>
+  </ul>
+  <div class="math-block">
+    \( \begin{bmatrix} 1 & -2 & 1 \\ 0 & 1 & 1 \\ 0 & -2 & 2 \end{bmatrix} \)
+  </div>
+  
+  <h4>Step 2: Eliminate below pivot in 2nd column</h4>
+  <p>Pivot in column 2 is <strong>1</strong> in R2. Apply row operation to eliminate entry below pivot:</p>
+  <ul>
+    <li>\( R_3 \leftarrow R_3 + 2 R_2 \)</li>
+  </ul>
+  <div class="math-block">
+    \( \begin{bmatrix} 1 & -2 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 4 \end{bmatrix} \)
+  </div>
+  
+  <h4>Step 3: Final Row Echelon Form (REF)</h4>
+  <div class="math-block">
+    \( \text{REF}(A) = \begin{bmatrix} 1 & -2 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 4 \end{bmatrix} \)
+  </div>
+  
+  <p>
+    Count the number of non-zero rows in REF. Here we have <strong>3 non-zero rows</strong>, so:
+  </p>
+  <p><strong>Rank(A) = 3</strong></p>
+  
+  <hr>
+  
+  <h3>Example 2: Zero Matrix (No Rank)</h3>
+  <div class="math-block">
+    \( B = \begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix} \)
+  </div>
+  <p>All rows are zero, so there are no pivots.</p>
+  <p><strong>Rank(B) = 0</strong></p>
 
 
           </div>

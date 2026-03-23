@@ -356,52 +356,98 @@
           </style>
   
   
-<h2 id = "minor">Minor, Cofactor, Adjoint, and Inverse</h2>
+  <h2 id="minor">Minor, Cofactor, Adjoint, and Inverse</h2>
 
-<h3>Minor Matrix</h3>
-<p>The <strong>minor</strong> of the element in the \( i^{\text{th}} \) row and \( j^{\text{th}} \) column of a square matrix \( A \) is denoted by \( M_{ij} \) and defined as:</p>
-<p>\( M_{ij} = \left| A_{ij} \right| \)</p>
-<p>Where \( A_{ij} \) is the submatrix formed by deleting the \( i^{\text{th}} \) row and \( j^{\text{th}} \) column from the original matrix \( A \), and \( \left| A_{ij} \right| \) is its determinant.</p>
+  <h3>Minor Matrix</h3>
+  <p>The <strong>minor</strong> of an element in the <em>i<sup>th</sup> row</em> and <em>j<sup>th</sup> column</em> of a square matrix <code>A</code> is denoted by <code>M<sub>ij</sub></code> and is defined as the determinant of the submatrix formed by removing the i<sup>th</sup> row and j<sup>th</sup> column from <code>A</code>:</p>
+  <p><code>M<sub>ij</sub> = |A<sub>ij</sub>|</code></p>
+  <p>Here, <code>A<sub>ij</sub></code> is the submatrix obtained by deleting the i<sup>th</sup> row and j<sup>th</sup> column of <code>A</code>, and <code>|A<sub>ij</sub>|</code> denotes its determinant.</p>
+  
+  <h3>Cofactor Matrix</h3>
+  <p>The <strong>cofactor</strong> of an element in the <em>i<sup>th</sup> row</em> and <em>j<sup>th</sup> column</em> of <code>A</code> is defined as:</p>
+  <p><code>C<sub>ij</sub> = (-1)<sup>i+j</sup> · M<sub>ij</sub></code></p>
+  <p>Where <code>M<sub>ij</sub></code> is the minor of the element. The factor <code>(-1)<sup>i+j</sup></code> ensures the correct sign for cofactor expansion.</p>
+  
+  <h3>Calculating Determinant Using Minors and Cofactors</h3>
+<p>To calculate the <strong>determinant</strong> of a square matrix <code>A</code> using <strong>minors</strong> and <strong>cofactors</strong>, follow these steps:</p>
 
-<h3>Cofactor Matrix</h3>
-<p>The cofactor of the element in the \( i^{\text{th}} \) row and \( j^{\text{th}} \) column of a square matrix \( A \) is given by:</p>
-<p>\( \text{CO}_{ij} = (-1)^{i+j} \cdot M_{ij} \)</p>
-<p>Where \( M_{ij} \) is the <strong>minor</strong> of the element, i.e., the determinant of the submatrix formed by deleting the \( i^{\text{th}} \) row and \( j^{\text{th}} \) column from \( A \).</p>
+<ol>
+  <li><strong>Choose an element:</strong> Pick an element \( a_{ij} \) from any row or column of \( A \).</li>
+  <li><strong>Form the submatrix:</strong> Remove the <em>i<sup>th</sup> row</em> and <em>j<sup>th</sup> column</em> from \( A \) to obtain the submatrix \( A_{ij} \).</li>
+  <li><strong>Calculate the minor:</strong> The <strong>minor</strong> \( M_{ij} \) is the determinant of the submatrix:  
+    \[
+    M_{ij} = |A_{ij}|
+    \]
+  </li>
+  <li><strong>Compute the cofactor:</strong> Multiply the minor by the sign factor:  
+    \[
+    C_{ij} = (-1)^{i+j} \cdot M_{ij}
+    \]  
+    The sign alternates in a checkerboard pattern across the matrix.
+  </li>
+  <li><strong>Expand along a row or column:</strong> The determinant of \( A \) is the sum of the products of elements and their cofactors along the chosen row or column:  
+    \[
+    \det(A) = a_{i1}C_{i1} + a_{i2}C_{i2} + \dots + a_{in}C_{in}
+    \]
+  </li>
+</ol>
 
-<h3>Adjoint</h3>
-<p>The adjoint (or adjugate) of a square matrix \( A \) is the transpose of the matrix of cofactors:</p>
-<p>\( \text{Adj}(A) = [\text{CO}_{ij}]^T \)</p>
+<h4>Example: 3 × 3 Matrix</h4>
+<p>Consider the matrix:</p>
+\[
+A = \begin{bmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{bmatrix}
+\]
 
-<h2>Inverse of a Matrix</h2>
-<p>If matrix \( A \) is invertible (i.e., \( \det(A) \ne 0 \)), then the inverse of \( A \) is given by:</p>
-<p>\( A^{-1} = \frac{\text{Adj}(A)}{\det(A)} \)</p>
+<p>Calculate the minors for the first row:</p>
+\[
+\begin{aligned}
+M_{11} &= \begin{vmatrix} e & f \\ h & i \end{vmatrix} = ei - fh, \\
+M_{12} &= \begin{vmatrix} d & f \\ g & i \end{vmatrix} = di - fg, \\
+M_{13} &= \begin{vmatrix} d & e \\ g & h \end{vmatrix} = dh - eg
+\end{aligned}
+\]
 
-<h2>Inverse of a Product</h2>
-<p>The inverse of a product of two invertible matrices is the product of their inverses in reverse order:</p>
-<p>\( (AB)^{-1} = B^{-1} A^{-1} \)</p>
-<p><strong>Proof:</strong></p>
-<p>Start with the identity:</p>
-<p>\( (AB)(AB)^{-1} = I \)</p>
-<p>Pre-multiply both sides by \( A^{-1} \):</p>
-<p>\( A^{-1}(AB)(AB)^{-1} = A^{-1} \Rightarrow B(AB)^{-1} = A^{-1} \)</p>
-<p>Now pre-multiply both sides by \( B^{-1} \):</p>
-<p>\( B^{-1}B(AB)^{-1} = B^{-1}A^{-1} \Rightarrow (AB)^{-1} = B^{-1}A^{-1} \)</p>
+<p>Calculate the cofactors:</p>
+\[
+\begin{aligned}
+C_{11} &= (+1) \cdot M_{11} = ei - fh, \\
+C_{12} &= (-1) \cdot M_{12} = fg - di, \\
+C_{13} &= (+1) \cdot M_{13} = dh - eg
+\end{aligned}
+\]
 
-<h2>Adjoint of a Product</h2>
-<p>The adjoint of the product of two matrices equals the product of their adjoints in reverse order:</p>
-<p>\( \text{Adj}(AB) = \text{Adj}(B) \cdot \text{Adj}(A) \)</p>
-
-<p><strong>Why this works:</strong></p>
-<p>From the inverse formula:</p>
-<p>\( (AB)^{-1} = \frac{\text{Adj}(AB)}{\det(AB)} \)</p>
-<p>We also have:</p>
-<p>\( (AB)^{-1} = B^{-1} A^{-1} \), and \( \det(AB) = \det(A) \cdot \det(B) \)</p>
-<p>Substitute the inverse formulas:</p>
-<p>\( A^{-1} = \frac{\text{Adj}(A)}{\det(A)} \), and \( B^{-1} = \frac{\text{Adj}(B)}{\det(B)} \)</p>
-<p>Multiply the adjoints accordingly:</p>
-<p>\( \text{Adj}(B) \cdot \text{Adj}(A) = \det(A) \cdot \det(B) \cdot B^{-1} \cdot A^{-1} \)</p>
-<p>Thus, from the original inverse formula:</p>
-<p>\( \text{Adj}(AB) = \text{Adj}(B) \cdot \text{Adj}(A) \)</p>
+<p>Finally, expand along the first row to find the determinant:</p>
+\[
+\det(A) = a C_{11} + b C_{12} + c C_{13} = a(ei - fh) + b(fg - di) + c(dh - eg)
+\]
+  <h3>Adjoint (Adjugate)</h3>
+  <p>The <strong>adjoint</strong> (or adjugate) of a square matrix <code>A</code> is the transpose of its cofactor matrix:</p>
+  <p><code>Adj(A) = [C<sub>ij</sub>]<sup>T</sup></code></p>
+  
+  <h3>Inverse of a Matrix</h3>
+  <p>If <code>A</code> is invertible (i.e., <code>det(A) ≠ 0</code>), its inverse is given by:</p>
+  <p><code>A<sup>-1</sup> = Adj(A) / det(A)</code></p>
+  
+  <h3>Inverse of a Product</h3>
+  <p>The inverse of a product of two invertible matrices is the product of their inverses in reverse order:</p>
+  <p><code>(AB)<sup>-1</sup> = B<sup>-1</sup> A<sup>-1</sup></code></p>
+  <p><strong>Proof:</strong></p>
+  <p>Start with the identity: <code>(AB)(AB)<sup>-1</sup> = I</code></p>
+  <p>Pre-multiply by <code>A<sup>-1</sup></code>: <code>A<sup>-1</sup>(AB)(AB)<sup>-1</sup> = A<sup>-1</sup> ⇒ B(AB)<sup>-1</sup> = A<sup>-1</sup></code></p>
+  <p>Pre-multiply by <code>B<sup>-1</sup></code>: <code>B<sup>-1</sup>B(AB)<sup>-1</sup> = B<sup>-1</sup>A<sup>-1</sup> ⇒ (AB)<sup>-1</sup> = B<sup>-1</sup>A<sup>-1</sup></code></p>
+  
+  <h3>Adjoint of a Product</h3>
+  <p>The adjoint of a product of two matrices equals the product of their adjoints in reverse order:</p>
+  <p><code>Adj(AB) = Adj(B) · Adj(A)</code></p>
+  <p><strong>Proof:</strong></p>
+  <p>From the inverse formula: <code>(AB)<sup>-1</sup> = Adj(AB) / det(AB)</code> and <code>(AB)<sup>-1</sup> = B<sup>-1</sup>A<sup>-1</sup></code>.</p>
+  <p>Also, <code>det(AB) = det(A) · det(B)</code>, and <code>A<sup>-1</sup> = Adj(A)/det(A)</code>, <code>B<sup>-1</sup> = Adj(B)/det(B)</code>.</p>
+  <p>Multiplying accordingly gives: <code>Adj(B) · Adj(A) = det(A) · det(B) · B<sup>-1</sup> · A<sup>-1</sup></code>, so</p>
+  <p><code>Adj(AB) = Adj(B) · Adj(A)</code></p>
 
           </div>
           <div class="bug-report-mobile">

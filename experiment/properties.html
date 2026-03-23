@@ -356,52 +356,73 @@
           </style>
   
   
-  <h2 id = "properties">Properties of Matrix Operations</h2>
-  <h2>Matrix Addition</h2>
-  <p>The fundamental properties of real number addition also apply to matrices.</p>
-  <p>Let \( A \), \( B \), and \( C \) be \( m \times n \) matrices:</p>
+  <h2 id="properties">Properties of Matrix Operations</h2>
+
+  <h3>Matrix Addition</h3>
+  <p>The properties of real number addition extend naturally to matrices. Let <code>A</code>, <code>B</code>, and <code>C</code> be <code>m × n</code> matrices:</p>
   <ol>
-    <li><strong>Commutative Property</strong>: \( A + B = B + A \)</li>
-    <li><strong>Associative Property</strong>: \( A + (B + C) = (A + B) + C \)</li>
-    <li><strong>Additive Identity</strong>: There exists a unique \( m \times n \) zero matrix \( O \) such that \( A + O = A \)</li>
-    <li><strong>Additive Inverse</strong>: For every matrix \( A \), there exists \( -A \) such that \( A + (-A) = O \)</li>
+    <li><strong>Commutative Property</strong>: <code>A + B = B + A</code></li>
+    <li><strong>Associative Property</strong>: <code>A + (B + C) = (A + B) + C</code></li>
+    <li><strong>Additive Identity</strong>: There exists a unique zero matrix <code>O<sub>m × n</sub></code> such that <code>A + O<sub>m × n</sub> = A</code></li>
+    <li><strong>Additive Inverse</strong>: For every matrix <code>A</code>, there exists <code>-A</code> such that <code>A + (-A) = O<sub>m × n</sub></code></li>
   </ol>
-  <h2>Matrix Multiplication</h2>
-  <p>Unlike addition, not all multiplication properties of real numbers apply to matrices.</p>
+  
+  <h3>Matrix Multiplication</h3>
+  <p>Matrix multiplication differs from scalar multiplication: not all properties of real numbers hold. Let <code>A</code>, <code>B</code>, and <code>C</code> be matrices with compatible dimensions for multiplication:</p>
   <ul>
-    <li>Matrix multiplication is <strong>not commutative</strong>: Even if both \( AB \) and \( BA \) are defined, they may not be equal.</li>
-    <li>A matrix may not have a <strong>multiplicative inverse</strong>, even if it is square.</li>
+    <li><strong>Non-Commutative:</strong> In general, <code>AB ≠ BA</code>, even if both products are defined.</li>
+    <li><strong>Existence of Inverse:</strong> A square matrix may not have a multiplicative inverse.</li>
   </ul>
-  <p>However, some properties <strong>do generalize</strong>. Let \( A \), \( B \), and \( C \) be matrices such that the operations are defined:</p>
+  <p>Some properties do hold for matrix multiplication:</p>
   <ol>
-    <li><strong>Associative Property</strong>: \( A(BC) = (AB)C \)</li>
-    <li><strong>Left Distributive Property</strong>: \( A(B + C) = AB + AC \)</li>
-    <li><strong>Right Distributive Property</strong>: \( (A + B)C = AC + BC \)</li>
-    <li><strong>Multiplicative Identity</strong>: \( I_m A = A \), \( A I_n = A \)</li>
+    <li><strong>Associative Property</strong>: <code>A(BC) = (AB)C</code></li>
+    <li><strong>Left Distributive Property</strong>: <code>A(B + C) = AB + AC</code></li>
+    <li><strong>Right Distributive Property</strong>: <code>(A + B)C = AC + BC</code></li>
+    <li><strong>Multiplicative Identity</strong>: <code>I<sub>m</sub> A = A</code>, <code>A I<sub>n</sub> = A</code>, where <code>I<sub>m</sub></code> and <code>I<sub>n</sub></code> are identity matrices of appropriate dimensions</li>
   </ol>
-  <h2>Scalar Multiplication</h2>
-  <p>Let \( r \), \( s \) be real numbers, and \( A \), \( B \) be matrices:</p>
+  <p>An <strong>identity matrix</strong> <code>I<sub>n</sub></code> is an <code>n × n</code> square matrix with ones on the diagonal and zeros elsewhere.</p>
+  
+  <h3>Scalar Multiplication</h3>
+  <p>Let <code>r</code> and <code>s</code> be real numbers, and <code>A</code>, <code>B</code> matrices of compatible dimensions:</p>
   <ol>
-    <li>\( r(sA) = (rs)A \)</li>
-    <li>\( (r + s)A = rA + sA \)</li>
-    <li>\( r(A + B) = rA + rB \)</li>
-    <li>\( A(rB) = r(AB) = (rA)B \) (if defined)</li>
+    <li><code>r(sA) = (rs)A</code></li>
+    <li><code>(r + s)A = rA + sA</code></li>
+    <li><code>r(A + B) = rA + rB</code></li>
+    <li><code>A(rB) = r(AB) = (rA)B</code> (if matrix multiplication is defined)</li>
   </ol>
-  <h2>Transpose of a Matrix</h2>
-  <p>Let \( r \) be real, and \( A \), \( B \) be matrices:</p>
+  
+  <h3>Transpose of a Matrix</h3>
+  <p>The <strong>transpose</strong> of a matrix <code>A</code>, denoted <code>A<sup>T</sup></code>, is formed by swapping its rows and columns. That is, the element in the <code>i</code>-th row and <code>j</code>-th column of <code>A</code> becomes the element in the <code>j</code>-th row and <code>i</code>-th column of <code>A<sup>T</sup></code>.</p>
+  <p>For any matrices <code>A</code>, <code>B</code> and scalar <code>r</code>:</p>
   <ol>
-    <li>\( (A^T)^T = A \)</li>
-    <li>\( (A + B)^T = A^T + B^T \)</li>
-    <li>\( (AB)^T = B^T A^T \)</li>
-    <li>\( (rA)^T = rA^T \)</li>
+    <li><code>(A<sup>T</sup>)<sup>T</sup> = A</code></li>
+    <li><code>(A + B)<sup>T</sup> = A<sup>T</sup> + B<sup>T</sup></code></li>
+    <li><code>(AB)<sup>T</sup> = B<sup>T</sup> A<sup>T</sup></code></li>
+    <li><code>(rA)<sup>T</sup> = r A<sup>T</sup></code></li>
   </ol>
-  <h2>Determinants</h2>
-  <ol>
-    <li>\( \det(A) = \det(A^T) \)</li>
-    <li>If any row/column is multiplied by \( k \), then \( \det(\Delta') = k \cdot \det(\Delta) \)</li>
-    <li>If a row or column is all zeros, then \( \det = 0 \)</li>
-    <li>If matrix is upper/lower triangular, \( \det = \) product of diagonal elements</li>
-  </ol>          
+  
+  <h3>Determinants</h3>
+  <p>The <strong>determinant</strong> is a scalar associated with a square matrix that indicates whether the matrix is invertible and provides information about volume scaling and system behavior. It can be calculated recursively using <strong>cofactor expansion</strong> (see the <em>Minor, Cofactor, and Adjoint</em> section) or, for small matrices, by simple formulas. For example, for a 2 × 2 matrix:</p>
+
+  \[
+  A = \begin{bmatrix}
+  a & b \\
+  c & d
+  \end{bmatrix}
+  \]
+  
+  <p>the determinant is calculated as:</p>
+  
+  \[
+  \det(A) = ad - bc
+  \]
+    <ol>
+    <li><code>det(AB) = det(A) · det(B)</code></li>
+    <li><code>det(A) = det(A<sup>T</sup>)</code></li>
+    <li>If a row or column is multiplied by a scalar <code>k</code>, the determinant is scaled: <code>det(Δ') = k · det(Δ)</code></li>
+    <li>If a row or column consists entirely of zeros, then <code>det(Δ) = 0</code></li>
+    <li>If <code>Δ</code> is upper or lower triangular, <code>det(Δ)</code> equals the product of its diagonal elements</li>
+  </ol>    
 
           </div>
           <div class="bug-report-mobile">

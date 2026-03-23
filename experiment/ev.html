@@ -356,63 +356,77 @@
           </style>
   
   
-<h2 id = "ev">Eigenvalue Decomposition</h2>
-<p>Eigenvalue decomposition expresses a matrix as a product of its eigenvectors and eigenvalues, enabling diagonalization and simplifying the analysis of matrix powers and system stability.</p>
-<p>Let’s assume a square matrix \( A \).</p>
+  <h2 id="ev">Eigenvalue Decomposition</h2>
 
-<p>The characteristic equation is:</p>
-<div class="math-left">\( |A - \lambda I| = 0 \)</div>
-<p>where \( I \) is the identity matrix and \( \lambda \) are eigenvalues.</p>
-
-<p>For eigenvalue \( \lambda = \lambda_1 \), the corresponding eigenvector \( x \) satisfies:</p>
-<div class="math-left">\( (A - \lambda_1 I)x = 0 \)</div>
-<p>Let \( A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \). The eigenvalue decomposition of a square matrix \( A \) is given by:</p>
-<p>\[
-A = P \Lambda P^{-1}
-\]</p>
-<p>Where:</p>
-<ul>
-  <li>\( \Lambda \) is a diagonal matrix of eigenvalues</li>
-  <li>\( P \) is a matrix whose columns are the eigenvectors corresponding to the eigenvalues</li>
-</ul>
-
-<h4>Step 1: Find the eigenvalues</h4>
-<p>We solve the characteristic equation \( \det(A - \lambda I) = 0 \).</p>
-<p>\[
-\begin{vmatrix}
-1 - \lambda & 2 \\
-3 & 4 - \lambda
-\end{vmatrix} = (1 - \lambda)(4 - \lambda) - 6 = \lambda^2 - 5\lambda - 2
-\]</p>
-<p>Solving: \( \lambda = \frac{5 \pm \sqrt{33}}{2} \approx -0.372, \ 5.372 \)</p>
-
-<h4>Step 2: Find eigenvectors</h4>
-<p>For each eigenvalue \( \lambda \), solve \( (A - \lambda I)\vec{v} = 0 \) to get the corresponding eigenvector \( \vec{v} \).</p>
-<p>For example, for \( \lambda_1 = 5.372 \), the corresponding eigenvector is approximately:</p>
-<p>\[
-\vec{v}_1 = \begin{bmatrix} -0.416 \\ -0.909 \end{bmatrix}
-\]</p>
-<p>And for \( \lambda_2 = -0.372 \):</p>
-<p>\[
-\vec{v}_2 = \begin{bmatrix} -0.825 \\ 0.566 \end{bmatrix}
-\]</p>
-
-<h4>Step 3: Construct the decomposition</h4>
-<p>Using:</p>
-<p>\[
-P = \begin{bmatrix}
--0.416 & -0.825 \\
--0.909 & 0.566
-\end{bmatrix},
-\quad
-\Lambda = \begin{bmatrix}
-5.372 & 0 \\
-0 & -0.372
-\end{bmatrix}
-\]</p>
-<p>You can verify that \( A = P \Lambda P^{-1} \) using matrix multiplication.</p>
-
-
+  <p>Eigenvalue decomposition is a fundamental concept in linear algebra that expresses a square matrix as a product of its eigenvectors and a diagonal matrix of its eigenvalues. This decomposition allows a matrix to be diagonalized and simplifies computations involving matrix powers, linear transformations, and analysis of system stability.</p>
+  
+  <h3>Definitions</h3>
+  
+  <p><strong>Eigenvalue:</strong> For a square matrix \( A \), a scalar \( \lambda \) is called an eigenvalue if there exists a <strong>nonzero</strong> vector \( \vec{v} \) such that:</p>
+  \[
+  A \vec{v} = \lambda \vec{v}
+  \]
+  <p>Intuitively, this means that multiplying \( A \) by \( \vec{v} \) only scales the vector by \(\lambda\) without changing its direction. Eigenvalues provide important information about the matrix, such as scaling factors in transformations, stability in dynamical systems, and the modes of linear transformations.</p>
+  
+  <p><strong>Eigenvector:</strong> An eigenvector corresponding to the eigenvalue \( \lambda \) is a <strong>nonzero</strong> vector \( \vec{v} \) that satisfies the above equation. Eigenvectors indicate the directions along which the linear transformation represented by \( A \) acts purely by scaling, without rotation. Eigenvectors are always nonzero because the zero vector has no direction and trivially satisfies the equation for any scalar.</p>
+  
+  <p>Eigenvalues and eigenvectors can also be determined by solving the <strong>characteristic equation</strong>:</p>
+  \[
+  \det(A - \lambda I) = 0
+  \]
+  <p>Here, \( I \) is the identity matrix of the same size as \( A \). Each solution \( \lambda \) of this equation is an eigenvalue of \( A \), and the corresponding eigenvectors are the nonzero solutions \( \vec{v} \) of \((A - \lambda I)\vec{v} = 0\).</p>
+  
+  <h3>Example</h3>
+  
+  <p>Consider the matrix:</p>
+  \[
+  A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
+  \]
+  
+  <h4>Step 1: Compute Eigenvalues</h4>
+  <p>Solve the characteristic equation:</p>
+  \[
+  \det(A - \lambda I) = 
+  \begin{vmatrix}
+  1 - \lambda & 2 \\
+  3 & 4 - \lambda
+  \end{vmatrix} = (1 - \lambda)(4 - \lambda) - 6 = \lambda^2 - 5\lambda - 2
+  \]
+  <p>The eigenvalues are:</p>
+  \[
+  \lambda_1 \approx 5.372, \quad \lambda_2 \approx -0.372
+  \]
+  
+  <h4>Step 2: Compute Eigenvectors</h4>
+  <p>For each eigenvalue \( \lambda_i \), solve \((A - \lambda_i I)\vec{v}_i = 0\) to find the corresponding eigenvector (up to a nonzero scalar multiple).</p>
+  
+  <p>Eigenvectors for this matrix are approximately:</p>
+  \[
+  \vec{v}_1 \approx \begin{bmatrix} -0.416 \\ -0.909 \end{bmatrix}, \quad
+  \vec{v}_2 \approx \begin{bmatrix} -0.825 \\ 0.566 \end{bmatrix}
+  \]
+  
+  <h4>Step 3: Construct Eigenvalue Decomposition</h4>
+  <p>Form the matrix of eigenvectors \( P \) and the diagonal matrix of eigenvalues \( \Lambda \):</p>
+  \[
+  P = [\vec{v}_1 \ \vec{v}_2] =
+  \begin{bmatrix}
+  -0.416 & -0.825 \\
+  -0.909 & 0.566
+  \end{bmatrix}, \quad
+  \Lambda =
+  \begin{bmatrix}
+  5.372 & 0 \\
+  0 & -0.372
+  \end{bmatrix}
+  \]
+  
+  <p>The eigenvalue decomposition of \( A \) is then:</p>
+  \[
+  A = P \Lambda P^{-1}
+  \]
+  
+  <p>This decomposition is valid because \( A \) has two linearly independent eigenvectors, making it diagonalizable.</p>
           </div>
           <div class="bug-report-mobile">
               <bug-report id="bug-report" title="[BUG REPORT] UNDERSTAND VARIOUS MATRIX OPERATIONS, MATRIX DECOMPOSITIONS, FACTORIZATION AND
