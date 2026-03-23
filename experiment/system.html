@@ -383,53 +383,39 @@
   \]
   </div>
   
-  <h3>Step-by-Step Solution (Standard Elimination Method)</h3>
+  <h3>Step-by-Step Solution Using Inverse Matrix</h3>
   
-  <p><strong>Step 1: Eliminate one variable.</strong></p>
-  
-  <p>Multiply the first equation by 3 so that the coefficients of \( x \) match:</p>
+  <p><strong>Step 1: Write the system in matrix form.</strong></p>
   
   <div class="math-left">
   \[
-  3(x + 2y = 5)
-  \]
-  \[
-  3x + 6y = 15
+  A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, \quad
+  \vec{x} = \begin{bmatrix} x \\ y \end{bmatrix}, \quad
+  \vec{b} = \begin{bmatrix} 5 \\ 11 \end{bmatrix}, \quad
+  Ax = b
   \]
   </div>
   
-  <p>Now subtract the second equation:</p>
+  <p><strong>Step 2: Compute the inverse of matrix \( A \).</strong></p>
   
   <div class="math-left">
   \[
-  (3x + 6y) - (3x + 4y) = 15 - 11
-  \]
-  \[
-  2y = 4
+  A^{-1} = \frac{1}{(1)(4) - (2)(3)} \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix} 
+  = \frac{1}{-2} \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix} 
+  = \begin{bmatrix} -2 & 1 \\ 1.5 & -0.5 \end{bmatrix}
   \]
   </div>
   
-  <p><strong>Step 2: Solve for \( y \).</strong></p>
+  <p><strong>Step 3: Multiply \( A^{-1} \) by \( b \) to find \( x \).</strong></p>
   
   <div class="math-left">
   \[
-  y = 2
-  \]
-  </div>
-  
-  <p><strong>Step 3: Substitute back to find \( x \).</strong></p>
-  
-  <p>Substitute \( y = 2 \) into the first equation:</p>
-  
-  <div class="math-left">
-  \[
-  x + 2(2) = 5
-  \]
-  \[
-  x + 4 = 5
-  \]
-  \[
-  x = 1
+  \vec{x} = A^{-1} \vec{b} = 
+  \begin{bmatrix} -2 & 1 \\ 1.5 & -0.5 \end{bmatrix} 
+  \begin{bmatrix} 5 \\ 11 \end{bmatrix} 
+  = \begin{bmatrix} (-2)(5) + (1)(11) \\ (1.5)(5) + (-0.5)(11) \end{bmatrix} 
+  = \begin{bmatrix} -10 + 11 \\ 7.5 - 5.5 \end{bmatrix} 
+  = \begin{bmatrix} 1 \\ 2 \end{bmatrix}
   \]
   </div>
   
@@ -443,13 +429,12 @@
   
   <h3>Interpreting Solutions:</h3>
   <ul>
-    <li><strong>Unique Solution:</strong> The system has exactly one solution.</li>
-    <li><strong>Infinite Solutions:</strong> The equations represent the same line.</li>
-    <li><strong>No Solution:</strong> The equations represent parallel lines.</li>
+    <li><strong>Unique Solution:</strong> The system has exactly one solution if \( A \) is invertible (determinant ≠ 0).</li>
+    <li><strong>Infinite Solutions:</strong> Occurs when \( A \) is singular (determinant = 0) and equations are consistent.</li>
+    <li><strong>No Solution:</strong> Occurs when \( A \) is singular and equations are inconsistent.</li>
   </ul>
   
-  <p>Systems of linear equations are fundamental in engineering, physics, and computer science for modeling real-world problems.</p>
-  
+  <p>Using the inverse matrix method is a systematic way to solve linear systems efficiently, especially for small systems or when using computational tools.</p> 
 
           </div>
           <div class="bug-report-mobile">
